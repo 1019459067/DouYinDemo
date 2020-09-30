@@ -1,0 +1,16 @@
+PODS:
+  - GKNavigationBarViewController (2.6.0)
+
+DEPENDENCIES:
+  - GKNavigationBarViewController
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - GKNavigationBarViewController
+
+SPEC CHECKSUMS:
+  GKNavigationBarViewController: d67cd6b87b1716a026c7d9d63de79dc735726a68
+
+PODFILE CHECKSUM: fd2ab4727877ac9cba3b97078a6a1ecd9398e6e2
+
+COCOAPODS: 1.9.3
