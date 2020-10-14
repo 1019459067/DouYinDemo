@@ -19,18 +19,18 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oEp-ft-5nM">
                                 <rect key="frame" x="60" y="10" width="200" height="44"/>
-                                <color key="backgroundColor" red="0.64154835092764584" green="1" blue="0.58144188643353567" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Br7-Zx-i7J"/>
+                                    <constraint firstAttribute="width" constant="200" id="dfW-uA-1ce"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kA6-T3-siW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="oEp-ft-5nM" firstAttribute="centerX" secondItem="IW0-tg-p6b" secondAttribute="centerX" id="FDf-K7-1mS"/>
                             <constraint firstItem="oEp-ft-5nM" firstAttribute="top" secondItem="kA6-T3-siW" secondAttribute="top" constant="10" id="FDs-ji-Yfy"/>
-                            <constraint firstItem="oEp-ft-5nM" firstAttribute="leading" secondItem="kA6-T3-siW" secondAttribute="leading" constant="60" id="ILD-XI-EaK"/>
-                            <constraint firstItem="kA6-T3-siW" firstAttribute="trailing" secondItem="oEp-ft-5nM" secondAttribute="trailing" constant="60" id="T7N-VA-sp2"/>
                         </constraints>
                     </view>
                     <connections>

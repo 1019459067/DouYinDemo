@@ -145,8 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				A6A6DE82253185D9004CE4F3 /* NLSliderSwitchProtocol.h */,
-				A6A6DE83253185D9004CE4F3 /* NLSliderSwitch.m */,
 				A6A6DE84253185D9004CE4F3 /* NLSliderSwitch.h */,
+				A6A6DE83253185D9004CE4F3 /* NLSliderSwitch.m */,
 			);
 			path = NLSliderSwitch;
 			sourceTree = "<group>";

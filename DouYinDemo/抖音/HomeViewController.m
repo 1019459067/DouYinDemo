@@ -33,15 +33,30 @@
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.greenColor;
     self.gk_navigationBar.hidden = YES;
-    self.gk_statusBarHidden = YES;
-
+    self.gk_statusBarStyle = UIStatusBarStyleLightContent;
+//    self.gk_statusBarHidden = YES;
     // 设置左滑push代理
     self.gk_pushDelegate = self;
+
+    [self settingUpUI];
+}
+
+- (void)settingUpUI {
+    self.sliderSwitch = [[NLSliderSwitch alloc]initWithFrame:CGRectMake(0, 0, 200, 44) buttonSize:CGSizeMake(100, 44)];
+    self.sliderSwitch.titleArray = @[@"test1VC",@"test2VC"];
+    self.sliderSwitch.normalTitleColor = [UIColor whiteColor];
+    self.sliderSwitch.selectedTitleColor = [UIColor whiteColor];
+    self.sliderSwitch.selectedButtonColor = [UIColor whiteColor];
+    self.sliderSwitch.titleFont = [UIFont systemFontOfSize:15];
+    self.sliderSwitch.backgroundColor = [UIColor clearColor];
+    self.sliderSwitch.delegate = (id)self;
+    self.sliderSwitch.viewControllers = @[self.test1VC,self.test2VC];
+    [self.topBgView addSubview:self.sliderSwitch];
+    
+    // scrolView
     [self.view addSubview:self.mainScrolView];
     self.mainScrolView.frame = self.view.bounds;
     
-    [self setNav];
-
     self.childVCs = @[self.test1VC, self.test2VC];
 
     CGFloat w = [UIScreen mainScreen].bounds.size.width;
@@ -59,20 +74,6 @@
     // 默认显示播放器页
     self.mainScrolView.contentOffset = CGPointMake(0, 0);
     [self.view insertSubview:self.topBgView aboveSubview:self.mainScrolView];
-}
-
-- (void)setNav {
-    // nav
-    self.sliderSwitch = [[NLSliderSwitch alloc]initWithFrame:CGRectMake(0, 0, 159, 40) buttonSize:CGSizeMake(53, 30)];
-    self.sliderSwitch.titleArray = @[@"test1VC",@"test2VC"];
-    self.sliderSwitch.normalTitleColor = [UIColor whiteColor];
-    self.sliderSwitch.selectedTitleColor = [UIColor whiteColor];
-    self.sliderSwitch.selectedButtonColor = [UIColor whiteColor];
-    self.sliderSwitch.titleFont = [UIFont systemFontOfSize:15];
-    self.sliderSwitch.backgroundColor = [UIColor clearColor];
-    self.sliderSwitch.delegate = (id)self;
-    self.sliderSwitch.viewControllers = @[self.test1VC,self.test2VC];
-    [self.topBgView addSubview:self.sliderSwitch];
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{

@@ -11,29 +11,26 @@
 @interface NLSliderSwitch()<CAAnimationDelegate>
 ///*! 当前选中index*/
 @property(nonatomic,readwrite) NSInteger selectedIndex;
+
 @end
+
 @implementation NLSliderSwitch
-#define SelectedScale 1.5
-#define UnSelectedScale (1/1.5)
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+
+#define SelectedScale       1.1
+#define UnSelectedScale     1
+
 - (instancetype)initWithFrame:(CGRect)frame buttonSize:(CGSize)size
 {
 	self = [super initWithFrame:frame];
 	if (self) {
-		self.selectedIndex = 1;
+		self.selectedIndex = 0;
 		self.selectedFontBlod = YES;
 		self.buttonSize = CGSizeMake(size.width*SelectedScale, size.height*SelectedScale);
 		self.normalTitleColor = [UIColor grayColor];
 		self.selectedTitleColor = [UIColor blackColor];
 		_sliderLayer = [CALayer layer];
 
-		_sliderLayer.frame = CGRectMake(self.buttonSize.width*self.selectedIndex*UnSelectedScale-(self.buttonSize.width-self.buttonSize.width*UnSelectedScale)/2+self.buttonSize.width/2-4, frame.size.height-6, 10, 4);
+		_sliderLayer.frame = CGRectMake(self.buttonSize.width*self.selectedIndex*UnSelectedScale- (self.buttonSize.width-self.buttonSize.width*UnSelectedScale)/2+self.buttonSize.width/2-4, frame.size.height-6, 10, 4);
 
 		_sliderLayer.masksToBounds = YES;
 		_sliderLayer.backgroundColor = [UIColor blueColor].CGColor;
@@ -43,12 +40,12 @@
 	return self;
 }
 
--(void)setTitleArray:(NSArray *)titleArray{
+- (void)setTitleArray:(NSArray *)titleArray {
 	if (_titleArray != titleArray) {
 		_titleArray = titleArray;
 	}
 	[titleArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-		UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(self.buttonSize.width*idx*UnSelectedScale-(self.buttonSize.width-self.buttonSize.width*UnSelectedScale)/2, (self.frame.size.height-self.buttonSize.height)/2, self.buttonSize.width, self.buttonSize.height)];
+		UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(self.buttonSize.width*idx*UnSelectedScale- (self.buttonSize.width-self.buttonSize.width*UnSelectedScale)/2, (self.frame.size.height-self.buttonSize.height)/2, self.buttonSize.width, self.buttonSize.height)];
 		button.layer.masksToBounds = YES;
 		button.layer.cornerRadius = self.buttonSize.width<self.buttonSize.height?self.buttonSize.width/2.:self.buttonSize.height/2.;
 		[button addTarget:self action:@selector(clickEvent:) forControlEvents:UIControlEventTouchUpInside];
@@ -69,7 +66,7 @@
 	}];
 }
 
--(void)setTitleFont:(UIFont *)titleFont{
+- (void)setTitleFont:(UIFont *)titleFont {
 	if (_titleFont != titleFont) {
 		_titleFont = titleFont;
 	}
@@ -85,7 +82,7 @@
 	}
 }
 
--(void)setNormalTitleColor:(UIColor *)normalTitleColor{
+- (void)setNormalTitleColor:(UIColor *)normalTitleColor {
 	if (_normalTitleColor != normalTitleColor) {
 		_normalTitleColor = normalTitleColor;
 	}
@@ -99,7 +96,7 @@
 	}
 }
 
--(void)setSelectedTitleColor:(UIColor *)selectedTitleColor{
+- (void)setSelectedTitleColor:(UIColor *)selectedTitleColor{
 	if (_selectedTitleColor != selectedTitleColor) {
 		_selectedTitleColor = selectedTitleColor;
 	}
@@ -107,29 +104,25 @@
 	[button setTitleColor:selectedTitleColor forState:UIControlStateNormal];
 }
 
--(void)setSelectedButtonColor:(UIColor *)selectedButtonColor{
+- (void)setSelectedButtonColor:(UIColor *)selectedButtonColor{
 	if (_selectedButtonColor != selectedButtonColor) {
 		_selectedButtonColor = selectedButtonColor;
 	}
 	_sliderLayer.backgroundColor = selectedButtonColor.CGColor;
 }
 
--(void)clickEvent:(UIButton *)sender
+- (void)clickEvent:(UIButton *)sender
 {
 	[self slideToIndex:sender.tag-9000 animated:YES];
 }
 
-//- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
-//	if (self.delegate && [self.delegate respondsToSelector:@selector(kmSwitch:didSelectedIndex:)]) {
-//		[self.delegate kmSwitch:self didSelectedIndex:index];
-//}
--(void)slideToIndex:(NSInteger)idx{
+- (void)slideToIndex:(NSInteger)idx{
 	[self slideToIndex:idx animated:YES];
 }
 
--(void)slideToIndex:(NSInteger)idx animated:(BOOL)animated;
+- (void)slideToIndex:(NSInteger)idx animated:(BOOL)animated;
 {
-	UIButton *button=(UIButton *)[self viewWithTag:idx+9000];
+	UIButton *button = (UIButton *)[self viewWithTag:idx+9000];
 	
 	[button setTitleColor:self.selectedTitleColor forState:UIControlStateNormal];
 	
@@ -191,7 +184,7 @@
 	}
 }
 
--(void)setSelectedIndex:(NSInteger)selectedIndex{
+- (void)setSelectedIndex:(NSInteger)selectedIndex{
 	if (_selectedIndex!=selectedIndex) {
 		_selectedIndex = selectedIndex;
 	}

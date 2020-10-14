@@ -38,7 +38,7 @@
 /*! 选中按钮字体是否变粗，默认变粗*/
 @property(nonatomic) BOOL selectedFontBlod;
 
-/*! 当前选中index*/
+/*! 当前选中index 默认为0*/
 @property(nonatomic,readonly) NSInteger selectedIndex;
 
 

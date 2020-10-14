@@ -19,16 +19,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3D708A75-9256-48DB-A6AB-FC2D6C3A9591"
+            uuid = "F23A93A3-541F-4868-ABC1-9A06A9B396EB"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DouYinDemo/&#x6296;&#x97f3;/HomeViewController.m"
+            filePath = "NLSliderSwitch/NLSliderSwitch.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "-setTitleArray:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
