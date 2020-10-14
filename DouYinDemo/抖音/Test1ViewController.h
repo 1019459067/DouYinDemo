@@ -1,5 +1,5 @@
 //
-//  PlayerViewController.h
+//  Test1ViewController.h
 //  DouYinDemo
 //
 //  Created by HN on 2020/9/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PlayerViewController : GKNavigationBarViewController
+@interface Test1ViewController : GKNavigationBarViewController
 
 @end

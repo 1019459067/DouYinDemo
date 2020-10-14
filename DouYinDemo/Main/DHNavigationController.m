@@ -20,9 +20,9 @@
 }
 
 
-//- (void)pushLiveRoomPlayerViewControllerWithModel:(LivePlay *)model
+//- (void)pushLiveRoomTest2ViewControllerWithModel:(LivePlay *)model
 //{
-//    LiveRoomPlayerViewController *vc = HNWLoadControllerFromStoryboard(SBLiveName, NSStringFromClass(LiveRoomPlayerViewController.class));
+//    LiveRoomTest2ViewController *vc = HNWLoadControllerFromStoryboard(SBLiveName, NSStringFromClass(LiveRoomTest2ViewController.class));
 //    vc.livePlayModel = model;
 //    vc.hidesBottomBarWhenPushed = YES;
 //    [self pushViewController:vc animated:YES];

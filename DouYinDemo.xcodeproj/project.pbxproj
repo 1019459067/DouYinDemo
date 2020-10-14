@@ -12,10 +12,11 @@
 		A65E42A12510564D0029A1DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65E42A02510564D0029A1DB /* Assets.xcassets */; };
 		A65E42A42510564D0029A1DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65E42A22510564D0029A1DB /* LaunchScreen.storyboard */; };
 		A65E42A72510564D0029A1DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E42A62510564D0029A1DB /* main.m */; };
-		A65E42B82510568A0029A1DB /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E42B22510568A0029A1DB /* PlayerViewController.m */; };
+		A65E42B82510568A0029A1DB /* Test2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E42B22510568A0029A1DB /* Test2ViewController.m */; };
 		A65E42B92510568A0029A1DB /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E42B32510568A0029A1DB /* HomeViewController.m */; };
 		A65E42BB2510568A0029A1DB /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E42B52510568A0029A1DB /* PersonalViewController.m */; };
-		A65E42BC2510568A0029A1DB /* AttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E42B62510568A0029A1DB /* AttentionViewController.m */; };
+		A65E42BC2510568A0029A1DB /* Test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E42B62510568A0029A1DB /* Test1ViewController.m */; };
+		A6A6DE85253185D9004CE4F3 /* NLSliderSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A6DE83253185D9004CE4F3 /* NLSliderSwitch.m */; };
 		A6CC251B2524220400F44260 /* DHScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CC251A2524220400F44260 /* DHScrollView.m */; };
 		A6CC252825242FF500F44260 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6CC252725242FF500F44260 /* main.storyboard */; };
 		A6CC252C2524312700F44260 /* DHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CC252B2524312700F44260 /* DHNavigationController.m */; };
@@ -34,14 +35,17 @@
 		A65E42A52510564D0029A1DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A65E42A62510564D0029A1DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A65E42AF2510568A0029A1DB /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		A65E42B02510568A0029A1DB /* AttentionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttentionViewController.h; sourceTree = "<group>"; };
+		A65E42B02510568A0029A1DB /* Test1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test1ViewController.h; sourceTree = "<group>"; };
 		A65E42B12510568A0029A1DB /* PersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalViewController.h; sourceTree = "<group>"; };
-		A65E42B22510568A0029A1DB /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		A65E42B22510568A0029A1DB /* Test2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test2ViewController.m; sourceTree = "<group>"; };
 		A65E42B32510568A0029A1DB /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		A65E42B52510568A0029A1DB /* PersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalViewController.m; sourceTree = "<group>"; };
-		A65E42B62510568A0029A1DB /* AttentionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttentionViewController.m; sourceTree = "<group>"; };
-		A65E42B72510568A0029A1DB /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		A65E42B62510568A0029A1DB /* Test1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test1ViewController.m; sourceTree = "<group>"; };
+		A65E42B72510568A0029A1DB /* Test2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test2ViewController.h; sourceTree = "<group>"; };
 		A65E43092510C1FA0029A1DB /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		A6A6DE82253185D9004CE4F3 /* NLSliderSwitchProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLSliderSwitchProtocol.h; sourceTree = "<group>"; };
+		A6A6DE83253185D9004CE4F3 /* NLSliderSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLSliderSwitch.m; sourceTree = "<group>"; };
+		A6A6DE84253185D9004CE4F3 /* NLSliderSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLSliderSwitch.h; sourceTree = "<group>"; };
 		A6CC25192524220400F44260 /* DHScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHScrollView.h; sourceTree = "<group>"; };
 		A6CC251A2524220400F44260 /* DHScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHScrollView.m; sourceTree = "<group>"; };
 		A6CC252725242FF500F44260 /* main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
@@ -79,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				A65E43092510C1FA0029A1DB /* PrefixHeader.pch */,
+				A6A6DE81253185D9004CE4F3 /* NLSliderSwitch */,
 				A65E4293251056480029A1DB /* DouYinDemo */,
 				A65E4292251056480029A1DB /* Products */,
 				93E9769401BF4EC9437DEA3B /* Pods */,
@@ -115,10 +120,10 @@
 			children = (
 				A65E42AF2510568A0029A1DB /* HomeViewController.h */,
 				A65E42B32510568A0029A1DB /* HomeViewController.m */,
-				A65E42B02510568A0029A1DB /* AttentionViewController.h */,
-				A65E42B62510568A0029A1DB /* AttentionViewController.m */,
-				A65E42B72510568A0029A1DB /* PlayerViewController.h */,
-				A65E42B22510568A0029A1DB /* PlayerViewController.m */,
+				A65E42B02510568A0029A1DB /* Test1ViewController.h */,
+				A65E42B62510568A0029A1DB /* Test1ViewController.m */,
+				A65E42B72510568A0029A1DB /* Test2ViewController.h */,
+				A65E42B22510568A0029A1DB /* Test2ViewController.m */,
 				A65E42B12510568A0029A1DB /* PersonalViewController.h */,
 				A65E42B52510568A0029A1DB /* PersonalViewController.m */,
 			);
@@ -134,6 +139,16 @@
 				A6CC252B2524312700F44260 /* DHNavigationController.m */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		A6A6DE81253185D9004CE4F3 /* NLSliderSwitch */ = {
+			isa = PBXGroup;
+			children = (
+				A6A6DE82253185D9004CE4F3 /* NLSliderSwitchProtocol.h */,
+				A6A6DE83253185D9004CE4F3 /* NLSliderSwitch.m */,
+				A6A6DE84253185D9004CE4F3 /* NLSliderSwitch.h */,
+			);
+			path = NLSliderSwitch;
 			sourceTree = "<group>";
 		};
 		A6CC251D252425DD00F44260 /* UIView */ = {
@@ -282,9 +297,10 @@
 				A65E42BB2510568A0029A1DB /* PersonalViewController.m in Sources */,
 				A65E4296251056480029A1DB /* AppDelegate.m in Sources */,
 				A65E42A72510564D0029A1DB /* main.m in Sources */,
-				A65E42BC2510568A0029A1DB /* AttentionViewController.m in Sources */,
+				A65E42BC2510568A0029A1DB /* Test1ViewController.m in Sources */,
+				A6A6DE85253185D9004CE4F3 /* NLSliderSwitch.m in Sources */,
 				A6CC254025246C5C00F44260 /* DHTabBar.m in Sources */,
-				A65E42B82510568A0029A1DB /* PlayerViewController.m in Sources */,
+				A65E42B82510568A0029A1DB /* Test2ViewController.m in Sources */,
 				A65E42B92510568A0029A1DB /* HomeViewController.m in Sources */,
 				A6CC252C2524312700F44260 /* DHNavigationController.m in Sources */,
 				A6CC254125246C5C00F44260 /* DHTabBarController.m in Sources */,

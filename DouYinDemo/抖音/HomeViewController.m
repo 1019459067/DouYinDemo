@@ -7,18 +7,21 @@
 //
 
 #import "HomeViewController.h"
-#import "AttentionViewController.h"
-#import "PlayerViewController.h"
+#import "Test1ViewController.h"
+#import "Test2ViewController.h"
 #import "DHScrollView.h"
+#import "NLSliderSwitch.h"
 
+#define TopBarHeight (([UIScreen mainScreen].bounds.size.height >= 812.0) ? 88.f : 64.f)
 
 @interface HomeViewController ()<GKViewControllerPushDelegate, UITabBarControllerDelegate, UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *topBgView;
+@property (nonatomic, strong) NLSliderSwitch *sliderSwitch;
 
 @property (nonatomic, strong) DHScrollView *mainScrolView;
 
-@property (nonatomic, strong) AttentionViewController *attentionVC;
-@property (nonatomic, strong) PlayerViewController *playerVC;
+@property (nonatomic, strong) Test1ViewController *test1VC;
+@property (nonatomic, strong) Test2ViewController *test2VC;
 
 @property (nonatomic, strong) NSArray *childVCs;
 
@@ -37,34 +40,53 @@
     [self.view addSubview:self.mainScrolView];
     self.mainScrolView.frame = self.view.bounds;
     
-    self.childVCs = @[self.attentionVC, self.playerVC];
-    
-    CGFloat w = self.view.frame.size.width;
-    CGFloat h = self.view.frame.size.height;
-    
+    [self setNav];
+
+    self.childVCs = @[self.test1VC, self.test2VC];
+
+    CGFloat w = [UIScreen mainScreen].bounds.size.width;
+    CGFloat h = [UIScreen mainScreen].bounds.size.height;
+
     [self.childVCs enumerateObjectsUsingBlock:^(UIViewController *vc, NSUInteger idx, BOOL * _Nonnull stop) {
         [self addChildViewController:vc];
         [self.mainScrolView addSubview:vc.view];
-        
+
         vc.view.frame = CGRectMake(idx * w, 0, w, h);
     }];
-    
-    self.mainScrolView.contentSize = CGSizeMake(self.childVCs.count * w, 0);
+
+    self.mainScrolView.contentSize = CGSizeMake(w * self.childVCs.count, h);//禁止竖向滚动
     
     // 默认显示播放器页
-    self.mainScrolView.contentOffset = CGPointMake(w, 0);
+    self.mainScrolView.contentOffset = CGPointMake(0, 0);
     [self.view insertSubview:self.topBgView aboveSubview:self.mainScrolView];
 }
 
-- (UIBarButtonItem *)itemWithTitle:(NSString *)title target:(id)target action:(SEL)action {
-    UIButton *btn = [UIButton new];
-    [btn setTitle:title forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-    [btn sizeToFit];
-    [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
-    
-    return [[UIBarButtonItem alloc] initWithCustomView:btn];
+- (void)setNav {
+    // nav
+    self.sliderSwitch = [[NLSliderSwitch alloc]initWithFrame:CGRectMake(0, 0, 159, 40) buttonSize:CGSizeMake(53, 30)];
+    self.sliderSwitch.titleArray = @[@"test1VC",@"test2VC"];
+    self.sliderSwitch.normalTitleColor = [UIColor whiteColor];
+    self.sliderSwitch.selectedTitleColor = [UIColor whiteColor];
+    self.sliderSwitch.selectedButtonColor = [UIColor whiteColor];
+    self.sliderSwitch.titleFont = [UIFont systemFontOfSize:15];
+    self.sliderSwitch.backgroundColor = [UIColor clearColor];
+    self.sliderSwitch.delegate = (id)self;
+    self.sliderSwitch.viewControllers = @[self.test1VC,self.test2VC];
+    [self.topBgView addSubview:self.sliderSwitch];
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    if (scrollView == self.mainScrolView) {
+        float xx = scrollView.contentOffset.x;
+        int rate = round(xx/[UIScreen mainScreen].bounds.size.width);
+        if (rate != self.sliderSwitch.selectedIndex) {
+            [self.sliderSwitch slideToIndex:rate];
+        }
+    }
+}
+
+- (void)sliderSwitch:(NLSliderSwitch *)sliderSwitch didSelectedIndex:(NSInteger)selectedIndex{
+    [self.mainScrolView scrollRectToVisible:CGRectMake(selectedIndex * [UIScreen mainScreen].bounds.size.width, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) animated:YES];
 }
 
 - (void)dealloc {
@@ -77,7 +99,6 @@
     personalVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:personalVC animated:YES];
 }
-
 
 #pragma mark - 懒加载
 - (DHScrollView *)mainScrolView {
@@ -97,18 +118,18 @@
     return _mainScrolView;
 }
 
-- (AttentionViewController *)attentionVC {
-    if (!_attentionVC) {
-        _attentionVC = HNWLoadControllerFromStoryboard(SBName, NSStringFromClass(AttentionViewController.class));
+- (Test1ViewController *)test1VC {
+    if (!_test1VC) {
+        _test1VC = HNWLoadControllerFromStoryboard(SBName, NSStringFromClass(Test1ViewController.class));
     }
-    return _attentionVC;
+    return _test1VC;
 }
 
-- (PlayerViewController *)playerVC {
-    if (!_playerVC) {
-        _playerVC = HNWLoadControllerFromStoryboard(SBName, NSStringFromClass(PlayerViewController.class));
+- (Test2ViewController *)test2VC {
+    if (!_test2VC) {
+        _test2VC = HNWLoadControllerFromStoryboard(SBName, NSStringFromClass(Test2ViewController.class));
     }
-    return _playerVC;
+    return _test2VC;
 }
 
 @end

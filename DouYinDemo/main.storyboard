@@ -41,10 +41,10 @@
             </objects>
             <point key="canvasLocation" x="320" y="189"/>
         </scene>
-        <!--Attention View Controller-->
+        <!--Test1 View Controller-->
         <scene sceneID="nV9-4N-NSB">
             <objects>
-                <viewController storyboardIdentifier="AttentionViewController" id="Boy-ux-rRZ" customClass="AttentionViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Test1ViewController" id="Boy-ux-rRZ" customClass="Test1ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IPC-uE-vdE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,10 +56,10 @@
             </objects>
             <point key="canvasLocation" x="1009" y="189"/>
         </scene>
-        <!--Player View Controller-->
+        <!--Test2 View Controller-->
         <scene sceneID="t86-Rh-3NA">
             <objects>
-                <viewController storyboardIdentifier="PlayerViewController" id="yLW-UV-f6o" customClass="PlayerViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Test2ViewController" id="yLW-UV-f6o" customClass="Test2ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kLF-c7-Ypf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,10 +71,10 @@
             </objects>
             <point key="canvasLocation" x="1688" y="189"/>
         </scene>
-        <!--Personal View Controller-->
+        <!--我的-->
         <scene sceneID="dCy-gv-TBp">
             <objects>
-                <viewController storyboardIdentifier="PersonalViewController" id="b31-Y9-GsB" customClass="PersonalViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PersonalViewController" title="我的" id="b31-Y9-GsB" customClass="PersonalViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g0B-mD-M1U">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

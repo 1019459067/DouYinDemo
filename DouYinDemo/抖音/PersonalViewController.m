@@ -17,6 +17,7 @@
 #pragma mark - life
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.gk_navTitle = @"My";
 
     UILabel *label = [[UILabel alloc]init];
     label.bounds = CGRectMake(0, 0, self.view.frame.size.width, 50);

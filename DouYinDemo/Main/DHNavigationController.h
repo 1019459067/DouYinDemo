@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 #import "HomeViewController.h"
-#import "AttentionViewController.h"
-#import "PlayerViewController.h"
+#import "Test1ViewController.h"
+#import "Test2ViewController.h"
 #import "PersonalViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
