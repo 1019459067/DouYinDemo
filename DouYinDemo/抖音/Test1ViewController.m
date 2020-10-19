@@ -34,6 +34,6 @@
 
 - (void)viewDidScrollToVisiableArea
 {
-    NSLog(@"当前滑动到了‘%s’页面",__func__);
+//    NSLog(@"当前滑动到了‘%s’页面",__func__);
 }
 @end

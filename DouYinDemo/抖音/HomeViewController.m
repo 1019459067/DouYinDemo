@@ -76,15 +76,29 @@
     [self.view insertSubview:self.topBgView aboveSubview:self.mainScrolView];
 }
 
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     if (scrollView == self.mainScrolView) {
         float xx = scrollView.contentOffset.x;
         int rate = round(xx/[UIScreen mainScreen].bounds.size.width);
-        if (rate != self.sliderSwitch.selectedIndex) {
+        if (rate != self.sliderSwitch.selectedIndex)
+        {
             [self.sliderSwitch slideToIndex:rate];
         }
     }
 }
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat pageIndex = scrollView.contentOffset.x/scrollView.bounds.size.width;
+
+    CGFloat sliderLayerX = CGRectGetWidth(self.sliderSwitch.sliderLayer.frame) * pageIndex;
+    CGFloat sliderLayerY = CGRectGetMinY(self.sliderSwitch.sliderLayer.frame);
+    CGFloat sliderLayerW = CGRectGetWidth(self.sliderSwitch.sliderLayer.frame);
+    CGFloat sliderLayerH = CGRectGetHeight(self.sliderSwitch.sliderLayer.frame);
+    self.sliderSwitch.sliderLayer.frame = CGRectMake(sliderLayerX, sliderLayerY, sliderLayerW, sliderLayerH);
+
+    NSLog(@"xwh：%f", pageIndex);
+}
+
 
 - (void)sliderSwitch:(NLSliderSwitch *)sliderSwitch didSelectedIndex:(NSInteger)selectedIndex{
     [self.mainScrolView scrollRectToVisible:CGRectMake(selectedIndex * [UIScreen mainScreen].bounds.size.width, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) animated:YES];

@@ -18,6 +18,7 @@
 
 #define SelectedScale       1.1
 #define UnSelectedScale     1
+#define sliderLayerW        100
 
 - (instancetype)initWithFrame:(CGRect)frame buttonSize:(CGSize)size
 {
@@ -25,16 +26,16 @@
 	if (self) {
 		self.selectedIndex = 0;
 		self.selectedFontBlod = YES;
-		self.buttonSize = CGSizeMake(size.width*SelectedScale, size.height*SelectedScale);
+		self.buttonSize = CGSizeMake(size.width, size.height);
 		self.normalTitleColor = [UIColor grayColor];
 		self.selectedTitleColor = [UIColor blackColor];
-		_sliderLayer = [CALayer layer];
-
-		_sliderLayer.frame = CGRectMake(self.buttonSize.width*self.selectedIndex*UnSelectedScale- (self.buttonSize.width-self.buttonSize.width*UnSelectedScale)/2+self.buttonSize.width/2-4, frame.size.height-6, 10, 4);
+		
+        _sliderLayer = [CALayer layer];
+		_sliderLayer.frame = CGRectMake(0, frame.size.height-6, sliderLayerW, 4);
 
 		_sliderLayer.masksToBounds = YES;
 		_sliderLayer.backgroundColor = [UIColor blueColor].CGColor;
-		_sliderLayer.cornerRadius = self.sliderLayer.frame.size.width<self.sliderLayer.frame.size.height?self.sliderLayer.frame.size.width/2.:self.sliderLayer.frame.size.height/2.;
+		_sliderLayer.cornerRadius = self.sliderLayer.frame.size.height/2.;
 		[self.layer addSublayer:_sliderLayer];
 	}
 	return self;
@@ -45,20 +46,16 @@
 		_titleArray = titleArray;
 	}
 	[titleArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-		UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(self.buttonSize.width*idx*UnSelectedScale- (self.buttonSize.width-self.buttonSize.width*UnSelectedScale)/2, (self.frame.size.height-self.buttonSize.height)/2, self.buttonSize.width, self.buttonSize.height)];
-		button.layer.masksToBounds = YES;
-		button.layer.cornerRadius = self.buttonSize.width<self.buttonSize.height?self.buttonSize.width/2.:self.buttonSize.height/2.;
+        CGFloat buttonX = self.buttonSize.width*idx;
+        CGFloat buttonY = (self.frame.size.height-self.buttonSize.height)/2;
+        CGFloat buttonW = self.buttonSize.width;
+        CGFloat buttonH = self.buttonSize.height;
+		UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(buttonX, buttonY, buttonW, buttonH)];
 		[button addTarget:self action:@selector(clickEvent:) forControlEvents:UIControlEventTouchUpInside];
-		button.backgroundColor = [UIColor clearColor];
 		[button setTitle:titleArray[idx] forState:UIControlStateNormal];
 		if (self.selectedIndex != idx) {
 			[button setTitleColor:self.selectedTitleColor forState:UIControlStateNormal];
-			// 	缩小
-			[CATransaction begin];
-			[CATransaction setDisableActions:YES];
-			button.layer.transform = CATransform3DMakeScale(UnSelectedScale, UnSelectedScale, 1);
-			[CATransaction commit];
-		}else{
+		} else {
 			[button setTitleColor:self.normalTitleColor forState:UIControlStateNormal];
 		}
 		button.tag = idx+9000;
@@ -123,11 +120,8 @@
 - (void)slideToIndex:(NSInteger)idx animated:(BOOL)animated;
 {
 	UIButton *button = (UIButton *)[self viewWithTag:idx+9000];
-	
 	[button setTitleColor:self.selectedTitleColor forState:UIControlStateNormal];
-	
 	UIButton *lastbutton=(UIButton *)[self viewWithTag:(NSInteger)(self.selectedIndex+9000)];
-	
 	NSInteger index = button.tag-9000;
 	if(index == self.selectedIndex){
 		return;
@@ -137,9 +131,10 @@
 	if (self.delegate && [self.delegate respondsToSelector:@selector(sliderSwitch:didSelectedIndex:)]) {
 		[self.delegate sliderSwitch:self didSelectedIndex:index];
 	}
-	if (animated){
+    
+	if (animated) {
 		//滑动
-		self.sliderLayer.frame = CGRectMake(button.frame.origin.x+button.frame.size.width/2-5, self.sliderLayer.frame.origin.y, self.sliderLayer.frame.size.width, self.sliderLayer.frame.size.height);
+		self.sliderLayer.frame = CGRectMake(button.frame.origin.x, self.sliderLayer.frame.origin.y, self.sliderLayer.frame.size.width, self.sliderLayer.frame.size.height);
 
 		//	长短
 		CABasicAnimation *sliderAnimation = [CABasicAnimation animation];

@@ -32,9 +32,9 @@
 /*! button宽高*/
 @property(nonatomic,assign) CGSize buttonSize;
 /*! 滑块*/
-@property(nonatomic,strong)CALayer *sliderLayer;
+@property(nonatomic,strong) CALayer *sliderLayer;
 /*! viewControllers控制器数组*/
-@property(nonatomic,strong)NSArray <T<NLSliderSwitchProtocol>> *viewControllers;
+@property(nonatomic,strong) NSArray <T<NLSliderSwitchProtocol>> *viewControllers;
 /*! 选中按钮字体是否变粗，默认变粗*/
 @property(nonatomic) BOOL selectedFontBlod;
 
