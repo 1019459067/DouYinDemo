@@ -7,9 +7,8 @@
 //
 
 #import "Test2ViewController.h"
-#import "NLSliderSwitchProtocol.h"
 
-@interface Test2ViewController ()<NLSliderSwitchProtocol>
+@interface Test2ViewController ()
 
 @end
 
@@ -32,8 +31,4 @@
     self.view.backgroundColor = UIColor.systemPinkColor;
 }
 
-- (void)viewDidScrollToVisiableArea
-{
-//    NSLog(@"当前滑动到了‘%s’页面",__func__);
-}
 @end

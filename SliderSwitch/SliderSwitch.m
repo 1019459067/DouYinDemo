@@ -7,9 +7,8 @@
 //
 
 #import "SliderSwitch.h"
-#import "SliderSwitchCell.h"
 
-@interface SliderSwitch ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+@interface SliderSwitch ()<UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 //集合视图
 @property (nonatomic, strong) UICollectionView *collectionView;
 
@@ -17,6 +16,7 @@
 @property (nonatomic, strong) UIView *shadowLine;
 
 @property (strong, nonatomic) NSArray *dataArray;
+
 @property (strong, nonatomic) NSIndexPath *indexPathSelected;
 
 @end
@@ -74,6 +74,23 @@
         });
     }
 }
+
+- (void)showShadowAnimationWithProgress:(CGFloat)progress
+{
+    NSInteger indexSelected = self.indexPathSelected.item - 1 < 0 ? 1 : self.indexPathSelected.item;
+    NSInteger targetIndex = indexSelected - 1;
+    NSInteger currentIndex = indexSelected;
+
+    //获取cell
+    SliderSwitchCell *currentCell = (SliderSwitchCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:currentIndex inSection:0]];
+    SliderSwitchCell *targetCell = (SliderSwitchCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:targetIndex inSection:0]];
+    
+    CGFloat distance = CGRectGetMidX(targetCell.frame) - CGRectGetMidX(currentCell.frame);
+    CGFloat centerX = CGRectGetMidX(currentCell.frame) + fabs(progress)*distance;
+    self.shadowLine.center = CGPointMake(centerX, self.shadowLine.center.y);
+  
+}
+
 #pragma mark - other
 - (void)updatePositonWithIndex:(NSInteger)index {
     [self updateShadowLineCenterForIndex:index];
@@ -81,6 +98,7 @@
     [self.collectionView selectItemAtIndexPath:indexPath animated:YES scrollPosition:UICollectionViewScrollPositionNone];
 }
 
+#pragma mark - UICollectionViewDataSource
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     SliderSwitchCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass(SliderSwitchCell.class) forIndexPath:indexPath];
@@ -116,7 +134,7 @@
 - (CGFloat)collectionView:(UICollectionView *)collectionView
                    layout:(UICollectionViewLayout*)collectionViewLayout
 minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-    return 10;
+    return 0;
 }
 
 #pragma mark - UICollectionViewDelegate
@@ -126,11 +144,12 @@ minimumLineSpacingForSectionAtIndex:(NSInteger)section {
         return;
     }
     self.indexPathSelected = indexPath;
-    
+
     if ([self.delegate respondsToSelector:@selector(sliderSwitch:didSelectedIndex:)]) {
         [self.delegate sliderSwitch:self didSelectedIndex:indexPath.item];
     } else {
         [self updateShadowLineCenterForIndex:indexPath.item];
     }
 }
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SliderSwitchCell.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -23,7 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithFrame:(CGRect)frame titles:(NSArray *)titlesArray;
 
-- (void)updatePositonWithIndex:(NSInteger)index;
+- (void)showShadowAnimationWithProgress:(CGFloat)progress;
+
 @end
 
 NS_ASSUME_NONNULL_END

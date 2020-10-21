@@ -10,14 +10,13 @@
 #import "Test1ViewController.h"
 #import "Test2ViewController.h"
 #import "DHScrollView.h"
-//#import "NLSliderSwitch.h"
 #import "SliderSwitch.h"
 
 #define TopBarHeight (([UIScreen mainScreen].bounds.size.height >= 812.0) ? 88.f : 64.f)
 
 @interface HomeViewController ()<GKViewControllerPushDelegate, UITabBarControllerDelegate, UIScrollViewDelegate, SliderSwitchDelegate>
 @property (weak, nonatomic) IBOutlet UIView *topBgView;
-//@property (nonatomic, strong) NLSliderSwitch *sliderSwitch;
+
 @property (strong, nonatomic) SliderSwitch *sliderSwitch;
 @property (nonatomic, strong) DHScrollView *mainScrolView;
 
@@ -30,6 +29,7 @@
 
 @implementation HomeViewController
 
+#pragma mark - life
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.greenColor;
@@ -42,20 +42,14 @@
     [self settingUpUI];
 }
 
+- (void)dealloc {
+    NSLog(@"%@ dealloc", NSStringFromClass([self class]));
+}
+
+#pragma mark - UI
 - (void)settingUpUI {
     self.sliderSwitch = [[SliderSwitch alloc]initWithFrame:CGRectMake(0, 0, 200, 44) titles:@[@"test1VC",@"test2VC"]];
     self.sliderSwitch.delegate = self;
-//    self.sliderSwitch = [[NLSliderSwitch alloc]initWithFrame:CGRectMake(0, 0, 200, 44) buttonSize:CGSizeMake(100, 44)];
-//    self.sliderSwitch.titleArray = @[@"test1VC",@"test2VC"];
-//    self.sliderSwitch.normalTitleColor = [UIColor whiteColor];
-//    self.sliderSwitch.selectedTitleColor = [UIColor whiteColor];
-//    self.sliderSwitch.selectedButtonColor = [UIColor whiteColor];
-//    self.sliderSwitch.titleFont = [UIFont systemFontOfSize:15];
-//    self.sliderSwitch.backgroundColor = [UIColor clearColor];
-//    self.sliderSwitch.delegate = (id)self;
-//    self.sliderSwitch.viewControllers = @[self.test1VC,self.test2VC];
-//    [self.topBgView addSubview:self.sliderSwitch];
-    
     [self.topBgView addSubview:self.sliderSwitch];
     
     
@@ -81,52 +75,23 @@
     self.mainScrolView.contentOffset = CGPointMake(0, 0);
     [self.view insertSubview:self.topBgView aboveSubview:self.mainScrolView];
 }
+
+#pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    CGFloat pageIndex = scrollView.contentOffset.x/scrollView.bounds.size.width;
-
-    int page = pageIndex;
-    [self.sliderSwitch updatePositonWithIndex:page];
-//    CGFloat sliderLayerX = CGRectGetWidth(self.sliderSwitch.sliderLayer.frame) * pageIndex;
-//    CGFloat sliderLayerY = CGRectGetMinY(self.sliderSwitch.sliderLayer.frame);
-//    CGFloat sliderLayerW = CGRectGetWidth(self.sliderSwitch.sliderLayer.frame);
-//    CGFloat sliderLayerH = CGRectGetHeight(self.sliderSwitch.sliderLayer.frame);
-//    self.sliderSwitch.sliderLayer.frame = CGRectMake(sliderLayerX, sliderLayerY, sliderLayerW, sliderLayerH);
-
-    NSLog(@"xwh：%f", pageIndex);
+    CGFloat value = scrollView.contentOffset.x - scrollView.bounds.size.width;
+    CGFloat progress = value/scrollView.bounds.size.width;
+    
+    [self.sliderSwitch showShadowAnimationWithProgress:progress];
 }
-//- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-//    if (scrollView == self.mainScrolView) {
-//        float xx = scrollView.contentOffset.x;
-//        int rate = round(xx/[UIScreen mainScreen].bounds.size.width);
-//        if (rate != self.sliderSwitch.selectedIndex)
-//        {
-//            [self.sliderSwitch slideToIndex:rate];
-//        }
-//    }
-//}
-//
-//- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-//    CGFloat pageIndex = scrollView.contentOffset.x/scrollView.bounds.size.width;
-//
-//    CGFloat sliderLayerX = CGRectGetWidth(self.sliderSwitch.sliderLayer.frame) * pageIndex;
-//    CGFloat sliderLayerY = CGRectGetMinY(self.sliderSwitch.sliderLayer.frame);
-//    CGFloat sliderLayerW = CGRectGetWidth(self.sliderSwitch.sliderLayer.frame);
-//    CGFloat sliderLayerH = CGRectGetHeight(self.sliderSwitch.sliderLayer.frame);
-//    self.sliderSwitch.sliderLayer.frame = CGRectMake(sliderLayerX, sliderLayerY, sliderLayerW, sliderLayerH);
-//
-//    NSLog(@"xwh：%f", pageIndex);
-//}
-//
-//
-//- (void)sliderSwitch:(NLSliderSwitch *)sliderSwitch didSelectedIndex:(NSInteger)selectedIndex{
-//    [self.mainScrolView scrollRectToVisible:CGRectMake(selectedIndex * [UIScreen mainScreen].bounds.size.width, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) animated:YES];
-//}
 
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    int pageIndex = scrollView.contentOffset.x/scrollView.bounds.size.width;
+    NSLog(@"xwh：%@", NSStringFromClass([self.childVCs[pageIndex] class]));
+}
+
+#pragma mark - SliderSwitchDelegate
 - (void)sliderSwitch:(SliderSwitch *)sliderSwitch didSelectedIndex:(NSInteger)selectedIndex {
     [self.mainScrolView scrollRectToVisible:CGRectMake(selectedIndex * [UIScreen mainScreen].bounds.size.width, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) animated:YES];
-}
-- (void)dealloc {
-    NSLog(@"%@ dealloc", NSStringFromClass([self class]));
 }
 
 #pragma mark - GKViewControllerPushDelegate
