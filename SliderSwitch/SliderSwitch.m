@@ -39,7 +39,8 @@
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
 
-    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height) collectionViewLayout:flowLayout];
+    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height-4) collectionViewLayout:flowLayout];
+    self.collectionView.backgroundColor = UIColor.clearColor;
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass(SliderSwitchCell.class) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass(SliderSwitchCell.class)];
@@ -49,7 +50,7 @@
     
     self.shadowLine = [[UIView alloc] init];
     self.shadowLine.backgroundColor = UIColor.whiteColor;
-    self.shadowLine.frame = CGRectMake(0, 0, 40, 4);
+    self.shadowLine.frame = CGRectMake(0, self.frame.size.height-4, 40, 4);
     self.shadowLine.layer.cornerRadius = self.shadowLine.frame.size.height/2.0f;
     self.shadowLine.layer.masksToBounds = true;
     self.shadowLine.hidden = YES;
@@ -63,7 +64,7 @@
     SliderSwitchCell *cell = (SliderSwitchCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]];
     CGRect cellFrame = cell.frame;
     CGFloat centerX = CGRectGetMidX(cellFrame);
-    CGPoint shadowCenter = CGPointMake(centerX, 0);
+    CGPoint shadowCenter = CGPointMake(centerX, self.shadowLine.center.y);
     if (shadowCenter.x > 0) {
         self.shadowLine.hidden = NO;
         self.shadowLine.center = shadowCenter;
@@ -77,9 +78,14 @@
 
 - (void)showShadowAnimationWithProgress:(CGFloat)progress
 {
-    NSInteger indexSelected = self.indexPathSelected.item - 1 < 0 ? 1 : self.indexPathSelected.item;
-    NSInteger targetIndex = indexSelected - 1;
-    NSInteger currentIndex = indexSelected;
+//    return;
+    //获取下一个index
+//    NSInteger targetIndex = progress < 0 ? self.indexPathSelected.item - 1 : self.indexPathSelected.item + 1;
+//    if (targetIndex < 0 || targetIndex >= self.dataArray.count) {return;}
+//    NSInteger indexSelected = self.indexPathSelected.item - 1 < 0 ? 1 : self.indexPathSelected.item;
+    NSInteger targetIndex = self.indexPathSelected.item;//0;//indexSelected - 1;
+    NSInteger currentIndex = self.indexPathSelected.item+1;
+    NSLog(@"xwh=== %ld, %ld, %lf",targetIndex, currentIndex,progress);
 
     //获取cell
     SliderSwitchCell *currentCell = (SliderSwitchCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:currentIndex inSection:0]];
@@ -88,7 +94,6 @@
     CGFloat distance = CGRectGetMidX(targetCell.frame) - CGRectGetMidX(currentCell.frame);
     CGFloat centerX = CGRectGetMidX(currentCell.frame) + fabs(progress)*distance;
     self.shadowLine.center = CGPointMake(centerX, self.shadowLine.center.y);
-  
 }
 
 #pragma mark - other
@@ -120,7 +125,9 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView
                   layout:(UICollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(100 , 44);
+    CGFloat cellW = self.frame.size.width/self.dataArray.count;
+    CGFloat cellH = self.frame.size.height-4;
+    return CGSizeMake(cellW, cellH);
 }
 
 //item边距

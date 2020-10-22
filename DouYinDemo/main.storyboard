@@ -18,19 +18,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oEp-ft-5nM">
-                                <rect key="frame" x="60" y="10" width="200" height="44"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="60" y="20" width="200" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Br7-Zx-i7J"/>
                                     <constraint firstAttribute="width" constant="200" id="dfW-uA-1ce"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="kA6-T3-siW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="oEp-ft-5nM" firstAttribute="centerX" secondItem="IW0-tg-p6b" secondAttribute="centerX" id="FDf-K7-1mS"/>
-                            <constraint firstItem="oEp-ft-5nM" firstAttribute="top" secondItem="kA6-T3-siW" secondAttribute="top" constant="10" id="FDs-ji-Yfy"/>
+                            <constraint firstItem="oEp-ft-5nM" firstAttribute="top" secondItem="IW0-tg-p6b" secondAttribute="top" constant="20" id="FDs-ji-Yfy"/>
                         </constraints>
                     </view>
                     <connections>
@@ -92,6 +91,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckM-Rx-KPq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2465" y="189"/>
+        </scene>
+        <!--Test3 View Controller-->
+        <scene sceneID="fQP-bj-BHB">
+            <objects>
+                <viewController storyboardIdentifier="Test3ViewController" id="clp-99-b6a" customClass="Test3ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XFv-J9-fEO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2X3-9i-Hzb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0wJ-AT-bnM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1688" y="189"/>
         </scene>
     </scenes>
     <resources>

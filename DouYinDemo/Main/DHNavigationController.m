@@ -19,12 +19,4 @@
     // Do any additional setup after loading the view.
 }
 
-
-//- (void)pushLiveRoomTest2ViewControllerWithModel:(LivePlay *)model
-//{
-//    LiveRoomTest2ViewController *vc = HNWLoadControllerFromStoryboard(SBLiveName, NSStringFromClass(LiveRoomTest2ViewController.class));
-//    vc.livePlayModel = model;
-//    vc.hidesBottomBarWhenPushed = YES;
-//    [self pushViewController:vc animated:YES];
-//}
 @end

@@ -19,16 +19,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F23A93A3-541F-4868-ABC1-9A06A9B396EB"
-            shouldBeEnabled = "No"
+            uuid = "9B9F8861-9B69-421E-90C7-53F2206911DA"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "NLSliderSwitch/NLSliderSwitch.m"
+            filePath = "SliderSwitch/SliderSwitch.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "-setTitleArray:"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
+            landmarkName = "-collectionView:didSelectItemAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

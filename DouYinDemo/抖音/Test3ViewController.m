@@ -1,22 +1,22 @@
 //
-//  Test1ViewController.m
+//  Test3ViewController.m
 //  DouYinDemo
 //
-//  Created by HN on 2020/9/15.
-//  Copyright © 2020 cnhnb. All rights reserved.
+//  Created by HN on 2020/10/22.
+//  Copyright © 2020 HN. All rights reserved.
 //
 
-#import "Test1ViewController.h"
+#import "Test3ViewController.h"
 
-@interface Test1ViewController ()
+@interface Test3ViewController ()
 
 @end
 
-@implementation Test1ViewController
+@implementation Test3ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.gk_statusBarStyle = UIStatusBarStyleLightContent;
+    // Do any additional setup after loading the view.
     self.gk_navigationBar.hidden = YES;
 
     UILabel *label = [[UILabel alloc]init];
@@ -28,7 +28,7 @@
     label.text = [NSString stringWithFormat:@"%s",__func__];
     [self.view addSubview:label];
     
-    self.view.backgroundColor = UIColor.redColor;
+    self.view.backgroundColor = UIColor.greenColor;
 }
 
 @end

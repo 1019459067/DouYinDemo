@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DHScrollView : UIScrollView
 
+@property (assign, nonatomic) NSInteger scrollPageIndex; // 可滑动push的临界下标
 @end
 
 NS_ASSUME_NONNULL_END

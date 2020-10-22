@@ -43,8 +43,7 @@
             }
             
             // 临界点：scrollView滑动到最后一屏时的x轴位置，可根据需求改变
-            CGFloat criticalPoint = [UIScreen mainScreen].bounds.size.width;
-            
+            CGFloat criticalPoint = [UIScreen mainScreen].bounds.size.width * self.scrollPageIndex;
             // point.x < 0 代表左滑即手指从屏幕右边向左移动
             // 当UIScrollview滑动到临界点时，则不再相应UIScrollview的滑动左滑手势，防止与左滑手势冲突
             if (point.x < 0 && self.contentOffset.x == criticalPoint) {

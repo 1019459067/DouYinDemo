@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "Test1ViewController.h"
 #import "Test2ViewController.h"
+#import "Test3ViewController.h"
 #import "DHScrollView.h"
 #import "SliderSwitch.h"
 
@@ -22,6 +23,7 @@
 
 @property (nonatomic, strong) Test1ViewController *test1VC;
 @property (nonatomic, strong) Test2ViewController *test2VC;
+@property (nonatomic, strong) Test3ViewController *test3VC;
 
 @property (nonatomic, strong) NSArray *childVCs;
 
@@ -39,7 +41,7 @@
     // 设置左滑push代理
     self.gk_pushDelegate = self;
 
-    [self settingUpUI];
+    [self settingUI];
 }
 
 - (void)dealloc {
@@ -47,18 +49,17 @@
 }
 
 #pragma mark - UI
-- (void)settingUpUI {
-    self.sliderSwitch = [[SliderSwitch alloc]initWithFrame:CGRectMake(0, 0, 200, 44) titles:@[@"test1VC",@"test2VC"]];
+- (void)settingUI {
+    self.sliderSwitch = [[SliderSwitch alloc]initWithFrame:CGRectMake(0, 0, 200, 44) titles:@[@"test1VC", @"test2VC", @"test3VC"]];
     self.sliderSwitch.delegate = self;
     [self.topBgView addSubview:self.sliderSwitch];
     
+    self.childVCs = @[self.test1VC, self.test2VC, self.test3VC];
     
     // scrolView
     [self.view addSubview:self.mainScrolView];
     self.mainScrolView.frame = self.view.bounds;
     
-    self.childVCs = @[self.test1VC, self.test2VC];
-
     CGFloat w = [UIScreen mainScreen].bounds.size.width;
     CGFloat h = [UIScreen mainScreen].bounds.size.height;
 
@@ -80,18 +81,26 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat value = scrollView.contentOffset.x - scrollView.bounds.size.width;
     CGFloat progress = value/scrollView.bounds.size.width;
-    
+
     [self.sliderSwitch showShadowAnimationWithProgress:progress];
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    int pageIndex = scrollView.contentOffset.x/scrollView.bounds.size.width;
-    NSLog(@"xwh：%@", NSStringFromClass([self.childVCs[pageIndex] class]));
+    NSInteger pageIndex = scrollView.contentOffset.x/scrollView.bounds.size.width;
+    [self sliderSwitchDidSelectedIndex:pageIndex];
+    
+    NSLog(@"xwh===  %ld",pageIndex);
+}
+
+- (void)sliderSwitchDidSelectedIndex:(NSInteger)index
+{
+    NSLog(@"xwh：%@", NSStringFromClass([self.childVCs[index] class]));
 }
 
 #pragma mark - SliderSwitchDelegate
 - (void)sliderSwitch:(SliderSwitch *)sliderSwitch didSelectedIndex:(NSInteger)selectedIndex {
     [self.mainScrolView scrollRectToVisible:CGRectMake(selectedIndex * [UIScreen mainScreen].bounds.size.width, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) animated:YES];
+    [self sliderSwitchDidSelectedIndex:selectedIndex];
 }
 
 #pragma mark - GKViewControllerPushDelegate
@@ -104,7 +113,8 @@
 #pragma mark - 懒加载
 - (DHScrollView *)mainScrolView {
     if (!_mainScrolView) {
-        _mainScrolView = [DHScrollView new];
+        _mainScrolView = [[DHScrollView alloc]init];
+        _mainScrolView.scrollPageIndex = self.childVCs.count-1;
         _mainScrolView.pagingEnabled = YES;
         _mainScrolView.showsHorizontalScrollIndicator = NO;
         _mainScrolView.showsVerticalScrollIndicator = NO;
@@ -131,6 +141,13 @@
         _test2VC = HNWLoadControllerFromStoryboard(SBName, NSStringFromClass(Test2ViewController.class));
     }
     return _test2VC;
+}
+
+- (Test3ViewController *)test3VC {
+    if (!_test3VC) {
+        _test3VC = HNWLoadControllerFromStoryboard(SBName, NSStringFromClass(Test3ViewController.class));
+    }
+    return _test3VC;
 }
 
 @end

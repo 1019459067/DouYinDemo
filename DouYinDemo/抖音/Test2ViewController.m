@@ -23,12 +23,12 @@
     label.bounds = CGRectMake(0, 0, self.view.frame.size.width, 50);
     label.center = CGPointMake(self.view.frame.size.width/2., self.view.frame.size.height/2.);
     label.textAlignment = NSTextAlignmentCenter;
-    label.textColor = UIColor.yellowColor;
+    label.textColor = UIColor.whiteColor;
     label.adjustsFontSizeToFitWidth = YES;
     label.text = [NSString stringWithFormat:@"%s",__func__];
     [self.view addSubview:label];
     
-    self.view.backgroundColor = UIColor.systemPinkColor;
+    self.view.backgroundColor = UIColor.orangeColor;
 }
 
 @end
