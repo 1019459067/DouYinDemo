@@ -75,24 +75,27 @@
     // 默认显示播放器页
     self.mainScrolView.contentOffset = CGPointMake(0, 0);
     [self.view insertSubview:self.topBgView aboveSubview:self.mainScrolView];
+    
+    [self slideTabBarView:self.slideTabBarView didSelectedIndex:1];
 }
 
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    [self.slideTabBarView slideTabBarView:self.slideTabBarView scrollViewDidScroll:scrollView];
+    [self.slideTabBarView updateSlideViewWithScroll:scrollView];
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    [self.slideTabBarView slideTabBarView:self.slideTabBarView scrollViewDidEndDecelerating:scrollView];
-
+    [self.slideTabBarView updateCurrentPageWithScroll:scrollView];
 }
 
 #pragma mark - SlideTabBarViewDelegate
-- (void)slideTabBarView:(SlideTabBarView *)slideTabBarView didSelectedIndex:(NSInteger)selectedIndex {
+- (void)slideTabBarView:(SlideTabBarView *)slideTabBarView
+       didSelectedIndex:(NSInteger)selectedIndex {
     [self.mainScrolView setContentOffset:CGPointMake(selectedIndex * self.mainScrolView.frame.size.width, 0) animated:YES];
 }
 
-- (void)slideTabBarView:(SlideTabBarView *)slideTabBarView didSelectedPageIndex:(NSInteger)pageIndex
+- (void)slideTabBarView:(SlideTabBarView *)slideTabBarView
+   didSelectedPageIndex:(NSInteger)pageIndex
 {
     NSLog(@"xwh：%@", NSStringFromClass([self.childVCs[pageIndex] class]));
 }

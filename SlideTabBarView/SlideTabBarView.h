@@ -24,9 +24,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithFrame:(CGRect)frame titles:(NSArray *)titlesArray;
 
-- (void)slideTabBarView:(SlideTabBarView *)slideTabBarView scrollViewDidScroll:(UIScrollView *)scrollView;
+- (void)updateCurrentPageWithScroll:(UIScrollView *)scrollView;
+- (void)updateSlideViewWithScroll:(UIScrollView *)scrollView;
 
-- (void)slideTabBarView:(SlideTabBarView *)slideTabBarView scrollViewDidEndDecelerating:(UIScrollView *)scrollView;
 @end
 
 NS_ASSUME_NONNULL_END

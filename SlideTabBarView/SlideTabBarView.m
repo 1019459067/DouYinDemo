@@ -10,11 +10,6 @@
 
 @interface SlideTabBarView ()
 
-@property (strong, nonatomic) NSArray *dataArray;
-
-///@brife 上方的按钮数组
-@property (strong, nonatomic) NSMutableArray *topViews;
-
 ///@brife 下面滑动的View
 @property (strong, nonatomic) UIView *slideView;
 
@@ -25,6 +20,8 @@
 @property (strong, nonatomic) UIScrollView *topScrollView;
 
 @property (assign, nonatomic) NSInteger currentPage;
+@property (strong, nonatomic) NSArray *dataArray;
+
 @end
 
 @implementation SlideTabBarView
@@ -32,7 +29,6 @@
 - (instancetype)initWithFrame:(CGRect)frame titles:(NSArray *)titlesArray {
     if (self = [super initWithFrame:frame]) {
         self.dataArray = titlesArray;
-        _topViews = [[NSMutableArray alloc] init];
 
         [self initTopTabs];
         [self initSlideView];
@@ -47,11 +43,12 @@
 #pragma mark - UI
 #pragma mark -- 初始化滑动的指示View
 - (void)initSlideView {
-    
-    CGFloat slideW = self.frame.size.width / self.dataArray.count *  0.75;
+    CGFloat slideX = self.frame.size.width / self.dataArray.count * (1-0.5)/2.;
+    CGFloat slideW = self.frame.size.width / self.dataArray.count * 0.5;
 
-    self.slideView = [[UIView alloc] initWithFrame:CGRectMake(self.frame.size.width / self.dataArray.count * (1-0.75)/2., self.frame.size.height - 5, slideW, 5)];
-    [self.slideView setBackgroundColor:[UIColor whiteColor]];
+    self.slideView = [[UIView alloc] initWithFrame:CGRectMake(slideX, self.frame.size.height - 4, slideW, 4)];
+    self.slideView.layer.cornerRadius = self.slideView.frame.size.height/2.;
+    self.slideView.backgroundColor = [UIColor whiteColor];
     [self.topScrollView addSubview:self.slideView];
 }
 
@@ -66,23 +63,18 @@
     self.topScrollView.bounces = NO;
     
     self.topScrollView.contentSize = CGSizeMake(self.frame.size.width, self.frame.size.height);
-    
     [self addSubview:self.topMainView];
-    
     [self.topMainView addSubview:self.topScrollView];
-    
-    
     
     for (int i = 0; i < self.dataArray.count; i ++) {
         UIView *view = [[UIView alloc] initWithFrame:CGRectMake(i * width, 0, width, self.frame.size.height)];
-        view.backgroundColor = [UIColor lightGrayColor];
         UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, width, self.frame.size.height)];
+        button.titleLabel.font = [UIFont systemFontOfSize:15];
         button.tag = i;
         [button setTitle:self.dataArray[i] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(onActionClicked:) forControlEvents:UIControlEventTouchUpInside];
         [view addSubview:button];
         
-        [_topViews addObject:view];
         [self.topScrollView addSubview:view];
     }
 }
@@ -93,7 +85,7 @@
         return;
     }
     
-    self.currentPage = sender.tag;    
+    self.currentPage = sender.tag;
     [self.delegate slideTabBarView:self didSelectedIndex:sender.tag];
     
     if ([self.delegate respondsToSelector:@selector(slideTabBarView:didSelectedIndex:)]) {
@@ -102,7 +94,7 @@
 }
 
 #pragma mark - other
-- (void)slideTabBarView:(SlideTabBarView *)slideTabBarView scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+- (void)updateCurrentPageWithScroll:(UIScrollView *)scrollView {
     self.currentPage = scrollView.contentOffset.x/scrollView.frame.size.width;
 
     if ([self.delegate respondsToSelector:@selector(slideTabBarView:didSelectedIndex:)]) {
@@ -110,10 +102,12 @@
     }
 }
 
-- (void)slideTabBarView:(SlideTabBarView *)slideTabBarView scrollViewDidScroll:(UIScrollView *)scrollView {
+- (void)updateSlideViewWithScroll:(UIScrollView *)scrollView {
     CGRect frame = self.slideView.frame;
+    CGFloat slideX = self.frame.size.width / self.dataArray.count * (1-0.5)/2.;
 
-    frame.origin.x = scrollView.contentOffset.x/[UIScreen mainScreen].bounds.size.width*self.frame.size.width/self.dataArray.count;
+    frame.origin.x = scrollView.contentOffset.x/[UIScreen mainScreen].bounds.size.width * self.frame.size.width/self.dataArray.count+slideX;
+
     self.slideView.frame = frame;
 }
 @end
