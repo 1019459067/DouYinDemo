@@ -16,7 +16,7 @@
 		A65E42B92510568A0029A1DB /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E42B32510568A0029A1DB /* HomeViewController.m */; };
 		A65E42BB2510568A0029A1DB /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E42B52510568A0029A1DB /* PersonalViewController.m */; };
 		A65E42BC2510568A0029A1DB /* Test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E42B62510568A0029A1DB /* Test1ViewController.m */; };
-		A6792BB4253D2B69000CB4DE /* SliderSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = A6792BB3253D2B69000CB4DE /* SliderSwitch.m */; };
+		A6792BB4253D2B69000CB4DE /* SlideTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6792BB3253D2B69000CB4DE /* SlideTabBarView.m */; };
 		A67DB597254115C40046A4DF /* Test3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A67DB596254115C40046A4DF /* Test3ViewController.m */; };
 		A6CC251B2524220400F44260 /* DHScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CC251A2524220400F44260 /* DHScrollView.m */; };
 		A6CC252825242FF500F44260 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6CC252725242FF500F44260 /* main.storyboard */; };
@@ -44,8 +44,8 @@
 		A65E42B62510568A0029A1DB /* Test1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test1ViewController.m; sourceTree = "<group>"; };
 		A65E42B72510568A0029A1DB /* Test2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test2ViewController.h; sourceTree = "<group>"; };
 		A65E43092510C1FA0029A1DB /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		A6792BB2253D2B69000CB4DE /* SliderSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SliderSwitch.h; sourceTree = "<group>"; };
-		A6792BB3253D2B69000CB4DE /* SliderSwitch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SliderSwitch.m; sourceTree = "<group>"; };
+		A6792BB2253D2B69000CB4DE /* SlideTabBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlideTabBarView.h; sourceTree = "<group>"; };
+		A6792BB3253D2B69000CB4DE /* SlideTabBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlideTabBarView.m; sourceTree = "<group>"; };
 		A67DB595254115C40046A4DF /* Test3ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test3ViewController.h; sourceTree = "<group>"; };
 		A67DB596254115C40046A4DF /* Test3ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test3ViewController.m; sourceTree = "<group>"; };
 		A6CC25192524220400F44260 /* DHScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHScrollView.h; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				A65E43092510C1FA0029A1DB /* PrefixHeader.pch */,
-				A6792BB1253D2B5A000CB4DE /* SliderSwitch */,
+				A6792BB1253D2B5A000CB4DE /* SlideTabBarView */,
 				A65E4293251056480029A1DB /* DouYinDemo */,
 				A65E4292251056480029A1DB /* Products */,
 				93E9769401BF4EC9437DEA3B /* Pods */,
@@ -145,13 +145,13 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		A6792BB1253D2B5A000CB4DE /* SliderSwitch */ = {
+		A6792BB1253D2B5A000CB4DE /* SlideTabBarView */ = {
 			isa = PBXGroup;
 			children = (
-				A6792BB2253D2B69000CB4DE /* SliderSwitch.h */,
-				A6792BB3253D2B69000CB4DE /* SliderSwitch.m */,
+				A6792BB2253D2B69000CB4DE /* SlideTabBarView.h */,
+				A6792BB3253D2B69000CB4DE /* SlideTabBarView.m */,
 			);
-			path = SliderSwitch;
+			path = SlideTabBarView;
 			sourceTree = "<group>";
 		};
 		A6CC251D252425DD00F44260 /* UIView */ = {
@@ -306,7 +306,7 @@
 				A65E42B82510568A0029A1DB /* Test2ViewController.m in Sources */,
 				A65E42B92510568A0029A1DB /* HomeViewController.m in Sources */,
 				A6CC252C2524312700F44260 /* DHNavigationController.m in Sources */,
-				A6792BB4253D2B69000CB4DE /* SliderSwitch.m in Sources */,
+				A6792BB4253D2B69000CB4DE /* SlideTabBarView.m in Sources */,
 				A6CC254125246C5C00F44260 /* DHTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

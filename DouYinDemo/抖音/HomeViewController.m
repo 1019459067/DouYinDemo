@@ -11,14 +11,14 @@
 #import "Test2ViewController.h"
 #import "Test3ViewController.h"
 #import "DHScrollView.h"
-#import "SliderSwitch.h"
+#import "SlideTabBarView.h"
 
 #define TopBarHeight (([UIScreen mainScreen].bounds.size.height >= 812.0) ? 88.f : 64.f)
 
-@interface HomeViewController ()<GKViewControllerPushDelegate, UITabBarControllerDelegate, UIScrollViewDelegate, SliderSwitchDelegate>
+@interface HomeViewController ()<GKViewControllerPushDelegate, UITabBarControllerDelegate, UIScrollViewDelegate, SlideTabBarViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *topBgView;
 
-@property (strong, nonatomic) SliderSwitch *sliderSwitch;
+@property (strong, nonatomic) SlideTabBarView *slideTabBarView;
 @property (nonatomic, strong) DHScrollView *mainScrolView;
 
 @property (nonatomic, strong) Test1ViewController *test1VC;
@@ -50,9 +50,9 @@
 
 #pragma mark - UI
 - (void)settingUI {
-    self.sliderSwitch = [[SliderSwitch alloc]initWithFrame:CGRectMake(0, 0, 200, 44) titles:@[@"test1VC", @"test2VC", @"test3VC"]];
-    self.sliderSwitch.delegate = self;
-    [self.topBgView addSubview:self.sliderSwitch];
+    self.slideTabBarView = [[SlideTabBarView alloc]initWithFrame:CGRectMake(0, 0, 200, 44) titles:@[@"test1VC", @"test2VC", @"test3VC"]];
+    self.slideTabBarView.delegate = self;
+    [self.topBgView addSubview:self.slideTabBarView];
     
     self.childVCs = @[self.test1VC, self.test2VC, self.test3VC];
     
@@ -79,22 +79,22 @@
 
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    [self.sliderSwitch sliderSwitch:self.sliderSwitch scrollViewDidScroll:scrollView];
+    [self.slideTabBarView slideTabBarView:self.slideTabBarView scrollViewDidScroll:scrollView];
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    [self.sliderSwitch sliderSwitch:self.sliderSwitch scrollViewDidEndDecelerating:scrollView];
+    [self.slideTabBarView slideTabBarView:self.slideTabBarView scrollViewDidEndDecelerating:scrollView];
 
 }
 
-#pragma mark - SliderSwitchDelegate
-- (void)sliderSwitch:(SliderSwitch *)sliderSwitch button:(UIButton *)sender {
-    [self.mainScrolView setContentOffset:CGPointMake(sender.tag * self.mainScrolView.frame.size.width, 0) animated:YES];
+#pragma mark - SlideTabBarViewDelegate
+- (void)slideTabBarView:(SlideTabBarView *)slideTabBarView didSelectedIndex:(NSInteger)selectedIndex {
+    [self.mainScrolView setContentOffset:CGPointMake(selectedIndex * self.mainScrolView.frame.size.width, 0) animated:YES];
 }
 
-- (void)sliderSwitch:(SliderSwitch *)sliderSwitch didSelectedIndex:(NSInteger)selectedIndex
+- (void)slideTabBarView:(SlideTabBarView *)slideTabBarView didSelectedPageIndex:(NSInteger)pageIndex
 {
-    NSLog(@"xwh：%@", NSStringFromClass([self.childVCs[selectedIndex] class]));
+    NSLog(@"xwh：%@", NSStringFromClass([self.childVCs[pageIndex] class]));
 }
 
 #pragma mark - GKViewControllerPushDelegate
