@@ -12,20 +12,21 @@
 #import "Test3ViewController.h"
 #import "DHScrollView.h"
 #import "SlideTabBarView.h"
-
-#define TopBarHeight (([UIScreen mainScreen].bounds.size.height >= 812.0) ? 88.f : 64.f)
+#import "PlayLoadingView.h"
 
 @interface HomeViewController ()<GKViewControllerPushDelegate, UITabBarControllerDelegate, UIScrollViewDelegate, SlideTabBarViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *topBgView;
+@property (weak, nonatomic) IBOutlet UIButton *showLoadingButton;
 
 @property (strong, nonatomic) SlideTabBarView *slideTabBarView;
-@property (nonatomic, strong) DHScrollView *mainScrolView;
+@property (strong, nonatomic) DHScrollView *mainScrolView;
+@property (strong, nonatomic) PlayLoadingView *playLoadingView;
 
-@property (nonatomic, strong) Test1ViewController *test1VC;
-@property (nonatomic, strong) Test2ViewController *test2VC;
-@property (nonatomic, strong) Test3ViewController *test3VC;
+@property (strong, nonatomic) Test1ViewController *test1VC;
+@property (strong, nonatomic) Test2ViewController *test2VC;
+@property (strong, nonatomic) Test3ViewController *test3VC;
 
-@property (nonatomic, strong) NSArray *childVCs;
+@property (strong, nonatomic) NSArray *childVCs;
 
 @end
 
@@ -42,6 +43,7 @@
     self.gk_pushDelegate = self;
 
     [self settingUI];
+    [self addPlayLoadingView];
 }
 
 - (void)dealloc {
@@ -75,8 +77,20 @@
     // 默认显示播放器页
     self.mainScrolView.contentOffset = CGPointMake(0, 0);
     [self.view insertSubview:self.topBgView aboveSubview:self.mainScrolView];
-    
+    [self.view insertSubview:self.showLoadingButton aboveSubview:self.mainScrolView];
+
     [self slideTabBarView:self.slideTabBarView didSelectedIndex:1];
+}
+
+- (void)addPlayLoadingView {
+    self.playLoadingView = [[PlayLoadingView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-49-self.view.safeAreaInsets.bottom, [UIScreen mainScreen].bounds.size.width, 2) postionX:self.view.center.x];
+    self.playLoadingView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.1];
+    [self.view addSubview:self.playLoadingView];
+}
+
+- (IBAction)onActionTest:(UIButton *)sender {
+    sender.selected = !sender.selected;
+    [self.playLoadingView showLoadingPlayAnimation:sender.selected];
 }
 
 #pragma mark - UIScrollViewDelegate

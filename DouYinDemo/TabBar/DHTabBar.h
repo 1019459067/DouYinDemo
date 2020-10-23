@@ -21,8 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DHTabBar : UITabBar
 
-@property (nonatomic, strong) UIView *indicatorLine;
-@property (nonatomic, strong) UIButton *issueBtn;
+@property (strong, nonatomic) UIView *indicatorLine;
+@property (strong, nonatomic) UIButton *centerButton;
 
 - (void)showLine;
 - (void)hideLine;

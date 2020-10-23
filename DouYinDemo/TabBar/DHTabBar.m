@@ -31,14 +31,14 @@
     [super layoutSubviews];
     [self addSubview:self.indicatorLine];
     CGFloat width = 50;
-    self.issueBtn.frame = CGRectMake((ScreenWidth-width)/2, 2, width, width);
+    self.centerButton.frame = CGRectMake((ScreenWidth-width)/2, 2, width, width);
     CGFloat tabBarButtonW = ScreenWidth / 5;
     CGFloat tabBarButtonIndex = 0;
     for (UIView *child in self.subviews) {
         Class class = NSClassFromString(@"UITabBarButton");
         if ([child isKindOfClass:class]) {
             // 重新设置frame
-            CGRect frame = CGRectMake(tabBarButtonIndex * tabBarButtonW, 0, tabBarButtonW, 49);
+            CGRect frame = CGRectMake(tabBarButtonIndex * tabBarButtonW, 0, tabBarButtonW, 47);
             child.frame = frame;
             // 增加索引
             if (tabBarButtonIndex == 1) {
@@ -49,24 +49,23 @@
     }
 }
 
-- (void)issueBtnAction:(UIButton *)sender{
+- (void)issueBtnAction:(UIButton *)sender {
     [[NSNotificationCenter defaultCenter]postNotificationName:@"issueBtnActionNotification" object:nil];
 }
 
-
-- (UIButton *)issueBtn {
-    if (!_issueBtn) {
-        _issueBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [self addSubview:_issueBtn];
-        [_issueBtn setImage:[UIImage imageNamed:@"tabbar_camera_image_normal"] forState:UIControlStateNormal];
-        _issueBtn.adjustsImageWhenHighlighted = false;
-        [_issueBtn addTarget:self action:@selector(issueBtnAction:) forControlEvents:UIControlEventTouchUpInside];
+- (UIButton *)centerButton {
+    if (!_centerButton) {
+        _centerButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [self addSubview:_centerButton];
+        [_centerButton setImage:[UIImage imageNamed:@"tabbar_camera_image_normal"] forState:UIControlStateNormal];
+        _centerButton.adjustsImageWhenHighlighted = false;
+        [_centerButton addTarget:self action:@selector(issueBtnAction:) forControlEvents:UIControlEventTouchUpInside];
     }
-    return _issueBtn;
+    return _centerButton;
 }
-- (UIView *)indicatorLine{
+- (UIView *)indicatorLine {
     if (!_indicatorLine) {
-        _indicatorLine = [[UIView alloc]initWithFrame:CGRectMake(1/15.0f*[UIScreen mainScreen].bounds.size.width, iPhoneX?45:40, 1/15.0f*[UIScreen mainScreen].bounds.size.width, 2)];
+        _indicatorLine = [[UIView alloc]initWithFrame:CGRectMake(1/15.0f*[UIScreen mainScreen].bounds.size.width, 47, 1/15.0f*[UIScreen mainScreen].bounds.size.width, 2)];
         _indicatorLine.backgroundColor = UIColor.whiteColor;
         [self addSubview:_indicatorLine];
     }

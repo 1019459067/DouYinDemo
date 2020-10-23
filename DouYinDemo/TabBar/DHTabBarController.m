@@ -27,8 +27,8 @@
     // Do any additional setup after loading the view.
     self.delegate = self;
     
-    self.tabBar = [DHTabBar new];
-    [self setValue:self.tabBar forKey:@"tabBar"];
+    self.dhTabBar = [DHTabBar new];
+    [self setValue:self.dhTabBar forKey:@"tabBar"];
     
     HomeViewController *homeVC = HNWLoadControllerFromStoryboard(SBName, NSStringFromClass(HomeViewController.class));
     PersonalViewController *personalVC = HNWLoadControllerFromStoryboard(SBName, NSStringFromClass(PersonalViewController.class));
@@ -57,17 +57,17 @@
     NSDictionary *info = notification.userInfo;
     NSInteger tabBarIndex = [info[@"index"] integerValue];
     ///修改tabBarItem上的indicatorLine的颜色和中心按钮图片
-    self.tabBar.backgroundImage = tabBarIndex ? [self imageWithColor:[UIColor colorWithRed:255 green:255 blue:255 alpha:1]] : [self imageWithColor:[UIColor colorWithRed:1 green:1 blue:1 alpha:0]];
+    self.dhTabBar.backgroundImage = tabBarIndex ? [self imageWithColor:[UIColor colorWithRed:255 green:255 blue:255 alpha:1]] : [self imageWithColor:[UIColor colorWithRed:1 green:1 blue:1 alpha:0]];
 //    self.tabBar.shadowImage = [UIImage new];
-    self.tabBar.indicatorLine.backgroundColor = tabBarIndex ? UIColor.redColor : UIColor.whiteColor;
-    [self.tabBar.issueBtn setImage:[UIImage imageNamed:tabBarIndex ? @"tabbar_camera_image_selected" : @"tabbar_camera_image_normal"] forState:UIControlStateNormal];
+    self.dhTabBar.indicatorLine.backgroundColor = tabBarIndex ? UIColor.redColor : UIColor.whiteColor;
+    [self.dhTabBar.centerButton setImage:[UIImage imageNamed:tabBarIndex ? @"tabbar_camera_image_selected" : @"tabbar_camera_image_normal"] forState:UIControlStateNormal];
     ///修改tabBarItem的文字颜色
     [self setTabbarItemtextColorWithIndex:tabBarIndex];
 //    [self viewDidLayoutSubviews];
 }
 
 - (void)addCustomChildVC:(UIViewController *)vc title:(NSString *)title imageName:(NSString *)imageName withSelectedImage:(NSString *)selectedImage {
-    self.tabBar.tintColor = UIColor.redColor;
+    self.dhTabBar.tintColor = UIColor.redColor;
     if (imageName) {
         vc.tabBarItem.image = [[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     }
@@ -81,7 +81,7 @@
     [nav.tabBarItem setTitleTextAttributes:textTitleOptions forState:UIControlStateNormal];
     [nav.tabBarItem setTitleTextAttributes:textTitleOptionsSelected forState:UIControlStateSelected];
     nav.tabBarItem.title = title;
-    self.tabBar.barTintColor = [UIColor whiteColor];
+    self.dhTabBar.barTintColor = [UIColor whiteColor];
     [self addChildViewController:nav];
     [[UITabBarItem appearance] setTitlePositionAdjustment:UIOffsetMake(0, -15)];
 }
@@ -120,7 +120,7 @@
     
     DHTabBarController *tabbar_c = (DHTabBarController *)tabBarController;
     
-    CGRect frame = tabbar_c.tabBar.indicatorLine.frame;
+    CGRect frame = tabbar_c.dhTabBar.indicatorLine.frame;
     if (index == 0) {
         frame.origin.x = 1/15.0f*[UIScreen mainScreen].bounds.size.width;
     }else if (index == 1){
@@ -130,6 +130,6 @@
     }else if (index == 3){
         frame.origin.x = 13/15.0f*[UIScreen mainScreen].bounds.size.width;
     }
-    tabbar_c.tabBar.indicatorLine.frame = frame;
+    tabbar_c.dhTabBar.indicatorLine.frame = frame;
 }
 @end

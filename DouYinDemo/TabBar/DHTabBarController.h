@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DHTabBarController : UITabBarController
 
-@property (nonatomic, strong)DHTabBar *tabBar;
+@property (strong, nonatomic) DHTabBar *dhTabBar;
 
 @end
 

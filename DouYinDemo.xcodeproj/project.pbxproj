@@ -16,6 +16,7 @@
 		A65E42B92510568A0029A1DB /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E42B32510568A0029A1DB /* HomeViewController.m */; };
 		A65E42BB2510568A0029A1DB /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E42B52510568A0029A1DB /* PersonalViewController.m */; };
 		A65E42BC2510568A0029A1DB /* Test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E42B62510568A0029A1DB /* Test1ViewController.m */; };
+		A66F431D2542C3F100EDD15B /* PlayLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = A66F431C2542C3F100EDD15B /* PlayLoadingView.m */; };
 		A6792BB4253D2B69000CB4DE /* SlideTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6792BB3253D2B69000CB4DE /* SlideTabBarView.m */; };
 		A67DB597254115C40046A4DF /* Test3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A67DB596254115C40046A4DF /* Test3ViewController.m */; };
 		A6CC251B2524220400F44260 /* DHScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CC251A2524220400F44260 /* DHScrollView.m */; };
@@ -44,6 +45,8 @@
 		A65E42B62510568A0029A1DB /* Test1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test1ViewController.m; sourceTree = "<group>"; };
 		A65E42B72510568A0029A1DB /* Test2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test2ViewController.h; sourceTree = "<group>"; };
 		A65E43092510C1FA0029A1DB /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		A66F431B2542C3F100EDD15B /* PlayLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayLoadingView.h; sourceTree = "<group>"; };
+		A66F431C2542C3F100EDD15B /* PlayLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayLoadingView.m; sourceTree = "<group>"; };
 		A6792BB2253D2B69000CB4DE /* SlideTabBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlideTabBarView.h; sourceTree = "<group>"; };
 		A6792BB3253D2B69000CB4DE /* SlideTabBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlideTabBarView.m; sourceTree = "<group>"; };
 		A67DB595254115C40046A4DF /* Test3ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test3ViewController.h; sourceTree = "<group>"; };
@@ -85,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				A65E43092510C1FA0029A1DB /* PrefixHeader.pch */,
+				A66F431A2542C3DD00EDD15B /* PlayLoadingView */,
 				A6792BB1253D2B5A000CB4DE /* SlideTabBarView */,
 				A65E4293251056480029A1DB /* DouYinDemo */,
 				A65E4292251056480029A1DB /* Products */,
@@ -143,6 +147,15 @@
 				A6CC252B2524312700F44260 /* DHNavigationController.m */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		A66F431A2542C3DD00EDD15B /* PlayLoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				A66F431B2542C3F100EDD15B /* PlayLoadingView.h */,
+				A66F431C2542C3F100EDD15B /* PlayLoadingView.m */,
+			);
+			path = PlayLoadingView;
 			sourceTree = "<group>";
 		};
 		A6792BB1253D2B5A000CB4DE /* SlideTabBarView */ = {
@@ -307,6 +320,7 @@
 				A65E42B92510568A0029A1DB /* HomeViewController.m in Sources */,
 				A6CC252C2524312700F44260 /* DHNavigationController.m in Sources */,
 				A6792BB4253D2B69000CB4DE /* SlideTabBarView.m in Sources */,
+				A66F431D2542C3F100EDD15B /* PlayLoadingView.m in Sources */,
 				A6CC254125246C5C00F44260 /* DHTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
