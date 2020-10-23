@@ -79,28 +79,22 @@
 
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    CGFloat value = scrollView.contentOffset.x - scrollView.bounds.size.width;
-    CGFloat progress = value/scrollView.bounds.size.width;
-
-    [self.sliderSwitch showShadowAnimationWithProgress:progress];
+    [self.sliderSwitch sliderSwitch:self.sliderSwitch scrollViewDidScroll:scrollView];
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    NSInteger pageIndex = scrollView.contentOffset.x/scrollView.bounds.size.width;
-    [self sliderSwitchDidSelectedIndex:pageIndex];
-    
-    NSLog(@"xwh===  %ld",pageIndex);
-}
+    [self.sliderSwitch sliderSwitch:self.sliderSwitch scrollViewDidEndDecelerating:scrollView];
 
-- (void)sliderSwitchDidSelectedIndex:(NSInteger)index
-{
-    NSLog(@"xwh：%@", NSStringFromClass([self.childVCs[index] class]));
 }
 
 #pragma mark - SliderSwitchDelegate
-- (void)sliderSwitch:(SliderSwitch *)sliderSwitch didSelectedIndex:(NSInteger)selectedIndex {
-    [self.mainScrolView scrollRectToVisible:CGRectMake(selectedIndex * [UIScreen mainScreen].bounds.size.width, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) animated:YES];
-    [self sliderSwitchDidSelectedIndex:selectedIndex];
+- (void)sliderSwitch:(SliderSwitch *)sliderSwitch button:(UIButton *)sender {
+    [self.mainScrolView setContentOffset:CGPointMake(sender.tag * self.mainScrolView.frame.size.width, 0) animated:YES];
+}
+
+- (void)sliderSwitch:(SliderSwitch *)sliderSwitch didSelectedIndex:(NSInteger)selectedIndex
+{
+    NSLog(@"xwh：%@", NSStringFromClass([self.childVCs[selectedIndex] class]));
 }
 
 #pragma mark - GKViewControllerPushDelegate

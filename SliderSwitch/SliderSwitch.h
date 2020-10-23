@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SliderSwitchCell.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol SliderSwitchDelegate <NSObject>
 
 - (void)sliderSwitch:(SliderSwitch *)sliderSwitch didSelectedIndex:(NSInteger)selectedIndex;
+- (void)sliderSwitch:(SliderSwitch *)sliderSwitch button:(UIButton *)sender;
 
 @end
 
@@ -24,8 +24,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithFrame:(CGRect)frame titles:(NSArray *)titlesArray;
 
-- (void)showShadowAnimationWithProgress:(CGFloat)progress;
+- (void)sliderSwitch:(SliderSwitch *)sliderSwitch scrollViewDidScroll:(UIScrollView *)scrollView;
 
+- (void)sliderSwitch:(SliderSwitch *)sliderSwitch scrollViewDidEndDecelerating:(UIScrollView *)scrollView;
 @end
 
 NS_ASSUME_NONNULL_END

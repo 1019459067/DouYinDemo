@@ -8,16 +8,27 @@
 
 #import "SliderSwitch.h"
 
-@interface SliderSwitch ()<UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
-//集合视图
-@property (nonatomic, strong) UICollectionView *collectionView;
+#define TOPHEIGHT 60
 
-//阴影线条
-@property (nonatomic, strong) UIView *shadowLine;
+@interface SliderSwitch ()
 
 @property (strong, nonatomic) NSArray *dataArray;
+///@brife 上方的按钮数组
+@property (strong, nonatomic) NSMutableArray *topViews;
+///@brife 当前选中页数
+//@property (assign) NSInteger currentPage;
 
-@property (strong, nonatomic) NSIndexPath *indexPathSelected;
+///@brife 下面滑动的View
+@property (strong, nonatomic) UIView *slideView;
+
+///@brife 上方的view
+@property (strong, nonatomic) UIView *topMainView;
+
+///@brife 上方的ScrollView
+@property (strong, nonatomic) UIScrollView *topScrollView;
+
+///@brife 整个视图的大小
+@property (assign) CGRect mViewFrame;
 
 @end
 
@@ -26,137 +37,92 @@
 - (instancetype)initWithFrame:(CGRect)frame titles:(NSArray *)titlesArray {
     if (self = [super initWithFrame:frame]) {
         self.dataArray = titlesArray;
-        [self setttingUI];
-        [self.collectionView reloadData];
+        _mViewFrame = frame;
+        _topViews = [[NSMutableArray alloc] init];
+
+        [self initTopTabs];
+        [self initSlideView];
         
-        [self updateShadowLineCenterForIndex:0];
+//        if ([self.delegate respondsToSelector:@selector(sliderSwitch:didSelectedIndex:)]) {
+//            [self.delegate sliderSwitch:self didSelectedIndex:0];
+//        }
     }
     return self;
 }
 
 #pragma mark - UI
-- (void)setttingUI {
-    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
-    flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-
-    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height-4) collectionViewLayout:flowLayout];
-    self.collectionView.backgroundColor = UIColor.clearColor;
-    self.collectionView.delegate = self;
-    self.collectionView.dataSource = self;
-    [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass(SliderSwitchCell.class) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass(SliderSwitchCell.class)];
-    self.collectionView.showsHorizontalScrollIndicator = false;
-    self.collectionView.bounces = NO;
-    [self addSubview:self.collectionView];
+#pragma mark -- 初始化滑动的指示View
+- (void)initSlideView {
     
-    self.shadowLine = [[UIView alloc] init];
-    self.shadowLine.backgroundColor = UIColor.whiteColor;
-    self.shadowLine.frame = CGRectMake(0, self.frame.size.height-4, 40, 4);
-    self.shadowLine.layer.cornerRadius = self.shadowLine.frame.size.height/2.0f;
-    self.shadowLine.layer.masksToBounds = true;
-    self.shadowLine.hidden = YES;
-    [self addSubview:self.shadowLine];
-    if (@available(iOS 11.0, *)) {
-        self.collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    CGFloat width = _mViewFrame.size.width / self.dataArray.count;
+
+    _slideView = [[UIView alloc] initWithFrame:CGRectMake(0, TOPHEIGHT - 5, width, 5)];
+    [_slideView setBackgroundColor:[UIColor whiteColor]];
+    [_topScrollView addSubview:_slideView];
+}
+
+#pragma mark -- 实例化顶部的tab
+-(void) initTopTabs{
+    CGFloat width = _mViewFrame.size.width / self.dataArray.count;
+    
+    _topMainView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, _mViewFrame.size.width, TOPHEIGHT)];
+    _topScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, _mViewFrame.size.width, TOPHEIGHT)];
+    _topScrollView.showsHorizontalScrollIndicator = NO;
+    _topScrollView.showsVerticalScrollIndicator = YES;
+    _topScrollView.bounces = NO;
+    
+    _topScrollView.contentSize = CGSizeMake(_mViewFrame.size.width, TOPHEIGHT);
+    
+    [self addSubview:_topMainView];
+    
+    [_topMainView addSubview:_topScrollView];
+    
+    
+    
+    for (int i = 0; i < self.dataArray.count; i ++) {
+        
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(i * width, 0, width, TOPHEIGHT)];
+        
+        view.backgroundColor = [UIColor lightGrayColor];
+        
+        if (i % 2) {
+            view.backgroundColor = [UIColor grayColor];
+        }
+        
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, width, TOPHEIGHT)];
+        button.tag = i;
+        [button setTitle:self.dataArray[i] forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(tabButton:) forControlEvents:UIControlEventTouchUpInside];
+        [view addSubview:button];
+        
+        
+        [_topViews addObject:view];
+        [_topScrollView addSubview:view];
     }
 }
 
-- (void)updateShadowLineCenterForIndex:(NSInteger)index {
-    SliderSwitchCell *cell = (SliderSwitchCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]];
-    CGRect cellFrame = cell.frame;
-    CGFloat centerX = CGRectGetMidX(cellFrame);
-    CGPoint shadowCenter = CGPointMake(centerX, self.shadowLine.center.y);
-    if (shadowCenter.x > 0) {
-        self.shadowLine.hidden = NO;
-        self.shadowLine.center = shadowCenter;
-    }else {
-        self.shadowLine.hidden = YES;
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.01 * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void){
-            [self updateShadowLineCenterForIndex:index];
-        });
-    }
-}
 
-- (void)showShadowAnimationWithProgress:(CGFloat)progress
-{
-//    return;
-    //获取下一个index
-//    NSInteger targetIndex = progress < 0 ? self.indexPathSelected.item - 1 : self.indexPathSelected.item + 1;
-//    if (targetIndex < 0 || targetIndex >= self.dataArray.count) {return;}
-//    NSInteger indexSelected = self.indexPathSelected.item - 1 < 0 ? 1 : self.indexPathSelected.item;
-    NSInteger targetIndex = self.indexPathSelected.item;//0;//indexSelected - 1;
-    NSInteger currentIndex = self.indexPathSelected.item+1;
-    NSLog(@"xwh=== %ld, %ld, %lf",targetIndex, currentIndex,progress);
 
-    //获取cell
-    SliderSwitchCell *currentCell = (SliderSwitchCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:currentIndex inSection:0]];
-    SliderSwitchCell *targetCell = (SliderSwitchCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:targetIndex inSection:0]];
-    
-    CGFloat distance = CGRectGetMidX(targetCell.frame) - CGRectGetMidX(currentCell.frame);
-    CGFloat centerX = CGRectGetMidX(currentCell.frame) + fabs(progress)*distance;
-    self.shadowLine.center = CGPointMake(centerX, self.shadowLine.center.y);
+#pragma mark --点击顶部的按钮所触发的方法
+-(void) tabButton: (id) sender{
+    UIButton *button = sender;
+    [self.delegate sliderSwitch:self button:button];
 }
 
 #pragma mark - other
-- (void)updatePositonWithIndex:(NSInteger)index {
-    [self updateShadowLineCenterForIndex:index];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:index inSection:0];
-    [self.collectionView selectItemAtIndexPath:indexPath animated:YES scrollPosition:UICollectionViewScrollPositionNone];
+- (void)sliderSwitch:(SliderSwitch *)sliderSwitch scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    NSInteger currentPage = scrollView.contentOffset.x/scrollView.frame.size.width;
+
+//    if ([self.delegate respondsToSelector:@selector(sliderSwitch:didSelectedIndex:)]) {
+//        [self.delegate sliderSwitch:self didSelectedIndex:currentPage];
+//    }
+
 }
 
-#pragma mark - UICollectionViewDataSource
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    SliderSwitchCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass(SliderSwitchCell.class) forIndexPath:indexPath];
-    if (!cell) {
-        cell = [[SliderSwitchCell alloc]init];
-    }
-    NSString *title = self.dataArray[indexPath.item];
-    cell.titleLabel.text = title.length?title:@"";
+- (void)sliderSwitch:(SliderSwitch *)sliderSwitch scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGRect frame = self.slideView.frame;
 
-    return cell;
+    frame.origin.x = scrollView.contentOffset.x/[UIScreen mainScreen].bounds.size.width*self.frame.size.width/self.dataArray.count;
+    self.slideView.frame = frame;
 }
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
-{
-    return self.dataArray.count;
-}
-
-//cell size
-- (CGSize)collectionView:(UICollectionView *)collectionView
-                  layout:(UICollectionViewLayout *)collectionViewLayout
-  sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CGFloat cellW = self.frame.size.width/self.dataArray.count;
-    CGFloat cellH = self.frame.size.height-4;
-    return CGSizeMake(cellW, cellH);
-}
-
-//item边距
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView
-                        layout:(UICollectionViewLayout *)collectionViewLayout
-        insetForSectionAtIndex:(NSInteger)section {
-    return UIEdgeInsetsMake(0, 0, 0, 0);
-}
-
-//行间距
-- (CGFloat)collectionView:(UICollectionView *)collectionView
-                   layout:(UICollectionViewLayout*)collectionViewLayout
-minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-    return 0;
-}
-
-#pragma mark - UICollectionViewDelegate
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (self.indexPathSelected == indexPath) {
-        return;
-    }
-    self.indexPathSelected = indexPath;
-
-    if ([self.delegate respondsToSelector:@selector(sliderSwitch:didSelectedIndex:)]) {
-        [self.delegate sliderSwitch:self didSelectedIndex:indexPath.item];
-    } else {
-        [self updateShadowLineCenterForIndex:indexPath.item];
-    }
-}
-
 @end

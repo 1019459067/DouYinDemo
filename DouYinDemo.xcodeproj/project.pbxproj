@@ -17,8 +17,6 @@
 		A65E42BB2510568A0029A1DB /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E42B52510568A0029A1DB /* PersonalViewController.m */; };
 		A65E42BC2510568A0029A1DB /* Test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E42B62510568A0029A1DB /* Test1ViewController.m */; };
 		A6792BB4253D2B69000CB4DE /* SliderSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = A6792BB3253D2B69000CB4DE /* SliderSwitch.m */; };
-		A6792BB9253D2B84000CB4DE /* SliderSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6792BB7253D2B84000CB4DE /* SliderSwitchCell.m */; };
-		A6792BBA253D2B84000CB4DE /* SliderSwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6792BB8253D2B84000CB4DE /* SliderSwitchCell.xib */; };
 		A67DB597254115C40046A4DF /* Test3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A67DB596254115C40046A4DF /* Test3ViewController.m */; };
 		A6CC251B2524220400F44260 /* DHScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CC251A2524220400F44260 /* DHScrollView.m */; };
 		A6CC252825242FF500F44260 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6CC252725242FF500F44260 /* main.storyboard */; };
@@ -48,9 +46,6 @@
 		A65E43092510C1FA0029A1DB /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		A6792BB2253D2B69000CB4DE /* SliderSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SliderSwitch.h; sourceTree = "<group>"; };
 		A6792BB3253D2B69000CB4DE /* SliderSwitch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SliderSwitch.m; sourceTree = "<group>"; };
-		A6792BB6253D2B84000CB4DE /* SliderSwitchCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SliderSwitchCell.h; sourceTree = "<group>"; };
-		A6792BB7253D2B84000CB4DE /* SliderSwitchCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SliderSwitchCell.m; sourceTree = "<group>"; };
-		A6792BB8253D2B84000CB4DE /* SliderSwitchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderSwitchCell.xib; sourceTree = "<group>"; };
 		A67DB595254115C40046A4DF /* Test3ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test3ViewController.h; sourceTree = "<group>"; };
 		A67DB596254115C40046A4DF /* Test3ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test3ViewController.m; sourceTree = "<group>"; };
 		A6CC25192524220400F44260 /* DHScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHScrollView.h; sourceTree = "<group>"; };
@@ -155,9 +150,6 @@
 			children = (
 				A6792BB2253D2B69000CB4DE /* SliderSwitch.h */,
 				A6792BB3253D2B69000CB4DE /* SliderSwitch.m */,
-				A6792BB6253D2B84000CB4DE /* SliderSwitchCell.h */,
-				A6792BB7253D2B84000CB4DE /* SliderSwitchCell.m */,
-				A6792BB8253D2B84000CB4DE /* SliderSwitchCell.xib */,
 			);
 			path = SliderSwitch;
 			sourceTree = "<group>";
@@ -251,7 +243,6 @@
 			files = (
 				A65E42A42510564D0029A1DB /* LaunchScreen.storyboard in Resources */,
 				A6CC252825242FF500F44260 /* main.storyboard in Resources */,
-				A6792BBA253D2B84000CB4DE /* SliderSwitchCell.xib in Resources */,
 				A65E42A12510564D0029A1DB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,7 +305,6 @@
 				A67DB597254115C40046A4DF /* Test3ViewController.m in Sources */,
 				A65E42B82510568A0029A1DB /* Test2ViewController.m in Sources */,
 				A65E42B92510568A0029A1DB /* HomeViewController.m in Sources */,
-				A6792BB9253D2B84000CB4DE /* SliderSwitchCell.m in Sources */,
 				A6CC252C2524312700F44260 /* DHNavigationController.m in Sources */,
 				A6792BB4253D2B69000CB4DE /* SliderSwitch.m in Sources */,
 				A6CC254125246C5C00F44260 /* DHTabBarController.m in Sources */,
