@@ -11,11 +11,14 @@
 
 #import <GKNavigationBarViewController/GKNavigationBarViewController.h>
 #import "DHNavigationController.h"
+#import "AppDelegate.h"
 
 #pragma mark - UI
 // 屏幕宽高
 #define SCREEN_WIDTH        [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT       [UIScreen mainScreen].bounds.size.height
+
+#define APPDELEGATE  ((AppDelegate *)[UIApplication sharedApplication].delegate)
 
 // 适配比例
 #define ADAPTATIONRATIO     SCREEN_WIDTH / 750.0f

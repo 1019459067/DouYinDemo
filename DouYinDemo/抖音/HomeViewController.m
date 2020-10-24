@@ -83,8 +83,8 @@
 }
 
 - (void)addPlayLoadingView {
-    self.playLoadingView = [[PlayLoadingView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-49-self.view.safeAreaInsets.bottom, [UIScreen mainScreen].bounds.size.width, 2) postionX:self.view.center.x];
-    self.playLoadingView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.1];
+    self.playLoadingView = [[PlayLoadingView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-49-APPDELEGATE.window.safeAreaInsets.bottom, [UIScreen mainScreen].bounds.size.width, 2) postionX:self.view.center.x];
+//    self.playLoadingView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.1];
     [self.view addSubview:self.playLoadingView];
 }
 

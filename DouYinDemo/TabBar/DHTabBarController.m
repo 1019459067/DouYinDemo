@@ -16,18 +16,16 @@
 
 @implementation DHTabBarController
 
-- (void)dealloc {
-    [[NSNotificationCenter defaultCenter]removeObserver:self name:@"issueBtnActionNotification" object:nil];
-    [[NSNotificationCenter defaultCenter]removeObserver:self name:@"tabbarSelectedIndexNotification" object:nil];
-}
-
-
+#pragma mark - life
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.delegate = self;
     
     self.dhTabBar = [DHTabBar new];
+//    const CGFloat tabBarHeight = 49 + APPDELEGATE.window.safeAreaInsets.bottom;
+//    self.dhTabBar = [[DHTabBar alloc] initWithFrame:CGRectMake(0, SCREEN_WIDTH-tabBarHeight, SCREEN_WIDTH, tabBarHeight)];
+
     [self setValue:self.dhTabBar forKey:@"tabBar"];
     
     HomeViewController *homeVC = HNWLoadControllerFromStoryboard(SBName, NSStringFromClass(HomeViewController.class));
@@ -40,8 +38,8 @@
     HomeViewController *homeVC2 = HNWLoadControllerFromStoryboard(SBName, NSStringFromClass(HomeViewController.class));
     PersonalViewController *personalVC2 = HNWLoadControllerFromStoryboard(SBName, NSStringFromClass(PersonalViewController.class));
 
-    [self addCustomChildVC:homeVC2 title:@"首页2" imageName:nil withSelectedImage:nil];
-    [self addCustomChildVC:personalVC2 title:@"我2" imageName:nil withSelectedImage:nil];
+    [self addCustomChildVC:homeVC2 title:@"首页复制" imageName:nil withSelectedImage:nil];
+    [self addCustomChildVC:personalVC2 title:@"我复制" imageName:nil withSelectedImage:nil];
 
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(presentIssueVC:) name:@"issueBtnActionNotification" object:nil];
@@ -49,11 +47,17 @@
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(tabbarBackgroundViewColor:) name:@"tabbarSelectedIndexNotification" object:nil];
 }
 
-- (void)presentIssueVC:(NSNotification *)notification{
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:@"issueBtnActionNotification" object:nil];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:@"tabbarSelectedIndexNotification" object:nil];
+}
+
+#pragma mark - other
+- (void)presentIssueVC:(NSNotification *)notification {
     NSLog(@"发布发布发布~~~~");
 }
 
-- (void)tabbarBackgroundViewColor:(NSNotification *)notification{
+- (void)tabbarBackgroundViewColor:(NSNotification *)notification {
     NSDictionary *info = notification.userInfo;
     NSInteger tabBarIndex = [info[@"index"] integerValue];
     ///修改tabBarItem上的indicatorLine的颜色和中心按钮图片
@@ -97,7 +101,7 @@
     return image;
 }
 
-- (void)setTabbarItemtextColorWithIndex:(NSInteger)index{
+- (void)setTabbarItemtextColorWithIndex:(NSInteger)index {
     for (UIViewController *vc in self.childViewControllers) {
         if ([vc isKindOfClass:[UINavigationController class]]) {
             UINavigationController *nav = (UINavigationController *)vc;
@@ -109,7 +113,7 @@
     }
 }
 
-
+#pragma mark - UITabBarControllerDelegate
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
     //判断，然后让第一个页面刷新。
     NSInteger index = [tabBarController.viewControllers indexOfObject:viewController];

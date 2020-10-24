@@ -18,6 +18,14 @@
     return self;
 }
 
+- (instancetype)initWithFrame:(CGRect)frame {
+    if ([super initWithFrame:frame]) {
+        [self setBackgroundImage:[UIImage gk_imageWithColor:[UIColor clearColor] size:CGSizeMake(SCREEN_WIDTH, TABBAR_HEIGHT)]];
+        [self showLine];
+    }
+    return self;
+}
+
 - (void)showLine {
     self.shadowImage = [UIImage gk_imageWithColor:[UIColor colorWithWhite:1.0f alpha:0.2f] size:CGSizeMake(SCREEN_WIDTH, 0.5f)];
 }
@@ -26,13 +34,12 @@
     self.shadowImage = [UIImage gk_imageWithColor:[UIColor clearColor] size:CGSizeMake(SCREEN_WIDTH, 0.5f)];
 }
 
-// layoutSubviews遍历子控件寻找UITabBarButton，给UITabBarButton重新设置frame
 - (void)layoutSubviews {
     [super layoutSubviews];
     [self addSubview:self.indicatorLine];
-    CGFloat width = 50;
-    self.centerButton.frame = CGRectMake((ScreenWidth-width)/2, 2, width, width);
     CGFloat tabBarButtonW = ScreenWidth / 5;
+    self.centerButton.frame = CGRectMake((ScreenWidth-tabBarButtonW)/2, 0, tabBarButtonW, 49);
+
     CGFloat tabBarButtonIndex = 0;
     for (UIView *child in self.subviews) {
         Class class = NSClassFromString(@"UITabBarButton");
@@ -63,10 +70,14 @@
     }
     return _centerButton;
 }
+
 - (UIView *)indicatorLine {
     if (!_indicatorLine) {
-        _indicatorLine = [[UIView alloc]initWithFrame:CGRectMake(1/15.0f*[UIScreen mainScreen].bounds.size.width, 47, 1/15.0f*[UIScreen mainScreen].bounds.size.width, 2)];
+//        CGFloat indicatorLineX = [UIScreen mainScreen].bounds.size.width/4-50;
+//        _indicatorLine = [[UIView alloc]initWithFrame:CGRectMake(indicatorLineX/2., 47, 32, 2)];
+        _indicatorLine = [[UIView alloc]initWithFrame:CGRectMake(1/15.0f*[UIScreen mainScreen].bounds.size.width, 47, 32, 1)];
         _indicatorLine.backgroundColor = UIColor.whiteColor;
+        _indicatorLine.tag = 1000;
         [self addSubview:_indicatorLine];
     }
     return _indicatorLine;
