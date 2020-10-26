@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Test2ViewController : GKNavigationBarViewController
+@interface Test2ViewController : UIViewController
 
 @end

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PersonalViewController : GKNavigationBarViewController
+@interface PersonalViewController : UIViewController
 
 @end

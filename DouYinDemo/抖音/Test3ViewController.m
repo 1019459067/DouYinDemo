@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.gk_navigationBar.hidden = YES;
+//    self.gk_navigationBar.hidden = YES;
 
     UILabel *label = [[UILabel alloc]init];
     label.bounds = CGRectMake(0, 0, self.view.frame.size.width, 50);

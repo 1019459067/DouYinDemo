@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    self.gk_statusBarStyle = UIStatusBarStyleLightContent;
-    self.gk_navigationBar.hidden = YES;
+//    self.gk_navigationBar.hidden = YES;
 
     UILabel *label = [[UILabel alloc]init];
     label.bounds = CGRectMake(0, 0, self.view.frame.size.width, 50);

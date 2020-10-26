@@ -17,7 +17,8 @@
 #pragma mark - life
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.gk_navTitle = @"My";
+//    self.gk_navTitle = @"My";
+//    self.navigationController.navigationBar.hidden = NO;
 
     UILabel *label = [[UILabel alloc]init];
     label.bounds = CGRectMake(0, 0, self.view.frame.size.width, 50);

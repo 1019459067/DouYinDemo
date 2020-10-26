@@ -9,18 +9,17 @@
 /* Begin PBXBuildFile section */
 		0A88B742C2173F44EBD7E29C64109D40 /* UIBarButtonItem+GKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = BE59D36BD03E0F72FCDB971A2F927DA1 /* UIBarButtonItem+GKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		166D4FCCDE8B33BB1BC417E738CBB43B /* GKPopTransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3374D20AA15CEE4CC889D0496B2E2678 /* GKPopTransitionAnimation.m */; };
+		17B34E5BDBB7F979DA5B06ECE951A36A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
 		180471F2A3E7DD4A880D02FF4A5626E6 /* GKBaseTransitionAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = BFA0734679AA788E30D6C986552FAC6F /* GKBaseTransitionAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		19CED3201E75C96035E4A06CD0BF4FCE /* Pods-DouYinDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BD461AA3F8D6D2459419B8260CE4C3F9 /* Pods-DouYinDemo-dummy.m */; };
 		1DE5C0F1ECAA84C45BC4FC93B34726D5 /* UIScrollView+GKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = BD314CCBC58E51A1DB22B4DC29B31A92 /* UIScrollView+GKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E7089E96EB375AFDBF0BAC0A2DDDDD6 /* GKNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC50A3CD1EFBC4E6560A8439F5CAEF9 /* GKNavigationBar.m */; };
 		1EA025B7142F138AF69BB12DB54B215A /* UINavigationController+GKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = EB9698BF8EBB883E37664EAFA4B58460 /* UINavigationController+GKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32652FBB8ECFE35A208FDAE93FD5DA10 /* GKDelegateHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 94629FA063F3DA9658694CDE4AE0F280 /* GKDelegateHandler.m */; };
 		401A58D61D48E5D9E3CF8B3F86156C33 /* GKCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = B6A30010DD7294527FB2FF015C678352 /* GKCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		42F6EFFD2911731D4491DB16FA91EC2A /* UIImage+GKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = AAAF7FEA1E4546FBA777E8C501598D1D /* UIImage+GKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		44FCEB904E4A4B9481AFE69073E75260 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
 		498A39F20113A0D686E3B2E36B6477A2 /* GKPopTransitionAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F91E303877E6A7E90F33AAB5B17B73A /* GKPopTransitionAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55C1925F1755B5B6DFC18852457A7AB8 /* Pods-DouYinDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BD461AA3F8D6D2459419B8260CE4C3F9 /* Pods-DouYinDemo-dummy.m */; };
 		64ECF4EBB7D7EE3617EEA15FA24C6E78 /* GKNavigationBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 22A0C3C72089632F3EA9056EDAB6BB18 /* GKNavigationBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		70BAA7AE582A79C39084050CABBDB71D /* Pods-DouYinDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DB0BBD69C27483BA899B8B99F1FD2AA7 /* Pods-DouYinDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7104092069832E21F5463DB2ABB08EF5 /* GKDelegateHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = E9D677300F0C7C61BC844F6AB33CCBBF /* GKDelegateHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		710ECB4C75675E618D1FB1C6E737A88F /* GKNavigationBarConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F110122472DE07D2043184D9624057 /* GKNavigationBarConfigure.m */; };
 		73581961FB0882010793613909387E4C /* UINavigationController+GKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CE3E688231F425DC1CAB38AA0A4EAF /* UINavigationController+GKCategory.m */; };
@@ -31,22 +30,23 @@
 		8B2632B2D35F1E34A5A2A4B64B17FB0D /* GKNavigationBarViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AC0169784EE08C51990A6FBDA53A9658 /* GKNavigationBarViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		93DF6C26933C885C5D1E79FEB7AB4353 /* GKNavigationBarViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F3E761DB4A14FA86BE7D7F22BF55F4FD /* GKNavigationBarViewController.bundle */; };
 		972A5201A8718D8516D98CC9D78B3A45 /* GKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B23E8B7AC67369DF25AB588834F682 /* GKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A733AD6AECD06B10C7785A8335341012 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
+		BC5FDC97AE796DE2F7A2F5BEEFAF7259 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
 		C5E24960A9150DE8AE7714450208F76E /* GKNavigationBarViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 515B4EE96A35315C4CE55380895858C3 /* GKNavigationBarViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9BFC6E5FB14B66611AB66952203416A /* UIScrollView+GKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5A938155E2BD3B797DBD4652313055 /* UIScrollView+GKCategory.m */; };
 		CD8A37702602450DF0AD3C9ABC3A0BE9 /* UINavigationItem+GKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 965821353CC867D641A913B2452A1420 /* UINavigationItem+GKCategory.m */; };
 		CF50F8D7053E702EECAC34A64DABB8DF /* GKNavigationBarConfigure.h in Headers */ = {isa = PBXBuildFile; fileRef = 756CEF8B1560D6E8E15D658FF1B20A8F /* GKNavigationBarConfigure.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D5203CE6CD619B8762C6B5B56D384E26 /* UIBarButtonItem+GKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A24DC93ACFD37006E55019BECD64263 /* UIBarButtonItem+GKCategory.m */; };
 		D5E1490C2539B3019609F5CB82895A14 /* GKBaseTransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CA988DD4F19ACB02E82467ABBF9DB7 /* GKBaseTransitionAnimation.m */; };
-		E0AF9C603045D96DDE1EC73CEBC2956F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
 		E0DA4BF6C11D2D193C2049F65175BE08 /* UIViewController+GKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = FDBF47DED8F15A79A53B645A0B6935F6 /* UIViewController+GKCategory.m */; };
+		E622841C092F0D0753E3A36E45A9C2B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
 		E8706C5B21867B21FCC040BE71771DC3 /* UIImage+GKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 005F946539A6DC234B5025F6A4822F78 /* UIImage+GKCategory.m */; };
 		E95F95D5A8344F7C3834AFF06530F3C4 /* GKNavigationBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D74EA14EF7CCFFB4DA87415037FA0F6 /* GKNavigationBarViewController.m */; };
+		F5F76A1F27DC4FD06E442AF058F2FFD4 /* Pods-DouYinDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DB0BBD69C27483BA899B8B99F1FD2AA7 /* Pods-DouYinDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FC659B57C432A0D15EE03D61D1DB16F7 /* GKPushTransitionAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C38D9B4A20B9408BD59767240BC946 /* GKPushTransitionAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		929B05319A25C91174A3D0332BD99E61 /* PBXContainerItemProxy */ = {
+		96507939B61E6881A982E92A3F408612 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -65,11 +65,9 @@
 		1EB6C4C756B62B695FCE8004C004FF74 /* Pods-DouYinDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DouYinDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
 		22A0C3C72089632F3EA9056EDAB6BB18 /* GKNavigationBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GKNavigationBar.h; path = GKNavigationBarViewController/GKConfigure/GKNavigationBar.h; sourceTree = "<group>"; };
 		25CE3E688231F425DC1CAB38AA0A4EAF /* UINavigationController+GKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+GKCategory.m"; path = "GKNavigationBarViewController/GKCategory/UINavigationController+GKCategory.m"; sourceTree = "<group>"; };
-		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		3374D20AA15CEE4CC889D0496B2E2678 /* GKPopTransitionAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GKPopTransitionAnimation.m; path = GKNavigationBarViewController/GKTransition/GKPopTransitionAnimation.m; sourceTree = "<group>"; };
 		37C38D9B4A20B9408BD59767240BC946 /* GKPushTransitionAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GKPushTransitionAnimation.h; path = GKNavigationBarViewController/GKTransition/GKPushTransitionAnimation.h; sourceTree = "<group>"; };
 		3F5D5740B80E370FE9F2BF73A6D7DF2C /* GKNavigationBarViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GKNavigationBarViewController.debug.xcconfig; sourceTree = "<group>"; };
-		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		440B32B7071E0C77FAB4B8DD2E7ABA14 /* UINavigationItem+GKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationItem+GKCategory.h"; path = "GKNavigationBarViewController/GKCategory/UINavigationItem+GKCategory.h"; sourceTree = "<group>"; };
 		496E12E38F397986E94F91C695793C4B /* GKPushTransitionAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GKPushTransitionAnimation.m; path = GKNavigationBarViewController/GKTransition/GKPushTransitionAnimation.m; sourceTree = "<group>"; };
 		4A10E1DB6F60D70BD264886906347374 /* Pods-DouYinDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DouYinDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -97,32 +95,34 @@
 		BFA0734679AA788E30D6C986552FAC6F /* GKBaseTransitionAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GKBaseTransitionAnimation.h; path = GKNavigationBarViewController/GKTransition/GKBaseTransitionAnimation.h; sourceTree = "<group>"; };
 		CE6CEE5152179C3DBF62F891291C20CB /* GKNavigationBarViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GKNavigationBarViewController.modulemap; sourceTree = "<group>"; };
 		D222C753B83C808852AE01E9B7FDCEEC /* GKNavigationBarViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GKNavigationBarViewController-dummy.m"; sourceTree = "<group>"; };
+		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		D5F110122472DE07D2043184D9624057 /* GKNavigationBarConfigure.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GKNavigationBarConfigure.m; path = GKNavigationBarViewController/GKConfigure/GKNavigationBarConfigure.m; sourceTree = "<group>"; };
 		D95FC8DAE2A1696459D90251B07A7E91 /* Pods-DouYinDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DouYinDemo-frameworks.sh"; sourceTree = "<group>"; };
 		DA900F67E64A644D2D757BF4F491C072 /* GKNavigationBarViewController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GKNavigationBarViewController-Info.plist"; sourceTree = "<group>"; };
 		DB0BBD69C27483BA899B8B99F1FD2AA7 /* Pods-DouYinDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DouYinDemo-umbrella.h"; sourceTree = "<group>"; };
 		E9D677300F0C7C61BC844F6AB33CCBBF /* GKDelegateHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GKDelegateHandler.h; path = GKNavigationBarViewController/GKTransition/GKDelegateHandler.h; sourceTree = "<group>"; };
 		EA098688891FD3912911C2DE31BFA74D /* Pods-DouYinDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DouYinDemo.modulemap"; sourceTree = "<group>"; };
+		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		EB9698BF8EBB883E37664EAFA4B58460 /* UINavigationController+GKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+GKCategory.h"; path = "GKNavigationBarViewController/GKCategory/UINavigationController+GKCategory.h"; sourceTree = "<group>"; };
 		F3E761DB4A14FA86BE7D7F22BF55F4FD /* GKNavigationBarViewController.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GKNavigationBarViewController.bundle; path = GKNavigationBarViewController/GKNavigationBarViewController.bundle; sourceTree = "<group>"; };
 		FDBF47DED8F15A79A53B645A0B6935F6 /* UIViewController+GKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+GKCategory.m"; path = "GKNavigationBarViewController/GKCategory/UIViewController+GKCategory.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		88E3D317ED20AB23362480344EFFE7D5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				44FCEB904E4A4B9481AFE69073E75260 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DC7F21D751ACBEEF4806B8CB1DE1607E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0AF9C603045D96DDE1EC73CEBC2956F /* Foundation.framework in Frameworks */,
-				A733AD6AECD06B10C7785A8335341012 /* UIKit.framework in Frameworks */,
+				BC5FDC97AE796DE2F7A2F5BEEFAF7259 /* Foundation.framework in Frameworks */,
+				17B34E5BDBB7F979DA5B06ECE951A36A /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF348ED5CC4619A300A1EB87FCDD6E8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E622841C092F0D0753E3A36E45A9C2B7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +132,7 @@
 		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E2983683FD097A93297E2F5D4E382B36 /* iOS */,
+				59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -173,6 +173,15 @@
 			);
 			name = GKNavigationBarViewController;
 			path = GKNavigationBarViewController;
+			sourceTree = "<group>";
+		};
+		59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */,
+				D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		621A7EF38B1F0AA2CD1AB2F0DD4695F1 /* Targets Support Files */ = {
@@ -251,23 +260,14 @@
 			);
 			sourceTree = "<group>";
 		};
-		E2983683FD097A93297E2F5D4E382B36 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */,
-				312B988EF117AE4DE76A268D970131FE /* UIKit.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		E5FB0C60F08DEE844851C02ACADB11A2 /* Headers */ = {
+		14AD581A2A3E6FC35A4BEC280C3143E1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70BAA7AE582A79C39084050CABBDB71D /* Pods-DouYinDemo-umbrella.h in Headers */,
+				F5F76A1F27DC4FD06E442AF058F2FFD4 /* Pods-DouYinDemo-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,17 +299,17 @@
 /* Begin PBXNativeTarget section */
 		9B61DC07AD809732AC4D6AEF4E9CE7E5 /* Pods-DouYinDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 11687787434173657F38E215127CF967 /* Build configuration list for PBXNativeTarget "Pods-DouYinDemo" */;
+			buildConfigurationList = 029B107749DC3F93687D3A9DCA926D50 /* Build configuration list for PBXNativeTarget "Pods-DouYinDemo" */;
 			buildPhases = (
-				E5FB0C60F08DEE844851C02ACADB11A2 /* Headers */,
-				338814091EF74BC5CF611AA7164990D2 /* Sources */,
-				88E3D317ED20AB23362480344EFFE7D5 /* Frameworks */,
-				0D77348F3230FB852C5B0751BE097CE9 /* Resources */,
+				14AD581A2A3E6FC35A4BEC280C3143E1 /* Headers */,
+				37EBDDFEBD23DD089B3700149C1CFFFA /* Sources */,
+				DF348ED5CC4619A300A1EB87FCDD6E8A /* Frameworks */,
+				B9213CE1CD07B8CFBDECB12B49F31BAA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5B0CAF782A84A547B707BD8C3A5E92EB /* PBXTargetDependency */,
+				C2182445DA2F459D439EC4AA1F52216D /* PBXTargetDependency */,
 			);
 			name = "Pods-DouYinDemo";
 			productName = "Pods-DouYinDemo";
@@ -363,18 +363,18 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0D77348F3230FB852C5B0751BE097CE9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		ACF0690C5A017A845081E46E7AC7C479 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				93DF6C26933C885C5D1E79FEB7AB4353 /* GKNavigationBarViewController.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9213CE1CD07B8CFBDECB12B49F31BAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,140 +402,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		338814091EF74BC5CF611AA7164990D2 /* Sources */ = {
+		37EBDDFEBD23DD089B3700149C1CFFFA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19CED3201E75C96035E4A06CD0BF4FCE /* Pods-DouYinDemo-dummy.m in Sources */,
+				55C1925F1755B5B6DFC18852457A7AB8 /* Pods-DouYinDemo-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5B0CAF782A84A547B707BD8C3A5E92EB /* PBXTargetDependency */ = {
+		C2182445DA2F459D439EC4AA1F52216D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GKNavigationBarViewController;
 			target = C921F96150B62CC49CBC3AC767EB543F /* GKNavigationBarViewController */;
-			targetProxy = 929B05319A25C91174A3D0332BD99E61 /* PBXContainerItemProxy */;
+			targetProxy = 96507939B61E6881A982E92A3F408612 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		3C365F1F20E270EE373C0AFDF9406065 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 90BB583CF0CA0C3691733945F07FC556 /* Pods-DouYinDemo.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-DouYinDemo/Pods-DouYinDemo-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-DouYinDemo/Pods-DouYinDemo.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		87BFAE84224A4B6B3DBCB4A030987832 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A10E1DB6F60D70BD264886906347374 /* Pods-DouYinDemo.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-DouYinDemo/Pods-DouYinDemo-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-DouYinDemo/Pods-DouYinDemo.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		8E97D59073FCFA1E1A00C2CD7F4F2602 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B7FAB677D0B4C79BF6F781BFF35ED2D /* GKNavigationBarViewController.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/GKNavigationBarViewController/GKNavigationBarViewController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GKNavigationBarViewController/GKNavigationBarViewController-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/GKNavigationBarViewController/GKNavigationBarViewController.modulemap";
-				PRODUCT_MODULE_NAME = GKNavigationBarViewController;
-				PRODUCT_NAME = GKNavigationBarViewController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		8F17DC3A99F99FBAD606CE6963886315 /* Release */ = {
+		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -558,66 +449,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		916E0404255105F480DC4950B7625F7A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -656,11 +488,83 @@
 			};
 			name = Debug;
 		};
-		977E0DBADA745D577670656584B59AF2 /* Debug */ = {
+		2CC1EED66790360C53A28924D55951CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90BB583CF0CA0C3691733945F07FC556 /* Pods-DouYinDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-DouYinDemo/Pods-DouYinDemo-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DouYinDemo/Pods-DouYinDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		59D23103177232DAD17B6BADCE1B69C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A10E1DB6F60D70BD264886906347374 /* Pods-DouYinDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-DouYinDemo/Pods-DouYinDemo-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DouYinDemo/Pods-DouYinDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A76EEA0C7FD5B79A8A7022544D8F81F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3F5D5740B80E370FE9F2BF73A6D7DF2C /* GKNavigationBarViewController.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -690,14 +594,110 @@
 			};
 			name = Debug;
 		};
+		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		CCD454F014EF07AC90F99DD3FC5297BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B7FAB677D0B4C79BF6F781BFF35ED2D /* GKNavigationBarViewController.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GKNavigationBarViewController/GKNavigationBarViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GKNavigationBarViewController/GKNavigationBarViewController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/GKNavigationBarViewController/GKNavigationBarViewController.modulemap";
+				PRODUCT_MODULE_NAME = GKNavigationBarViewController;
+				PRODUCT_NAME = GKNavigationBarViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		11687787434173657F38E215127CF967 /* Build configuration list for PBXNativeTarget "Pods-DouYinDemo" */ = {
+		029B107749DC3F93687D3A9DCA926D50 /* Build configuration list for PBXNativeTarget "Pods-DouYinDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				87BFAE84224A4B6B3DBCB4A030987832 /* Debug */,
-				3C365F1F20E270EE373C0AFDF9406065 /* Release */,
+				59D23103177232DAD17B6BADCE1B69C7 /* Debug */,
+				2CC1EED66790360C53A28924D55951CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -705,8 +705,8 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				916E0404255105F480DC4950B7625F7A /* Debug */,
-				8F17DC3A99F99FBAD606CE6963886315 /* Release */,
+				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
+				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -714,8 +714,8 @@
 		DA109E96207B60DB4C8DE2B023348EB3 /* Build configuration list for PBXNativeTarget "GKNavigationBarViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				977E0DBADA745D577670656584B59AF2 /* Debug */,
-				8E97D59073FCFA1E1A00C2CD7F4F2602 /* Release */,
+				A76EEA0C7FD5B79A8A7022544D8F81F3 /* Debug */,
+				CCD454F014EF07AC90F99DD3FC5297BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

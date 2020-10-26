@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Test3ViewController : GKNavigationBarViewController
+@interface Test3ViewController : UIViewController
 
 @end
 

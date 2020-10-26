@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeViewController : GKNavigationBarViewController
+@interface HomeViewController : UIViewController
 
 @end

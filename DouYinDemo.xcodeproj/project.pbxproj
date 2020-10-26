@@ -17,15 +17,15 @@
 		A65E42BB2510568A0029A1DB /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E42B52510568A0029A1DB /* PersonalViewController.m */; };
 		A65E42BC2510568A0029A1DB /* Test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E42B62510568A0029A1DB /* Test1ViewController.m */; };
 		A66F431D2542C3F100EDD15B /* PlayLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = A66F431C2542C3F100EDD15B /* PlayLoadingView.m */; };
+		A6755C892546B06500EA78D2 /* DHScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6755C882546B06500EA78D2 /* DHScrollView.m */; };
+		A6755C942546B07200EA78D2 /* DHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6755C8D2546B07200EA78D2 /* DHTabBarController.m */; };
+		A6755C952546B07200EA78D2 /* DHTabbarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A6755C912546B07200EA78D2 /* DHTabbarButton.m */; };
+		A6755C962546B07200EA78D2 /* DHTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6755C922546B07200EA78D2 /* DHTabBarView.m */; };
+		A6755C972546B07200EA78D2 /* DHCustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A6755C932546B07200EA78D2 /* DHCustomTabBar.m */; };
 		A6792BB4253D2B69000CB4DE /* SlideTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6792BB3253D2B69000CB4DE /* SlideTabBarView.m */; };
 		A67DB597254115C40046A4DF /* Test3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A67DB596254115C40046A4DF /* Test3ViewController.m */; };
-		A6AECDAF2543FDEA0017E065 /* DHTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AECDAD2543FDEA0017E065 /* DHTabBarView.m */; };
-		A6AECDB32543FE060017E065 /* DHCustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AECDB12543FE060017E065 /* DHCustomTabBar.m */; };
-		A6AECDB8254412560017E065 /* DHTabbarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AECDB7254412560017E065 /* DHTabbarButton.m */; };
-		A6CC251B2524220400F44260 /* DHScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CC251A2524220400F44260 /* DHScrollView.m */; };
 		A6CC252825242FF500F44260 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6CC252725242FF500F44260 /* main.storyboard */; };
 		A6CC252C2524312700F44260 /* DHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CC252B2524312700F44260 /* DHNavigationController.m */; };
-		A6CC254125246C5C00F44260 /* DHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CC253F25246C5C00F44260 /* DHTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,23 +49,23 @@
 		A65E43092510C1FA0029A1DB /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		A66F431B2542C3F100EDD15B /* PlayLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayLoadingView.h; sourceTree = "<group>"; };
 		A66F431C2542C3F100EDD15B /* PlayLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayLoadingView.m; sourceTree = "<group>"; };
+		A6755C872546B06500EA78D2 /* DHScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHScrollView.h; sourceTree = "<group>"; };
+		A6755C882546B06500EA78D2 /* DHScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHScrollView.m; sourceTree = "<group>"; };
+		A6755C8C2546B07200EA78D2 /* DHTabbarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTabbarButton.h; sourceTree = "<group>"; };
+		A6755C8D2546B07200EA78D2 /* DHTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTabBarController.m; sourceTree = "<group>"; };
+		A6755C8E2546B07200EA78D2 /* DHTabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTabBarView.h; sourceTree = "<group>"; };
+		A6755C8F2546B07200EA78D2 /* DHCustomTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHCustomTabBar.h; sourceTree = "<group>"; };
+		A6755C902546B07200EA78D2 /* DHTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTabBarController.h; sourceTree = "<group>"; };
+		A6755C912546B07200EA78D2 /* DHTabbarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTabbarButton.m; sourceTree = "<group>"; };
+		A6755C922546B07200EA78D2 /* DHTabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTabBarView.m; sourceTree = "<group>"; };
+		A6755C932546B07200EA78D2 /* DHCustomTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHCustomTabBar.m; sourceTree = "<group>"; };
 		A6792BB2253D2B69000CB4DE /* SlideTabBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlideTabBarView.h; sourceTree = "<group>"; };
 		A6792BB3253D2B69000CB4DE /* SlideTabBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlideTabBarView.m; sourceTree = "<group>"; };
 		A67DB595254115C40046A4DF /* Test3ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test3ViewController.h; sourceTree = "<group>"; };
 		A67DB596254115C40046A4DF /* Test3ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test3ViewController.m; sourceTree = "<group>"; };
-		A6AECDAB2543FDEA0017E065 /* DHTabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTabBarView.h; sourceTree = "<group>"; };
-		A6AECDAD2543FDEA0017E065 /* DHTabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTabBarView.m; sourceTree = "<group>"; };
-		A6AECDB12543FE060017E065 /* DHCustomTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHCustomTabBar.m; sourceTree = "<group>"; };
-		A6AECDB22543FE060017E065 /* DHCustomTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHCustomTabBar.h; sourceTree = "<group>"; };
-		A6AECDB6254412560017E065 /* DHTabbarButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHTabbarButton.h; sourceTree = "<group>"; };
-		A6AECDB7254412560017E065 /* DHTabbarButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHTabbarButton.m; sourceTree = "<group>"; };
-		A6CC25192524220400F44260 /* DHScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHScrollView.h; sourceTree = "<group>"; };
-		A6CC251A2524220400F44260 /* DHScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHScrollView.m; sourceTree = "<group>"; };
 		A6CC252725242FF500F44260 /* main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
 		A6CC252A2524312700F44260 /* DHNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHNavigationController.h; sourceTree = "<group>"; };
 		A6CC252B2524312700F44260 /* DHNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHNavigationController.m; sourceTree = "<group>"; };
-		A6CC253D25246C5C00F44260 /* DHTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTabBarController.h; sourceTree = "<group>"; };
-		A6CC253F25246C5C00F44260 /* DHTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTabBarController.m; sourceTree = "<group>"; };
 		F318877465912A0B7EF1276B /* Pods_DouYinDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DouYinDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -114,8 +114,8 @@
 		A65E4293251056480029A1DB /* DouYinDemo */ = {
 			isa = PBXGroup;
 			children = (
-				A6CC253B25246C5C00F44260 /* TabBar */,
-				A6CC251D252425DD00F44260 /* UIView */,
+				A6755C8B2546B07200EA78D2 /* TabBar */,
+				A6755C862546B06500EA78D2 /* DHScrollView */,
 				A65E42FA2510C06B0029A1DB /* Main */,
 				A65E42AD2510568A0029A1DB /* 抖音 */,
 				A65E42A02510564D0029A1DB /* Assets.xcassets */,
@@ -164,6 +164,30 @@
 			path = PlayLoadingView;
 			sourceTree = "<group>";
 		};
+		A6755C862546B06500EA78D2 /* DHScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				A6755C872546B06500EA78D2 /* DHScrollView.h */,
+				A6755C882546B06500EA78D2 /* DHScrollView.m */,
+			);
+			path = DHScrollView;
+			sourceTree = SOURCE_ROOT;
+		};
+		A6755C8B2546B07200EA78D2 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				A6755C8C2546B07200EA78D2 /* DHTabbarButton.h */,
+				A6755C8D2546B07200EA78D2 /* DHTabBarController.m */,
+				A6755C8E2546B07200EA78D2 /* DHTabBarView.h */,
+				A6755C8F2546B07200EA78D2 /* DHCustomTabBar.h */,
+				A6755C902546B07200EA78D2 /* DHTabBarController.h */,
+				A6755C912546B07200EA78D2 /* DHTabbarButton.m */,
+				A6755C922546B07200EA78D2 /* DHTabBarView.m */,
+				A6755C932546B07200EA78D2 /* DHCustomTabBar.m */,
+			);
+			path = TabBar;
+			sourceTree = SOURCE_ROOT;
+		};
 		A6792BB1253D2B5A000CB4DE /* SlideTabBarView */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,30 +195,6 @@
 				A6792BB3253D2B69000CB4DE /* SlideTabBarView.m */,
 			);
 			path = SlideTabBarView;
-			sourceTree = "<group>";
-		};
-		A6CC251D252425DD00F44260 /* UIView */ = {
-			isa = PBXGroup;
-			children = (
-				A6CC25192524220400F44260 /* DHScrollView.h */,
-				A6CC251A2524220400F44260 /* DHScrollView.m */,
-			);
-			path = UIView;
-			sourceTree = "<group>";
-		};
-		A6CC253B25246C5C00F44260 /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-				A6AECDB22543FE060017E065 /* DHCustomTabBar.h */,
-				A6AECDB12543FE060017E065 /* DHCustomTabBar.m */,
-				A6AECDAB2543FDEA0017E065 /* DHTabBarView.h */,
-				A6AECDAD2543FDEA0017E065 /* DHTabBarView.m */,
-				A6AECDB6254412560017E065 /* DHTabbarButton.h */,
-				A6AECDB7254412560017E065 /* DHTabbarButton.m */,
-				A6CC253D25246C5C00F44260 /* DHTabBarController.h */,
-				A6CC253F25246C5C00F44260 /* DHTabBarController.m */,
-			);
-			path = TabBar;
 			sourceTree = "<group>";
 		};
 		F7F518498214B961BEA7BC33 /* Frameworks */ = {
@@ -216,7 +216,7 @@
 				A65E428D251056480029A1DB /* Sources */,
 				A65E428E251056480029A1DB /* Frameworks */,
 				A65E428F251056480029A1DB /* Resources */,
-				AA8090CEDF4490654E0CCEE1 /* [CP] Embed Pods Frameworks */,
+				CF5F9C6F097EE1A486635870 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -273,23 +273,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		AA8090CEDF4490654E0CCEE1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DouYinDemo/Pods-DouYinDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DouYinDemo/Pods-DouYinDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DouYinDemo/Pods-DouYinDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		ACC304806C02070848BEFE21 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -312,6 +295,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CF5F9C6F097EE1A486635870 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DouYinDemo/Pods-DouYinDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DouYinDemo/Pods-DouYinDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DouYinDemo/Pods-DouYinDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -319,21 +319,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6CC251B2524220400F44260 /* DHScrollView.m in Sources */,
 				A65E42BB2510568A0029A1DB /* PersonalViewController.m in Sources */,
 				A65E4296251056480029A1DB /* AppDelegate.m in Sources */,
 				A65E42A72510564D0029A1DB /* main.m in Sources */,
 				A65E42BC2510568A0029A1DB /* Test1ViewController.m in Sources */,
-				A6AECDB32543FE060017E065 /* DHCustomTabBar.m in Sources */,
+				A6755C962546B07200EA78D2 /* DHTabBarView.m in Sources */,
 				A67DB597254115C40046A4DF /* Test3ViewController.m in Sources */,
 				A65E42B82510568A0029A1DB /* Test2ViewController.m in Sources */,
+				A6755C892546B06500EA78D2 /* DHScrollView.m in Sources */,
 				A65E42B92510568A0029A1DB /* HomeViewController.m in Sources */,
 				A6CC252C2524312700F44260 /* DHNavigationController.m in Sources */,
+				A6755C952546B07200EA78D2 /* DHTabbarButton.m in Sources */,
 				A6792BB4253D2B69000CB4DE /* SlideTabBarView.m in Sources */,
 				A66F431D2542C3F100EDD15B /* PlayLoadingView.m in Sources */,
-				A6AECDAF2543FDEA0017E065 /* DHTabBarView.m in Sources */,
-				A6CC254125246C5C00F44260 /* DHTabBarController.m in Sources */,
-				A6AECDB8254412560017E065 /* DHTabbarButton.m in Sources */,
+				A6755C972546B07200EA78D2 /* DHCustomTabBar.m in Sources */,
+				A6755C942546B07200EA78D2 /* DHTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

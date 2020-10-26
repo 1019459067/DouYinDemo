@@ -36,18 +36,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.greenColor;
-    self.gk_navigationBar.hidden = YES;
-    self.gk_statusBarStyle = UIStatusBarStyleLightContent;
+    self.navigationController.navigationBar.hidden = YES;
+//    self.gk_navigationBar.hidden = YES;
+//    self.gk_statusBarStyle = UIStatusBarStyleLightContent;
 //    self.gk_statusBarHidden = YES;
     // 设置左滑push代理
     self.gk_pushDelegate = self;
 
     [self settingUI];
     [self addPlayLoadingView];
-}
-
-- (void)dealloc {
-    NSLog(@"%@ dealloc", NSStringFromClass([self class]));
 }
 
 #pragma mark - UI
