@@ -18,7 +18,7 @@
 #pragma mark - life
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     self.label = [[UILabel alloc]init];
     self.label.bounds = CGRectMake(0, 0, self.view.frame.size.width, 50);
     self.label.center = CGPointMake(self.view.frame.size.width/2., self.view.frame.size.height/2.);

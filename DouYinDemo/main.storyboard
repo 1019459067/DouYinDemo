@@ -44,7 +44,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eDy-5c-Ip7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="54" y="-113"/>
+            <point key="canvasLocation" x="2047.5" y="-113.75"/>
         </scene>
         <!--Near View Controller-->
         <scene sceneID="nV9-4N-NSB">
@@ -62,7 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mcU-yU-bnZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="812" y="-114"/>
+            <point key="canvasLocation" x="2806.875" y="-115"/>
         </scene>
         <!--Message View Controller-->
         <scene sceneID="t86-Rh-3NA">
@@ -80,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EW7-mc-0YM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1571" y="-115"/>
+            <point key="canvasLocation" x="3564.375" y="-115"/>
         </scene>
         <!--我的-->
         <scene sceneID="dCy-gv-TBp">
@@ -105,7 +105,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckM-Rx-KPq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2280" y="-114"/>
+            <point key="canvasLocation" x="4275" y="-115"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="aQx-AX-ZUb">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="3Lv-95-RLu" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7EK-AL-qgE"/>
+                        <viewControllerLayoutGuide type="bottom" id="gzX-Ie-1j5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9R4-Ix-MVk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Xs-hl-qAs">
+                                <rect key="frame" x="137" y="225" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onActionPush:" destination="3Lv-95-RLu" eventType="touchUpInside" id="Ubx-Nd-p7o"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4Xs-hl-qAs" firstAttribute="centerY" secondItem="9R4-Ix-MVk" secondAttribute="centerY" id="9Zv-e6-ySy"/>
+                            <constraint firstItem="4Xs-hl-qAs" firstAttribute="centerX" secondItem="9R4-Ix-MVk" secondAttribute="centerX" id="Qcj-rc-Nhl"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="ubR-PK-5r6"/>
+                    <navigationItem key="navigationItem" id="5eD-Vd-27w"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wbO-76-oRF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1087.5" y="273.75"/>
         </scene>
         <!--Home Base View Controller-->
         <scene sceneID="fQP-bj-BHB">
@@ -123,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0wJ-AT-bnM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="624"/>
+            <point key="canvasLocation" x="2047.5" y="623.75"/>
         </scene>
     </scenes>
     <resources>

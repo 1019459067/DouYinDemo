@@ -19,6 +19,8 @@
 		A6755C962546B07200EA78D2 /* DHTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6755C922546B07200EA78D2 /* DHTabBarView.m */; };
 		A6755C972546B07200EA78D2 /* DHCustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A6755C932546B07200EA78D2 /* DHCustomTabBar.m */; };
 		A6792BB4253D2B69000CB4DE /* SlideTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6792BB3253D2B69000CB4DE /* SlideTabBarView.m */; };
+		A6AA03A22547F030000E5061 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AA03A12547F030000E5061 /* MainViewController.m */; };
+		A6AA03A62547F2EF000E5061 /* DYTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AA03A52547F2EF000E5061 /* DYTabViewController.m */; };
 		A6B3A3A72547E9E7008B37BE /* DHHomeBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B3A39C2547E9E6008B37BE /* DHHomeBaseViewController.m */; };
 		A6B3A3A82547E9E7008B37BE /* DHMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B3A39D2547E9E6008B37BE /* DHMessageViewController.m */; };
 		A6B3A3A92547E9E7008B37BE /* DHMyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B3A39F2547E9E7008B37BE /* DHMyViewController.m */; };
@@ -54,6 +56,10 @@
 		A6755C932546B07200EA78D2 /* DHCustomTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHCustomTabBar.m; sourceTree = "<group>"; };
 		A6792BB2253D2B69000CB4DE /* SlideTabBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlideTabBarView.h; sourceTree = "<group>"; };
 		A6792BB3253D2B69000CB4DE /* SlideTabBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlideTabBarView.m; sourceTree = "<group>"; };
+		A6AA03A02547F030000E5061 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		A6AA03A12547F030000E5061 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		A6AA03A42547F2EF000E5061 /* DYTabViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYTabViewController.h; sourceTree = "<group>"; };
+		A6AA03A52547F2EF000E5061 /* DYTabViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYTabViewController.m; sourceTree = "<group>"; };
 		A6B3A3992547E9E6008B37BE /* DHMyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHMyViewController.h; sourceTree = "<group>"; };
 		A6B3A39A2547E9E6008B37BE /* DHHomeRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHHomeRecommendViewController.h; sourceTree = "<group>"; };
 		A6B3A39B2547E9E6008B37BE /* DHHomeAttentionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHHomeAttentionViewController.h; sourceTree = "<group>"; };
@@ -156,6 +162,10 @@
 			children = (
 				A65E4294251056480029A1DB /* AppDelegate.h */,
 				A65E4295251056480029A1DB /* AppDelegate.m */,
+				A6AA03A02547F030000E5061 /* MainViewController.h */,
+				A6AA03A12547F030000E5061 /* MainViewController.m */,
+				A6AA03A42547F2EF000E5061 /* DYTabViewController.h */,
+				A6AA03A52547F2EF000E5061 /* DYTabViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -331,6 +341,8 @@
 				A6B3A3A82547E9E7008B37BE /* DHMessageViewController.m in Sources */,
 				A6755C962546B07200EA78D2 /* DHTabBarView.m in Sources */,
 				A6B3A3AB2547E9E7008B37BE /* DHNearViewController.m in Sources */,
+				A6AA03A62547F2EF000E5061 /* DYTabViewController.m in Sources */,
+				A6AA03A22547F030000E5061 /* MainViewController.m in Sources */,
 				A6B3A3A72547E9E7008B37BE /* DHHomeBaseViewController.m in Sources */,
 				A6755C892546B06500EA78D2 /* DHScrollView.m in Sources */,
 				A6755C952546B07200EA78D2 /* DHTabbarButton.m in Sources */,

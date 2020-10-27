@@ -23,6 +23,7 @@
 #pragma mark - life
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
     self.dhTabBar = [[DHCustomTabBar alloc] initWithFrame:CGRectZero titles:@[@"首页",@"附近",@"消息",@"我"]];
     self.dhTabBar.tabBarView.viewDelegate = self;
