@@ -5,6 +5,6 @@ platform :ios, '9.0'
 target 'DouYinDemo' do
   use_frameworks!
 
-   pod 'GKNavigationBarViewController'
+#   pod 'GKNavigationBarViewController'
 
 end

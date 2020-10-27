@@ -26,7 +26,7 @@
 /// 返回按钮样式，默认GKNavigationBarBackStyleBlack
 @property (nonatomic, assign) GKNavigationBarBackStyle backStyle;
 
-/// 是否禁止导航栏左右item调整间距，默认NO
+/// 是否禁止导航栏左右item调整间距，默认YES
 @property (nonatomic, assign) BOOL      gk_disableFixSpace;
 
 /// 导航栏左右按钮距屏幕左边间距，默认是0，可自行调整

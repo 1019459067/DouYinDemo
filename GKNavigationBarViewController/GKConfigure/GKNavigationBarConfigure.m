@@ -49,6 +49,8 @@ static GKNavigationBarConfigure *instance = nil;
     self.navItemLeftSpace       = 0;
     self.navItemRightSpace      = 0;
     
+    self.gk_disableFixSpace = YES;
+    
     self.gk_pushTransitionCriticalValue = 0.3;
     self.gk_popTransitionCriticalValue  = 0.5;
     
