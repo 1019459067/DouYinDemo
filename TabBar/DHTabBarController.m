@@ -7,8 +7,10 @@
 //
 
 #import "DHTabBarController.h"
-#import "PersonalViewController.h"
-#import "HomeViewController.h"
+#import "DHHomeViewController.h"
+#import "DHNearViewController.h"
+#import "DHMessageViewController.h"
+#import "DHMyViewController.h"
 
 #import "DHCustomTabBar.h"
 
@@ -22,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.dhTabBar = [[DHCustomTabBar alloc] initWithFrame:CGRectZero titles:@[@"首页",@"我",@"首页复制",@"我复制"]];
+    self.dhTabBar = [[DHCustomTabBar alloc] initWithFrame:CGRectZero titles:@[@"首页",@"附近",@"消息",@"我"]];
     self.dhTabBar.tabBarView.viewDelegate = self;
     [self setValue:self.dhTabBar forKey:@"tabBar"];
     
@@ -31,18 +33,15 @@
 
 #pragma mark - UI
 - (void)addAllChildViewController {
-    HomeViewController *homeVC = HNWLoadControllerFromStoryboard(SBName, NSStringFromClass(HomeViewController.class));
-    PersonalViewController *personalVC = HNWLoadControllerFromStoryboard(SBName, NSStringFromClass(PersonalViewController.class));
+    DHHomeViewController *homeVC = HNWLoadControllerFromStoryboard(SBName, NSStringFromClass(DHHomeViewController.class));
+    DHNearViewController *nearVC = HNWLoadControllerFromStoryboard(SBName, NSStringFromClass(DHNearViewController.class));
+    DHMessageViewController *messageVC = HNWLoadControllerFromStoryboard(SBName, NSStringFromClass(DHMessageViewController.class));
+    DHMyViewController *myVC = HNWLoadControllerFromStoryboard(SBName, NSStringFromClass(DHMyViewController.class));
     
     [self addChildViewControllerWithVC:homeVC];
-    [self addChildViewControllerWithVC:personalVC];
-
-    HomeViewController *homeVC2 = HNWLoadControllerFromStoryboard(SBName, NSStringFromClass(HomeViewController.class));
-    PersonalViewController *personalVC2 = HNWLoadControllerFromStoryboard(SBName, NSStringFromClass(PersonalViewController.class));
-
-    [self addChildViewControllerWithVC:homeVC2];
-    [self addChildViewControllerWithVC:personalVC2];
-
+    [self addChildViewControllerWithVC:nearVC];
+    [self addChildViewControllerWithVC:messageVC];
+    [self addChildViewControllerWithVC:myVC];
 }
 
 // 添加某个 childViewController
@@ -57,22 +56,10 @@
     [self addChildViewController:nav];
 }
 
-#pragma mark - other
-- (UIImage *)imageWithColor:(UIColor *)color {
-    CGRect rect = CGRectMake(0.0f,0.0f, 1.0f,1.0f);
-    UIGraphicsBeginImageContext(rect.size);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetFillColorWithColor(context, [color CGColor]);
-    CGContextFillRect(context, rect);
-    UIImage *image =UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return image;
-}
-
 #pragma mark - DHCustomTabBarViewDelegate
 - (void)dhTabBarView:(DHTabBarView *)view didSelectItemAtIndex:(NSInteger)index
 {
-    self.dhTabBar.backgroundImage = index ? [self imageWithColor:UIColor.lightTextColor] : [self imageWithColor:[UIColor colorWithRed:1 green:1 blue:1 alpha:0]];
+    self.dhTabBar.backgroundImage = index ? [UIImage gk_imageWithColor:[UIColor blueColor] size:CGSizeMake(SCREEN_WIDTH, GK_TABBAR_HEIGHT)] : [UIImage gk_imageWithColor:[UIColor clearColor] size:CGSizeMake(SCREEN_WIDTH, GK_TABBAR_HEIGHT)];
     // 切换到对应index的viewController
     self.selectedIndex = index;
     NSLog(@"index------>>>%ld",index);

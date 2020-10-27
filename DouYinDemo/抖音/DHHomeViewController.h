@@ -1,5 +1,5 @@
 //
-//  Test2ViewController.h
+//  DHHomeViewController.h
 //  DouYinDemo
 //
 //  Created by HN on 2020/9/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Test2ViewController : UIViewController
+@interface DHHomeViewController : UIViewController
 
 @end

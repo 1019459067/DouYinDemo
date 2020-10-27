@@ -1,25 +1,21 @@
 //
-//  PersonalViewController.m
-//  DouYinDemo
+//  DHNearViewController.m
+//  huinongwang
 //
-//  Created by HN on 2020/9/15.
+//  Created by HN on 2020/10/26.
 //  Copyright © 2020 cnhnb. All rights reserved.
 //
 
-#import "PersonalViewController.h"
+#import "DHNearViewController.h"
 
-@interface PersonalViewController ()
+@interface DHNearViewController ()
 
 @end
 
-@implementation PersonalViewController
+@implementation DHNearViewController
 
-#pragma mark - life
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.gk_navTitle = @"My";
-//    self.navigationController.navigationBar.hidden = NO;
-
     UILabel *label = [[UILabel alloc]init];
     label.bounds = CGRectMake(0, 0, self.view.frame.size.width, 50);
     label.center = CGPointMake(self.view.frame.size.width/2., self.view.frame.size.height/2.);
@@ -29,7 +25,7 @@
     label.text = [NSString stringWithFormat:@"%s",__func__];
     [self.view addSubview:label];
     
-    self.view.backgroundColor = UIColor.blackColor;
+    self.view.backgroundColor = UIColor.redColor;
 }
 
 @end

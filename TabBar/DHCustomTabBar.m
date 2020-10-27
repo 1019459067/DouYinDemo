@@ -21,7 +21,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.titlesArray = titlesArray;
-        [self setBackgroundImage:[UIImage gk_imageWithColor:[UIColor clearColor] size:CGSizeMake(SCREEN_WIDTH, TABBAR_HEIGHT)]];
+        [self setBackgroundImage:[UIImage gk_imageWithColor:[UIColor clearColor] size:CGSizeMake(SCREEN_WIDTH, GK_TABBAR_HEIGHT)]];
         [self showLine];
         [self addSubview:self.tabBarView];
     }

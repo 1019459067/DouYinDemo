@@ -1,59 +1,70 @@
 //
-//  HomeViewController.m
+//  DHHomeViewController.m
 //  DouYinDemo
 //
 //  Created by HN on 2020/9/15.
 //  Copyright © 2020 cnhnb. All rights reserved.
 //
 
-#import "HomeViewController.h"
-#import "Test1ViewController.h"
-#import "Test2ViewController.h"
-#import "Test3ViewController.h"
+// ViewController
+#import "DHHomeViewController.h"
+#import "DHHomeAttentionViewController.h"
+#import "DHHomeRecommendViewController.h"
+#import "DHMyViewController.h"
+
+// View
 #import "DHScrollView.h"
 #import "SlideTabBarView.h"
 #import "PlayLoadingView.h"
 
-@interface HomeViewController ()<GKViewControllerPushDelegate, UITabBarControllerDelegate, UIScrollViewDelegate, SlideTabBarViewDelegate>
+@interface DHHomeViewController ()<GKViewControllerPushDelegate, UITabBarControllerDelegate, UIScrollViewDelegate, SlideTabBarViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *topBgView;
-@property (weak, nonatomic) IBOutlet UIButton *showLoadingButton;
+@property (weak, nonatomic) IBOutlet UISwitch *testBT;
 
 @property (strong, nonatomic) SlideTabBarView *slideTabBarView;
 @property (strong, nonatomic) DHScrollView *mainScrolView;
 @property (strong, nonatomic) PlayLoadingView *playLoadingView;
 
-@property (strong, nonatomic) Test1ViewController *test1VC;
-@property (strong, nonatomic) Test2ViewController *test2VC;
-@property (strong, nonatomic) Test3ViewController *test3VC;
+@property (strong, nonatomic) DHHomeAttentionViewController *attentionVC;
+@property (strong, nonatomic) DHHomeRecommendViewController *recommendVC;
 
 @property (strong, nonatomic) NSArray *childVCs;
 
 @end
 
-@implementation HomeViewController
+@implementation DHHomeViewController
 
 #pragma mark - life
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = UIColor.greenColor;
-    self.navigationController.navigationBar.hidden = YES;
 //    self.gk_navigationBar.hidden = YES;
 //    self.gk_statusBarStyle = UIStatusBarStyleLightContent;
 //    self.gk_statusBarHidden = YES;
     // 设置左滑push代理
     self.gk_pushDelegate = self;
+    self.navigationController.navigationBar.hidden = YES;
 
     [self settingUI];
     [self addPlayLoadingView];
 }
 
+- (void)dealloc {
+    NSLog(@"xwh: %@ dealloc", NSStringFromClass([self class]));
+}
+
 #pragma mark - UI
 - (void)settingUI {
-    self.slideTabBarView = [[SlideTabBarView alloc]initWithFrame:CGRectMake(0, 0, 200, 44) titles:@[@"test1VC", @"test2VC", @"test3VC"]];
+    UIEdgeInsets safeAreaInsets = UIEdgeInsetsZero;
+    if (@available(iOS 11.0, *)) {
+        safeAreaInsets = APPDELEGATE.window.safeAreaInsets;
+    } else {
+        // Fallback on earlier versions
+    }
+    self.slideTabBarView = [[SlideTabBarView alloc]initWithFrame:CGRectMake((SCREEN_WIDTH-120)/2., safeAreaInsets.top, 120, 30) titles:@[@"test1VC", @"test2VC"]];
     self.slideTabBarView.delegate = self;
-    [self.topBgView addSubview:self.slideTabBarView];
+    [self.view addSubview:self.slideTabBarView];
     
-    self.childVCs = @[self.test1VC, self.test2VC, self.test3VC];
+    self.childVCs = @[self.attentionVC, self.recommendVC];
     
     // scrolView
     [self.view addSubview:self.mainScrolView];
@@ -73,14 +84,21 @@
     
     // 默认显示播放器页
     self.mainScrolView.contentOffset = CGPointMake(0, 0);
-    [self.view insertSubview:self.topBgView aboveSubview:self.mainScrolView];
-    [self.view insertSubview:self.showLoadingButton aboveSubview:self.mainScrolView];
+    [self.view insertSubview:self.slideTabBarView aboveSubview:self.mainScrolView];
+    [self.view insertSubview:self.testBT aboveSubview:self.mainScrolView];
 
-    [self slideTabBarView:self.slideTabBarView didSelectedIndex:1];
+    [self slideTabBarView:self.slideTabBarView didSelectedIndex:0];
 }
 
 - (void)addPlayLoadingView {
-    self.playLoadingView = [[PlayLoadingView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-49-APPDELEGATE.window.safeAreaInsets.bottom, [UIScreen mainScreen].bounds.size.width, 2) postionX:self.view.center.x];
+    UIEdgeInsets safeAreaInsets = UIEdgeInsetsZero;
+    if (@available(iOS 11.0, *)) {
+        safeAreaInsets = APPDELEGATE.window.safeAreaInsets;
+    } else {
+        // Fallback on earlier versions
+    }
+    self.playLoadingView = [[PlayLoadingView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-49-safeAreaInsets.bottom, [UIScreen mainScreen].bounds.size.width, 2) postionX:self.view.center.x];
+
 //    self.playLoadingView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.1];
     [self.view addSubview:self.playLoadingView];
 }
@@ -113,16 +131,16 @@
 
 #pragma mark - GKViewControllerPushDelegate
 - (void)pushToNextViewController {
-    PersonalViewController *personalVC = HNWLoadControllerFromStoryboard(SBName, NSStringFromClass(PersonalViewController.class));
+    DHMyViewController *personalVC = HNWLoadControllerFromStoryboard(SBName, NSStringFromClass(DHMyViewController.class));
     personalVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:personalVC animated:YES];
 }
 
-#pragma mark - 懒加载
+#pragma mark - get data
 - (DHScrollView *)mainScrolView {
     if (!_mainScrolView) {
         _mainScrolView = [[DHScrollView alloc]init];
-        _mainScrolView.scrollPageIndex = self.childVCs.count-1;
+        _mainScrolView.scrollPageIndex = 1;
         _mainScrolView.pagingEnabled = YES;
         _mainScrolView.showsHorizontalScrollIndicator = NO;
         _mainScrolView.showsVerticalScrollIndicator = NO;
@@ -137,25 +155,18 @@
     return _mainScrolView;
 }
 
-- (Test1ViewController *)test1VC {
-    if (!_test1VC) {
-        _test1VC = HNWLoadControllerFromStoryboard(SBName, NSStringFromClass(Test1ViewController.class));
+- (DHHomeAttentionViewController *)attentionVC {
+    if (!_attentionVC) {
+        _attentionVC = [[DHHomeAttentionViewController alloc]init];
     }
-    return _test1VC;
+    return _attentionVC;
 }
 
-- (Test2ViewController *)test2VC {
-    if (!_test2VC) {
-        _test2VC = HNWLoadControllerFromStoryboard(SBName, NSStringFromClass(Test2ViewController.class));
+- (DHHomeRecommendViewController *)recommendVC {
+    if (!_recommendVC) {
+        _recommendVC = [[DHHomeRecommendViewController alloc]init];
     }
-    return _test2VC;
-}
-
-- (Test3ViewController *)test3VC {
-    if (!_test3VC) {
-        _test3VC = HNWLoadControllerFromStoryboard(SBName, NSStringFromClass(Test3ViewController.class));
-    }
-    return _test3VC;
+    return _recommendVC;
 }
 
 @end

@@ -12,10 +12,6 @@
 		A65E42A12510564D0029A1DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65E42A02510564D0029A1DB /* Assets.xcassets */; };
 		A65E42A42510564D0029A1DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65E42A22510564D0029A1DB /* LaunchScreen.storyboard */; };
 		A65E42A72510564D0029A1DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E42A62510564D0029A1DB /* main.m */; };
-		A65E42B82510568A0029A1DB /* Test2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E42B22510568A0029A1DB /* Test2ViewController.m */; };
-		A65E42B92510568A0029A1DB /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E42B32510568A0029A1DB /* HomeViewController.m */; };
-		A65E42BB2510568A0029A1DB /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E42B52510568A0029A1DB /* PersonalViewController.m */; };
-		A65E42BC2510568A0029A1DB /* Test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E42B62510568A0029A1DB /* Test1ViewController.m */; };
 		A66F431D2542C3F100EDD15B /* PlayLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = A66F431C2542C3F100EDD15B /* PlayLoadingView.m */; };
 		A6755C892546B06500EA78D2 /* DHScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6755C882546B06500EA78D2 /* DHScrollView.m */; };
 		A6755C942546B07200EA78D2 /* DHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6755C8D2546B07200EA78D2 /* DHTabBarController.m */; };
@@ -23,9 +19,14 @@
 		A6755C962546B07200EA78D2 /* DHTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6755C922546B07200EA78D2 /* DHTabBarView.m */; };
 		A6755C972546B07200EA78D2 /* DHCustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A6755C932546B07200EA78D2 /* DHCustomTabBar.m */; };
 		A6792BB4253D2B69000CB4DE /* SlideTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6792BB3253D2B69000CB4DE /* SlideTabBarView.m */; };
-		A67DB597254115C40046A4DF /* Test3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A67DB596254115C40046A4DF /* Test3ViewController.m */; };
+		A6B3A3A72547E9E7008B37BE /* DHHomeBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B3A39C2547E9E6008B37BE /* DHHomeBaseViewController.m */; };
+		A6B3A3A82547E9E7008B37BE /* DHMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B3A39D2547E9E6008B37BE /* DHMessageViewController.m */; };
+		A6B3A3A92547E9E7008B37BE /* DHMyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B3A39F2547E9E7008B37BE /* DHMyViewController.m */; };
+		A6B3A3AA2547E9E7008B37BE /* DHHomeAttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B3A3A12547E9E7008B37BE /* DHHomeAttentionViewController.m */; };
+		A6B3A3AB2547E9E7008B37BE /* DHNearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B3A3A32547E9E7008B37BE /* DHNearViewController.m */; };
+		A6B3A3AC2547E9E7008B37BE /* DHHomeRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B3A3A42547E9E7008B37BE /* DHHomeRecommendViewController.m */; };
+		A6B3A3AD2547E9E7008B37BE /* DHHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B3A3A62547E9E7008B37BE /* DHHomeViewController.m */; };
 		A6CC252825242FF500F44260 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6CC252725242FF500F44260 /* main.storyboard */; };
-		A6CC252C2524312700F44260 /* DHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CC252B2524312700F44260 /* DHNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,14 +39,6 @@
 		A65E42A32510564D0029A1DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A65E42A52510564D0029A1DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A65E42A62510564D0029A1DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A65E42AF2510568A0029A1DB /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		A65E42B02510568A0029A1DB /* Test1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test1ViewController.h; sourceTree = "<group>"; };
-		A65E42B12510568A0029A1DB /* PersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalViewController.h; sourceTree = "<group>"; };
-		A65E42B22510568A0029A1DB /* Test2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test2ViewController.m; sourceTree = "<group>"; };
-		A65E42B32510568A0029A1DB /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		A65E42B52510568A0029A1DB /* PersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalViewController.m; sourceTree = "<group>"; };
-		A65E42B62510568A0029A1DB /* Test1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test1ViewController.m; sourceTree = "<group>"; };
-		A65E42B72510568A0029A1DB /* Test2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test2ViewController.h; sourceTree = "<group>"; };
 		A65E43092510C1FA0029A1DB /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		A66F431B2542C3F100EDD15B /* PlayLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayLoadingView.h; sourceTree = "<group>"; };
 		A66F431C2542C3F100EDD15B /* PlayLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayLoadingView.m; sourceTree = "<group>"; };
@@ -61,11 +54,21 @@
 		A6755C932546B07200EA78D2 /* DHCustomTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHCustomTabBar.m; sourceTree = "<group>"; };
 		A6792BB2253D2B69000CB4DE /* SlideTabBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlideTabBarView.h; sourceTree = "<group>"; };
 		A6792BB3253D2B69000CB4DE /* SlideTabBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlideTabBarView.m; sourceTree = "<group>"; };
-		A67DB595254115C40046A4DF /* Test3ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test3ViewController.h; sourceTree = "<group>"; };
-		A67DB596254115C40046A4DF /* Test3ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test3ViewController.m; sourceTree = "<group>"; };
+		A6B3A3992547E9E6008B37BE /* DHMyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHMyViewController.h; sourceTree = "<group>"; };
+		A6B3A39A2547E9E6008B37BE /* DHHomeRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHHomeRecommendViewController.h; sourceTree = "<group>"; };
+		A6B3A39B2547E9E6008B37BE /* DHHomeAttentionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHHomeAttentionViewController.h; sourceTree = "<group>"; };
+		A6B3A39C2547E9E6008B37BE /* DHHomeBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHHomeBaseViewController.m; sourceTree = "<group>"; };
+		A6B3A39D2547E9E6008B37BE /* DHMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHMessageViewController.m; sourceTree = "<group>"; };
+		A6B3A39E2547E9E7008B37BE /* DHHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHHomeViewController.h; sourceTree = "<group>"; };
+		A6B3A39F2547E9E7008B37BE /* DHMyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHMyViewController.m; sourceTree = "<group>"; };
+		A6B3A3A02547E9E7008B37BE /* DHMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHMessageViewController.h; sourceTree = "<group>"; };
+		A6B3A3A12547E9E7008B37BE /* DHHomeAttentionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHHomeAttentionViewController.m; sourceTree = "<group>"; };
+		A6B3A3A22547E9E7008B37BE /* DHHomeBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHHomeBaseViewController.h; sourceTree = "<group>"; };
+		A6B3A3A32547E9E7008B37BE /* DHNearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHNearViewController.m; sourceTree = "<group>"; };
+		A6B3A3A42547E9E7008B37BE /* DHHomeRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHHomeRecommendViewController.m; sourceTree = "<group>"; };
+		A6B3A3A52547E9E7008B37BE /* DHNearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHNearViewController.h; sourceTree = "<group>"; };
+		A6B3A3A62547E9E7008B37BE /* DHHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHHomeViewController.m; sourceTree = "<group>"; };
 		A6CC252725242FF500F44260 /* main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
-		A6CC252A2524312700F44260 /* DHNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHNavigationController.h; sourceTree = "<group>"; };
-		A6CC252B2524312700F44260 /* DHNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHNavigationController.m; sourceTree = "<group>"; };
 		F318877465912A0B7EF1276B /* Pods_DouYinDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DouYinDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -130,16 +133,20 @@
 		A65E42AD2510568A0029A1DB /* 抖音 */ = {
 			isa = PBXGroup;
 			children = (
-				A65E42AF2510568A0029A1DB /* HomeViewController.h */,
-				A65E42B32510568A0029A1DB /* HomeViewController.m */,
-				A65E42B02510568A0029A1DB /* Test1ViewController.h */,
-				A65E42B62510568A0029A1DB /* Test1ViewController.m */,
-				A65E42B72510568A0029A1DB /* Test2ViewController.h */,
-				A65E42B22510568A0029A1DB /* Test2ViewController.m */,
-				A67DB595254115C40046A4DF /* Test3ViewController.h */,
-				A67DB596254115C40046A4DF /* Test3ViewController.m */,
-				A65E42B12510568A0029A1DB /* PersonalViewController.h */,
-				A65E42B52510568A0029A1DB /* PersonalViewController.m */,
+				A6B3A39B2547E9E6008B37BE /* DHHomeAttentionViewController.h */,
+				A6B3A3A12547E9E7008B37BE /* DHHomeAttentionViewController.m */,
+				A6B3A3A22547E9E7008B37BE /* DHHomeBaseViewController.h */,
+				A6B3A39C2547E9E6008B37BE /* DHHomeBaseViewController.m */,
+				A6B3A39A2547E9E6008B37BE /* DHHomeRecommendViewController.h */,
+				A6B3A3A42547E9E7008B37BE /* DHHomeRecommendViewController.m */,
+				A6B3A39E2547E9E7008B37BE /* DHHomeViewController.h */,
+				A6B3A3A62547E9E7008B37BE /* DHHomeViewController.m */,
+				A6B3A3A02547E9E7008B37BE /* DHMessageViewController.h */,
+				A6B3A39D2547E9E6008B37BE /* DHMessageViewController.m */,
+				A6B3A3992547E9E6008B37BE /* DHMyViewController.h */,
+				A6B3A39F2547E9E7008B37BE /* DHMyViewController.m */,
+				A6B3A3A52547E9E7008B37BE /* DHNearViewController.h */,
+				A6B3A3A32547E9E7008B37BE /* DHNearViewController.m */,
 			);
 			path = "抖音";
 			sourceTree = "<group>";
@@ -149,8 +156,6 @@
 			children = (
 				A65E4294251056480029A1DB /* AppDelegate.h */,
 				A65E4295251056480029A1DB /* AppDelegate.m */,
-				A6CC252A2524312700F44260 /* DHNavigationController.h */,
-				A6CC252B2524312700F44260 /* DHNavigationController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -177,13 +182,13 @@
 			isa = PBXGroup;
 			children = (
 				A6755C8C2546B07200EA78D2 /* DHTabbarButton.h */,
-				A6755C8D2546B07200EA78D2 /* DHTabBarController.m */,
-				A6755C8E2546B07200EA78D2 /* DHTabBarView.h */,
-				A6755C8F2546B07200EA78D2 /* DHCustomTabBar.h */,
-				A6755C902546B07200EA78D2 /* DHTabBarController.h */,
 				A6755C912546B07200EA78D2 /* DHTabbarButton.m */,
+				A6755C8E2546B07200EA78D2 /* DHTabBarView.h */,
 				A6755C922546B07200EA78D2 /* DHTabBarView.m */,
+				A6755C8F2546B07200EA78D2 /* DHCustomTabBar.h */,
 				A6755C932546B07200EA78D2 /* DHCustomTabBar.m */,
+				A6755C902546B07200EA78D2 /* DHTabBarController.h */,
+				A6755C8D2546B07200EA78D2 /* DHTabBarController.m */,
 			);
 			path = TabBar;
 			sourceTree = SOURCE_ROOT;
@@ -319,20 +324,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A65E42BB2510568A0029A1DB /* PersonalViewController.m in Sources */,
 				A65E4296251056480029A1DB /* AppDelegate.m in Sources */,
 				A65E42A72510564D0029A1DB /* main.m in Sources */,
-				A65E42BC2510568A0029A1DB /* Test1ViewController.m in Sources */,
+				A6B3A3AC2547E9E7008B37BE /* DHHomeRecommendViewController.m in Sources */,
+				A6B3A3AA2547E9E7008B37BE /* DHHomeAttentionViewController.m in Sources */,
+				A6B3A3A82547E9E7008B37BE /* DHMessageViewController.m in Sources */,
 				A6755C962546B07200EA78D2 /* DHTabBarView.m in Sources */,
-				A67DB597254115C40046A4DF /* Test3ViewController.m in Sources */,
-				A65E42B82510568A0029A1DB /* Test2ViewController.m in Sources */,
+				A6B3A3AB2547E9E7008B37BE /* DHNearViewController.m in Sources */,
+				A6B3A3A72547E9E7008B37BE /* DHHomeBaseViewController.m in Sources */,
 				A6755C892546B06500EA78D2 /* DHScrollView.m in Sources */,
-				A65E42B92510568A0029A1DB /* HomeViewController.m in Sources */,
-				A6CC252C2524312700F44260 /* DHNavigationController.m in Sources */,
 				A6755C952546B07200EA78D2 /* DHTabbarButton.m in Sources */,
 				A6792BB4253D2B69000CB4DE /* SlideTabBarView.m in Sources */,
+				A6B3A3A92547E9E7008B37BE /* DHMyViewController.m in Sources */,
 				A66F431D2542C3F100EDD15B /* PlayLoadingView.m in Sources */,
 				A6755C972546B07200EA78D2 /* DHCustomTabBar.m in Sources */,
+				A6B3A3AD2547E9E7008B37BE /* DHHomeViewController.m in Sources */,
 				A6755C942546B07200EA78D2 /* DHTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,7 +407,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -453,7 +459,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

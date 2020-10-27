@@ -1,34 +1,30 @@
 //
-//  Test2ViewController.m
-//  DouYinDemo
+//  DHMyViewController.m
+//  huinongwang
 //
-//  Created by HN on 2020/9/15.
+//  Created by HN on 2020/10/26.
 //  Copyright © 2020 cnhnb. All rights reserved.
 //
 
-#import "Test2ViewController.h"
+#import "DHMyViewController.h"
 
-@interface Test2ViewController ()
+@interface DHMyViewController ()
 
 @end
 
-@implementation Test2ViewController
+@implementation DHMyViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.gk_statusBarStyle = UIStatusBarStyleLightContent;
-//    self.gk_navigationBar.hidden = YES;
-
     UILabel *label = [[UILabel alloc]init];
     label.bounds = CGRectMake(0, 0, self.view.frame.size.width, 50);
     label.center = CGPointMake(self.view.frame.size.width/2., self.view.frame.size.height/2.);
     label.textAlignment = NSTextAlignmentCenter;
-    label.textColor = UIColor.whiteColor;
+    label.textColor = UIColor.redColor;
     label.adjustsFontSizeToFitWidth = YES;
     label.text = [NSString stringWithFormat:@"%s",__func__];
     [self.view addSubview:label];
     
-    self.view.backgroundColor = UIColor.orangeColor;
+    self.view.backgroundColor = UIColor.redColor;
 }
-
 @end
