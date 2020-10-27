@@ -25,7 +25,8 @@
     label.text = [NSString stringWithFormat:@"%s",__func__];
     [self.view addSubview:label];
     
-    self.view.backgroundColor = UIColor.redColor;
+    self.navigationController.navigationBar.hidden = YES;
+    self.view.backgroundColor = UIColor.whiteColor;
 }
 
 @end
