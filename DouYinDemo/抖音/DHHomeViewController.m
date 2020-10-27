@@ -48,6 +48,7 @@
     [self addPlayLoadingView];
 }
 
+
 - (void)dealloc {
     NSLog(@"xwh: %@ dealloc", NSStringFromClass([self class]));
 }

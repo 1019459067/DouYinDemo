@@ -10,11 +10,8 @@
 #import "MainViewController.h"
 #import "RTRootNavigationController.h"
 
-#import "DHCustomTabBar.h"
-
 @interface DYTabViewController ()
 
-@property (strong, nonatomic) DHCustomTabBar *dhTabBar;
 
 @end
 
@@ -22,13 +19,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    DHCustomTabBar *dhTabBar = [[DHCustomTabBar alloc] initWithFrame:CGRectZero titles:@[@"首页"]];
+    self.tabBar.hidden = YES;
+    self.dhTabBar = [[DHCustomTabBar alloc] initWithFrame:self.tabBar.frame titles:@[@"首页"]];
+    [self.view addSubview:self.dhTabBar];
+//    dhTabBar.frame
+//    dhTabBar.tabBarView.viewDelegate = self;
+//    [self setValue:dhTabBar forKey:@"tabBar"];
 
-    dhTabBar.tabBarView.viewDelegate = self;
-    [self setValue:dhTabBar forKey:@"tabBar"];
-
-//    dhTabBar.backgroundImage = [UIImage gk_imageWithColor:[UIColor orangeColor] size:CGSizeMake(SCREEN_WIDTH, GK_TABBAR_HEIGHT)];
+    self.dhTabBar.backgroundImage = [UIImage gk_imageWithColor:[UIColor orangeColor] size:CGSizeMake(SCREEN_WIDTH, GK_TABBAR_HEIGHT)];
     MainViewController *homeVC = HNWLoadControllerFromStoryboard(SBName, NSStringFromClass(MainViewController.class));
 //    RTRootNavigationController *containVC = [[RTRootNavigationController alloc]initWithRootViewController:homeVC];
     [self addChildViewControllerWithVC:homeVC];
