@@ -30,8 +30,8 @@
             filePath = "DouYinDemo/Main/TestTabViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "-dhTabBarView:didSelectItemAtIndex:"
             landmarkType = "7">
          </BreakpointContent>

@@ -7,6 +7,7 @@
 //
 
 #import "TestBaseViewController.h"
+#import "DHTabBarController.h"
 
 @interface TestBaseViewController ()
 
@@ -27,11 +28,19 @@
     [self.view addSubview:self.label];
     
     self.view.backgroundColor = UIColor.orangeColor;
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"push" style:UIBarButtonItemStylePlain target:self action:@selector(onActionPush:)];
 }
 
 - (UIBarButtonItem *)rt_customBackItemWithTarget:(id)target action:(SEL)action
 {
     return nil;
+}
+
+- (IBAction)onActionPush:(UIButton *)sender {
+    DHTabBarController *tabVC = [[DHTabBarController alloc]init];
+    tabVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:tabVC animated:YES];
 }
 /*
 #pragma mark - Navigation

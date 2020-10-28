@@ -7,8 +7,6 @@
 //
 
 #import "Test1ViewController.h"
-#import "DHTabBarController.h"
-#import "TestTabViewController.h"
 
 @interface Test1ViewController ()
 
@@ -21,10 +19,6 @@
     self.label.text = [NSString stringWithFormat:@"%s",__func__];
 }
 
-- (IBAction)onActionPush:(UIButton *)sender {
-    DHTabBarController *tabVC = [[DHTabBarController alloc]init];
-    tabVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:tabVC animated:YES];
-}
+
 
 @end

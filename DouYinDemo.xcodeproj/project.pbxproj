@@ -50,7 +50,6 @@
 		C9D7353E25499385008A0A85 /* Test4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D7353D25499385008A0A85 /* Test4ViewController.m */; };
 		C9D735432549948E008A0A85 /* TestBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D735422549948E008A0A85 /* TestBaseViewController.m */; };
 		C9D735492549970B008A0A85 /* Test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D735472549970B008A0A85 /* Test1ViewController.m */; };
-		C9D7354A2549970B008A0A85 /* Test1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9D735482549970B008A0A85 /* Test1ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,7 +139,6 @@
 		C9D735422549948E008A0A85 /* TestBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestBaseViewController.m; sourceTree = "<group>"; };
 		C9D735462549970B008A0A85 /* Test1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test1ViewController.h; sourceTree = "<group>"; };
 		C9D735472549970B008A0A85 /* Test1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test1ViewController.m; sourceTree = "<group>"; };
-		C9D735482549970B008A0A85 /* Test1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Test1ViewController.xib; sourceTree = "<group>"; };
 		F318877465912A0B7EF1276B /* Pods_DouYinDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DouYinDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -373,7 +371,6 @@
 			children = (
 				C9D735462549970B008A0A85 /* Test1ViewController.h */,
 				C9D735472549970B008A0A85 /* Test1ViewController.m */,
-				C9D735482549970B008A0A85 /* Test1ViewController.xib */,
 				C9D7353425499377008A0A85 /* Test2ViewController.h */,
 				C9D7353525499377008A0A85 /* Test2ViewController.m */,
 				C9D735382549937D008A0A85 /* Test3ViewController.h */,
@@ -455,7 +452,6 @@
 				A65E42A42510564D0029A1DB /* LaunchScreen.storyboard in Resources */,
 				A6CC252825242FF500F44260 /* main.storyboard in Resources */,
 				A6AA048025481820000E5061 /* GKNavigationBarViewController.bundle in Resources */,
-				C9D7354A2549970B008A0A85 /* Test1ViewController.xib in Resources */,
 				A65E42A12510564D0029A1DB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

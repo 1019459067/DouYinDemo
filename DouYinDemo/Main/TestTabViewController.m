@@ -27,7 +27,7 @@
 //    self.tabBar.hidden = YES;
     self.dhTabBar = [[DHCustomTabBar alloc] initWithFrame:self.tabBar.frame titles:@[@"Test1", @"Test2", @"Test3", @"Test4"]];
 //    [self.view addSubview:self.dhTabBar];
-    self.dhTabBar.frame = self.tabBar.frame;
+//    self.dhTabBar.frame = self.tabBar.frame;
     self.dhTabBar.tabBarView.viewDelegate = self;
     [self setValue:self.dhTabBar forKey:@"tabBar"];
 
@@ -55,7 +55,13 @@
 // 添加某个 childViewController
 - (void)addChildViewControllerWithVC:(UIViewController *)vc
 {
-    RTRootNavigationController *nav = [[RTRootNavigationController alloc]initWithRootViewController:vc];
+//    RTRootNavigationController *nav = [[RTRootNavigationController alloc]initWithRootViewController:vc];
+
+    RTContainerNavigationController *nav = [[RTContainerNavigationController alloc]initWithRootViewController:vc];
+    
+//    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
+    nav.view.backgroundColor = UIColor.redColor;
+//    RTRootNavigationController *nav = [[RTRootNavigationController alloc]initWithRootViewController:vc];
 //    nav.title = [NSStringFromClass(vc.class) componentsSeparatedByString:@"V"].firstObject;
 //    vc.tabBarItem.title = [NSStringFromClass(vc.class) componentsSeparatedByString:@"V"].firstObject;
     [self addChildViewController:nav];
