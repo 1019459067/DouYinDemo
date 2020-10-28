@@ -20,7 +20,7 @@
 		A6755C972546B07200EA78D2 /* DHCustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A6755C932546B07200EA78D2 /* DHCustomTabBar.m */; };
 		A6792BB4253D2B69000CB4DE /* SlideTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6792BB3253D2B69000CB4DE /* SlideTabBarView.m */; };
 		A6AA03A22547F030000E5061 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AA03A12547F030000E5061 /* MainViewController.m */; };
-		A6AA03A62547F2EF000E5061 /* DYTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AA03A52547F2EF000E5061 /* DYTabViewController.m */; };
+		A6AA03A62547F2EF000E5061 /* TestTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AA03A52547F2EF000E5061 /* TestTabViewController.m */; };
 		A6AA047425481820000E5061 /* GKPushTransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AA045525481820000E5061 /* GKPushTransitionAnimation.m */; };
 		A6AA047525481820000E5061 /* GKDelegateHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AA045625481820000E5061 /* GKDelegateHandler.m */; };
 		A6AA047625481820000E5061 /* GKPopTransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AA045725481820000E5061 /* GKPopTransitionAnimation.m */; };
@@ -45,6 +45,12 @@
 		A6CC252825242FF500F44260 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6CC252725242FF500F44260 /* main.storyboard */; };
 		C9D734F325486BF6008A0A85 /* UIViewController+RTRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D734EF25486BF6008A0A85 /* UIViewController+RTRootNavigationController.m */; };
 		C9D734F425486BF6008A0A85 /* RTRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D734F225486BF6008A0A85 /* RTRootNavigationController.m */; };
+		C9D7353625499377008A0A85 /* Test2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D7353525499377008A0A85 /* Test2ViewController.m */; };
+		C9D7353A2549937D008A0A85 /* Test3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D735392549937D008A0A85 /* Test3ViewController.m */; };
+		C9D7353E25499385008A0A85 /* Test4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D7353D25499385008A0A85 /* Test4ViewController.m */; };
+		C9D735432549948E008A0A85 /* TestBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D735422549948E008A0A85 /* TestBaseViewController.m */; };
+		C9D735492549970B008A0A85 /* Test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D735472549970B008A0A85 /* Test1ViewController.m */; };
+		C9D7354A2549970B008A0A85 /* Test1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9D735482549970B008A0A85 /* Test1ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,8 +80,8 @@
 		A6792BB3253D2B69000CB4DE /* SlideTabBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlideTabBarView.m; sourceTree = "<group>"; };
 		A6AA03A02547F030000E5061 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		A6AA03A12547F030000E5061 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		A6AA03A42547F2EF000E5061 /* DYTabViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYTabViewController.h; sourceTree = "<group>"; };
-		A6AA03A52547F2EF000E5061 /* DYTabViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYTabViewController.m; sourceTree = "<group>"; };
+		A6AA03A42547F2EF000E5061 /* TestTabViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTabViewController.h; sourceTree = "<group>"; };
+		A6AA03A52547F2EF000E5061 /* TestTabViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTabViewController.m; sourceTree = "<group>"; };
 		A6AA045525481820000E5061 /* GKPushTransitionAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKPushTransitionAnimation.m; sourceTree = "<group>"; };
 		A6AA045625481820000E5061 /* GKDelegateHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKDelegateHandler.m; sourceTree = "<group>"; };
 		A6AA045725481820000E5061 /* GKPopTransitionAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKPopTransitionAnimation.m; sourceTree = "<group>"; };
@@ -124,6 +130,17 @@
 		C9D734F025486BF6008A0A85 /* RTRootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTRootNavigationController.h; sourceTree = "<group>"; };
 		C9D734F125486BF6008A0A85 /* UIViewController+RTRootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RTRootNavigationController.h"; sourceTree = "<group>"; };
 		C9D734F225486BF6008A0A85 /* RTRootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTRootNavigationController.m; sourceTree = "<group>"; };
+		C9D7353425499377008A0A85 /* Test2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test2ViewController.h; sourceTree = "<group>"; };
+		C9D7353525499377008A0A85 /* Test2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test2ViewController.m; sourceTree = "<group>"; };
+		C9D735382549937D008A0A85 /* Test3ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test3ViewController.h; sourceTree = "<group>"; };
+		C9D735392549937D008A0A85 /* Test3ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test3ViewController.m; sourceTree = "<group>"; };
+		C9D7353C25499385008A0A85 /* Test4ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test4ViewController.h; sourceTree = "<group>"; };
+		C9D7353D25499385008A0A85 /* Test4ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test4ViewController.m; sourceTree = "<group>"; };
+		C9D735412549948E008A0A85 /* TestBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestBaseViewController.h; sourceTree = "<group>"; };
+		C9D735422549948E008A0A85 /* TestBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestBaseViewController.m; sourceTree = "<group>"; };
+		C9D735462549970B008A0A85 /* Test1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test1ViewController.h; sourceTree = "<group>"; };
+		C9D735472549970B008A0A85 /* Test1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test1ViewController.m; sourceTree = "<group>"; };
+		C9D735482549970B008A0A85 /* Test1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Test1ViewController.xib; sourceTree = "<group>"; };
 		F318877465912A0B7EF1276B /* Pods_DouYinDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DouYinDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -190,20 +207,7 @@
 		A65E42AD2510568A0029A1DB /* 抖音 */ = {
 			isa = PBXGroup;
 			children = (
-				A6B3A39B2547E9E6008B37BE /* DHHomeAttentionViewController.h */,
-				A6B3A3A12547E9E7008B37BE /* DHHomeAttentionViewController.m */,
-				A6B3A3A22547E9E7008B37BE /* DHHomeBaseViewController.h */,
-				A6B3A39C2547E9E6008B37BE /* DHHomeBaseViewController.m */,
-				A6B3A39A2547E9E6008B37BE /* DHHomeRecommendViewController.h */,
-				A6B3A3A42547E9E7008B37BE /* DHHomeRecommendViewController.m */,
-				A6B3A39E2547E9E7008B37BE /* DHHomeViewController.h */,
-				A6B3A3A62547E9E7008B37BE /* DHHomeViewController.m */,
-				A6B3A3A02547E9E7008B37BE /* DHMessageViewController.h */,
-				A6B3A39D2547E9E6008B37BE /* DHMessageViewController.m */,
-				A6B3A3992547E9E6008B37BE /* DHMyViewController.h */,
-				A6B3A39F2547E9E7008B37BE /* DHMyViewController.m */,
-				A6B3A3A52547E9E7008B37BE /* DHNearViewController.h */,
-				A6B3A3A32547E9E7008B37BE /* DHNearViewController.m */,
+				C9D7352A25499217008A0A85 /* 抖货 */,
 			);
 			path = "抖音";
 			sourceTree = "<group>";
@@ -215,8 +219,9 @@
 				A65E4295251056480029A1DB /* AppDelegate.m */,
 				A6AA03A02547F030000E5061 /* MainViewController.h */,
 				A6AA03A12547F030000E5061 /* MainViewController.m */,
-				A6AA03A42547F2EF000E5061 /* DYTabViewController.h */,
-				A6AA03A52547F2EF000E5061 /* DYTabViewController.m */,
+				C9D7352E25499249008A0A85 /* Test */,
+				A6AA03A42547F2EF000E5061 /* TestTabViewController.h */,
+				A6AA03A52547F2EF000E5061 /* TestTabViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -334,12 +339,51 @@
 		C9D734EE25486BF6008A0A85 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C9D734F125486BF6008A0A85 /* UIViewController+RTRootNavigationController.h */,
 				C9D734EF25486BF6008A0A85 /* UIViewController+RTRootNavigationController.m */,
 				C9D734F025486BF6008A0A85 /* RTRootNavigationController.h */,
-				C9D734F125486BF6008A0A85 /* UIViewController+RTRootNavigationController.h */,
 				C9D734F225486BF6008A0A85 /* RTRootNavigationController.m */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		C9D7352A25499217008A0A85 /* 抖货 */ = {
+			isa = PBXGroup;
+			children = (
+				A6B3A39B2547E9E6008B37BE /* DHHomeAttentionViewController.h */,
+				A6B3A3A12547E9E7008B37BE /* DHHomeAttentionViewController.m */,
+				A6B3A3A22547E9E7008B37BE /* DHHomeBaseViewController.h */,
+				A6B3A39C2547E9E6008B37BE /* DHHomeBaseViewController.m */,
+				A6B3A39A2547E9E6008B37BE /* DHHomeRecommendViewController.h */,
+				A6B3A3A42547E9E7008B37BE /* DHHomeRecommendViewController.m */,
+				A6B3A39E2547E9E7008B37BE /* DHHomeViewController.h */,
+				A6B3A3A62547E9E7008B37BE /* DHHomeViewController.m */,
+				A6B3A3A02547E9E7008B37BE /* DHMessageViewController.h */,
+				A6B3A39D2547E9E6008B37BE /* DHMessageViewController.m */,
+				A6B3A3992547E9E6008B37BE /* DHMyViewController.h */,
+				A6B3A39F2547E9E7008B37BE /* DHMyViewController.m */,
+				A6B3A3A52547E9E7008B37BE /* DHNearViewController.h */,
+				A6B3A3A32547E9E7008B37BE /* DHNearViewController.m */,
+			);
+			path = "抖货";
+			sourceTree = "<group>";
+		};
+		C9D7352E25499249008A0A85 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				C9D735462549970B008A0A85 /* Test1ViewController.h */,
+				C9D735472549970B008A0A85 /* Test1ViewController.m */,
+				C9D735482549970B008A0A85 /* Test1ViewController.xib */,
+				C9D7353425499377008A0A85 /* Test2ViewController.h */,
+				C9D7353525499377008A0A85 /* Test2ViewController.m */,
+				C9D735382549937D008A0A85 /* Test3ViewController.h */,
+				C9D735392549937D008A0A85 /* Test3ViewController.m */,
+				C9D7353C25499385008A0A85 /* Test4ViewController.h */,
+				C9D7353D25499385008A0A85 /* Test4ViewController.m */,
+				C9D735412549948E008A0A85 /* TestBaseViewController.h */,
+				C9D735422549948E008A0A85 /* TestBaseViewController.m */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 		F7F518498214B961BEA7BC33 /* Frameworks */ = {
@@ -411,6 +455,7 @@
 				A65E42A42510564D0029A1DB /* LaunchScreen.storyboard in Resources */,
 				A6CC252825242FF500F44260 /* main.storyboard in Resources */,
 				A6AA048025481820000E5061 /* GKNavigationBarViewController.bundle in Resources */,
+				C9D7354A2549970B008A0A85 /* Test1ViewController.xib in Resources */,
 				A65E42A12510564D0029A1DB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,6 +494,7 @@
 			files = (
 				A6AA047725481820000E5061 /* GKBaseTransitionAnimation.m in Sources */,
 				A6AA047C25481820000E5061 /* UIScrollView+GKCategory.m in Sources */,
+				C9D7353A2549937D008A0A85 /* Test3ViewController.m in Sources */,
 				A6AA048125481820000E5061 /* GKNavigationBarViewController.m in Sources */,
 				A65E4296251056480029A1DB /* AppDelegate.m in Sources */,
 				A65E42A72510564D0029A1DB /* main.m in Sources */,
@@ -458,8 +504,11 @@
 				A6B3A3A82547E9E7008B37BE /* DHMessageViewController.m in Sources */,
 				A6755C962546B07200EA78D2 /* DHTabBarView.m in Sources */,
 				A6B3A3AB2547E9E7008B37BE /* DHNearViewController.m in Sources */,
+				C9D735432549948E008A0A85 /* TestBaseViewController.m in Sources */,
 				A6AA047B25481820000E5061 /* UIBarButtonItem+GKCategory.m in Sources */,
-				A6AA03A62547F2EF000E5061 /* DYTabViewController.m in Sources */,
+				A6AA03A62547F2EF000E5061 /* TestTabViewController.m in Sources */,
+				C9D7353E25499385008A0A85 /* Test4ViewController.m in Sources */,
+				C9D735492549970B008A0A85 /* Test1ViewController.m in Sources */,
 				A6AA047F25481820000E5061 /* UIViewController+GKCategory.m in Sources */,
 				C9D734F325486BF6008A0A85 /* UIViewController+RTRootNavigationController.m in Sources */,
 				A6AA047E25481820000E5061 /* UIImage+GKCategory.m in Sources */,
@@ -471,6 +520,7 @@
 				A6755C952546B07200EA78D2 /* DHTabbarButton.m in Sources */,
 				A6792BB4253D2B69000CB4DE /* SlideTabBarView.m in Sources */,
 				A6AA047925481820000E5061 /* GKNavigationBarConfigure.m in Sources */,
+				C9D7353625499377008A0A85 /* Test2ViewController.m in Sources */,
 				A6AA047625481820000E5061 /* GKPopTransitionAnimation.m in Sources */,
 				A6AA047425481820000E5061 /* GKPushTransitionAnimation.m in Sources */,
 				A6B3A3A92547E9E7008B37BE /* DHMyViewController.m in Sources */,

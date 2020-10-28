@@ -13,6 +13,7 @@
 #import "DHMyViewController.h"
 
 #import "DHCustomTabBar.h"
+#import "RTRootNavigationController.h"
 
 @interface DHTabBarController ()<DHTabBarViewDelegate>
 
@@ -48,7 +49,7 @@
 // 添加某个 childViewController
 - (void)addChildViewControllerWithVC:(UIViewController *)vc
 {
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    RTRootNavigationController *nav = [[RTRootNavigationController alloc] initWithRootViewController:vc];
     nav.gk_openScrollLeftPush = YES;
     // 如果同时有navigationbar 和 tabbar的时候最好分别设置它们的title
 //    vc.navigationItem.title = title;

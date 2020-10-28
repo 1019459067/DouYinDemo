@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "UINavigationController+GKCategory.h"
 
-#import "DYTabViewController.h"
+#import "TestTabViewController.h"
 
 @interface AppDelegate ()
 
@@ -35,7 +35,7 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
 //    self.window.backgroundColor = UIColor.whiteColor;
 
-    DYTabViewController *tabVC = [[DYTabViewController alloc]init];
+    TestTabViewController *tabVC = [[TestTabViewController alloc]init];
     self.window.rootViewController = tabVC;
 
     [self.window makeKeyAndVisible];

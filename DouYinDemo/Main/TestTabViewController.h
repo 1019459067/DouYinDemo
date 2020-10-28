@@ -1,5 +1,5 @@
 //
-//  DYTabViewController.h
+//  TestTabViewController.h
 //  DouYinDemo
 //
 //  Created by HN on 2020/10/27.
@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DYTabViewController : UITabBarController
+@interface TestTabViewController : UITabBarController
 @property (strong, nonatomic) DHCustomTabBar *dhTabBar;
 
 @end

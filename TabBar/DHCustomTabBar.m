@@ -25,7 +25,6 @@
         [self showLine];
         [self addSubview:self.tabBarView];
     }
-    
     return self;
 }
 
