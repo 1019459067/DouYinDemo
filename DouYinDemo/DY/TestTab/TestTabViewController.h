@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DHCustomTabBar.h"
+#import "TestTabBar.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TestTabViewController : UITabBarController
-@property (strong, nonatomic) DHCustomTabBar *dhTabBar;
+@property (strong, nonatomic) TestTabBar *testTabBar;
 
 @end
 

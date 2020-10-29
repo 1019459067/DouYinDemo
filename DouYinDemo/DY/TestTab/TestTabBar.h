@@ -1,17 +1,19 @@
 //
-//  DHCustomTabBar.h
+//  TestTabBar.h
 //  DouYinDemo
 //
-//  Created by HN on 2020/7/27.
+//  Created by XWH on 2020/10/29.
 //  Copyright © 2020 HN. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "DHTabBarView.h"
+#import "TestBarView.h"
 
-@interface DHCustomTabBar : UITabBar
+NS_ASSUME_NONNULL_BEGIN
 
-@property (nonatomic, strong) DHTabBarView *tabBarView;
+@interface TestTabBar : UITabBar
+
+@property (nonatomic, strong) TestBarView *tabBarView;
 
 - (instancetype)initWithFrame:(CGRect)frame titles:(NSArray *)titlesArray;
 
@@ -19,3 +21,5 @@
 - (void)hideLine;
 
 @end
+
+NS_ASSUME_NONNULL_END

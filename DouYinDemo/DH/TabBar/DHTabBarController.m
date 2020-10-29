@@ -12,8 +12,8 @@
 #import "DHMessageViewController.h"
 #import "DHMyViewController.h"
 
-#import "DHCustomTabBar.h"
-#import "RTRootNavigationController.h"
+#import "DHTabBar.h"
+#import "TestNavigationController.h"
 
 @interface DHTabBarController ()<DHTabBarViewDelegate>
 
@@ -26,7 +26,7 @@
     [super viewDidLoad];
 
     // Do any additional setup after loading the view.
-    self.dhTabBar = [[DHCustomTabBar alloc] initWithFrame:CGRectZero titles:@[@"首页",@"附近",@"消息",@"我"]];
+    self.dhTabBar = [[DHTabBar alloc] initWithFrame:CGRectZero titles:@[@"首页",@"附近",@"消息",@"我"]];
     self.dhTabBar.tabBarView.viewDelegate = self;
     [self setValue:self.dhTabBar forKey:@"tabBar"];
     
@@ -49,7 +49,7 @@
 // 添加某个 childViewController
 - (void)addChildViewControllerWithVC:(UIViewController *)vc
 {
-    RTRootNavigationController *nav = [[RTRootNavigationController alloc] initWithRootViewController:vc];
+    TestNavigationController *nav = [[TestNavigationController alloc] initWithRootViewController:vc];
     nav.gk_openScrollLeftPush = YES;
     // 如果同时有navigationbar 和 tabbar的时候最好分别设置它们的title
 //    vc.navigationItem.title = title;
@@ -58,7 +58,7 @@
     [self addChildViewController:nav];
 }
 
-#pragma mark - DHCustomTabBarViewDelegate
+#pragma mark - DHTabBarViewDelegate
 - (void)dhTabBarView:(DHTabBarView *)view didSelectItemAtIndex:(NSInteger)index
 {
     self.dhTabBar.backgroundImage = index ? [UIImage gk_imageWithColor:[UIColor blueColor] size:CGSizeMake(SCREEN_WIDTH, GK_TABBAR_HEIGHT)] : [UIImage gk_imageWithColor:[UIColor clearColor] size:CGSizeMake(SCREEN_WIDTH, GK_TABBAR_HEIGHT)];

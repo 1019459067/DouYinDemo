@@ -27,7 +27,7 @@
     UIWindow * window = [[UIApplication sharedApplication]keyWindow];
     TestTabViewController * tab = (TestTabViewController*)window.rootViewController;
     tab.tabBar.hidden = YES;
-    tab.dhTabBar.hidden = NO;
+    tab.testTabBar.hidden = NO;
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -49,7 +49,7 @@
     UIWindow * window = [[UIApplication sharedApplication]keyWindow];
     TestTabViewController * tab = (TestTabViewController*)window.rootViewController;
     tab.tabBar.hidden = YES;
-    tab.dhTabBar.hidden = YES;
+    tab.testTabBar.hidden = YES;
 }
 - (IBAction)onActionPush:(UIButton *)sender {
     

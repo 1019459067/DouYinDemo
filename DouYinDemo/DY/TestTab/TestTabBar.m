@@ -1,27 +1,27 @@
 //
-//  DHCustomTabBar.m
+//  TestTabBar.m
 //  DouYinDemo
 //
-//  Created by HN on 2020/7/27.
+//  Created by XWH on 2020/10/29.
 //  Copyright © 2020 HN. All rights reserved.
 //
 
-#import "DHCustomTabBar.h"
+#import "TestTabBar.h"
 
-@interface DHCustomTabBar ()
+@interface TestTabBar ()
 
 @property (strong, nonatomic) NSArray *titlesArray;
 
 @end
 
-@implementation DHCustomTabBar
+@implementation TestTabBar
 
 #pragma mark - life
 - (instancetype)initWithFrame:(CGRect)frame titles:(NSArray *)titlesArray {
     self = [super initWithFrame:frame];
     if (self) {
         self.titlesArray = titlesArray;
-        [self setBackgroundImage:[UIImage gk_imageWithColor:[UIColor clearColor] size:CGSizeMake(SCREEN_WIDTH, GK_TABBAR_HEIGHT)]];
+        [self setBackgroundImage:[UIImage gk_imageWithColor:[UIColor whiteColor] size:CGSizeMake(SCREEN_WIDTH, GK_TABBAR_HEIGHT)]];
         [self showLine];
         [self addSubview:self.tabBarView];
     }
@@ -72,13 +72,12 @@
 }
 
 #pragma mark - get data
-- (DHTabBarView *)tabBarView
+- (TestBarView *)tabBarView
 {
     if (_tabBarView == nil) {
         // xib的加载方式
-        _tabBarView = [[DHTabBarView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 49) titles:self.titlesArray];
+        _tabBarView = [[TestBarView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 49) titles:self.titlesArray];
     }
     return _tabBarView;
 }
-
 @end

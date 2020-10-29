@@ -12,9 +12,9 @@
 #import "Test3ViewController.h"
 #import "Test4ViewController.h"
 
-#import "RTRootNavigationController.h"
+#import "TestNavigationController.h"
 
-@interface TestTabViewController ()<DHTabBarViewDelegate, UITabBarControllerDelegate>
+@interface TestTabViewController ()<TestBarViewDelegate, UITabBarControllerDelegate>
 
 
 @end
@@ -25,13 +25,11 @@
     [super viewDidLoad];
     
 //    self.tabBar.hidden = YES;
-    self.dhTabBar = [[DHCustomTabBar alloc] initWithFrame:self.tabBar.frame titles:@[@"Test1", @"Test2", @"Test3", @"Test4"]];
-//    [self.view addSubview:self.dhTabBar];
-//    self.dhTabBar.frame = self.tabBar.frame;
-    self.dhTabBar.tabBarView.viewDelegate = self;
-    [self setValue:self.dhTabBar forKey:@"tabBar"];
-
-    self.dhTabBar.backgroundImage = [UIImage gk_imageWithColor:[UIColor orangeColor] size:CGSizeMake(SCREEN_WIDTH, GK_TABBAR_HEIGHT)];
+    self.testTabBar = [[TestTabBar alloc] initWithFrame:self.tabBar.frame titles:@[@"Test1", @"Test2", @"Test3", @"Test4"]];
+//    [self.view addSubview:self.testTabBar];
+//    self.testTabBar.frame = self.tabBar.frame;
+    self.testTabBar.tabBarView.viewDelegate = self;
+    [self setValue:self.testTabBar forKey:@"tabBar"];
     
 //    self.delegate = self;
 //    UITabBar *tabBar = [UITabBar appearance];
@@ -57,7 +55,7 @@
 {
 //    RTRootNavigationController *nav = [[RTRootNavigationController alloc]initWithRootViewController:vc];
 
-    RTContainerNavigationController *nav = [[RTContainerNavigationController alloc]initWithRootViewController:vc];
+    TestNavigationController *nav = [[TestNavigationController alloc]initWithRootViewController:vc];
     
 //    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
     nav.view.backgroundColor = UIColor.redColor;
@@ -77,22 +75,13 @@
     return YES;
 }
 
-#pragma mark - DHCustomTabBarViewDelegate
-- (void)dhTabBarView:(DHTabBarView *)view didSelectItemAtIndex:(NSInteger)index
+#pragma mark - TestBarViewViewDelegate
+- (void)testBarView:(TestBarView *)view didSelectItemAtIndex:(NSInteger)index
 {
-    self.dhTabBar.backgroundImage = index ? [UIImage gk_imageWithColor:[UIColor blueColor] size:CGSizeMake(SCREEN_WIDTH, GK_TABBAR_HEIGHT)] : [UIImage gk_imageWithColor:[UIColor clearColor] size:CGSizeMake(SCREEN_WIDTH, GK_TABBAR_HEIGHT)];
+//    self.testTabBar.backgroundImage = index ? [UIImage gk_imageWithColor:[UIColor blueColor] size:CGSizeMake(SCREEN_WIDTH, GK_TABBAR_HEIGHT)] : [UIImage gk_imageWithColor:[UIColor clearColor] size:CGSizeMake(SCREEN_WIDTH, GK_TABBAR_HEIGHT)];
     // 切换到对应index的viewController
     self.selectedIndex = index;
     NSLog(@"index------>>>%ld",index);
 }
 
-- (void)dhTabBarViewDidClickCenterItem:(DHTabBarView *)view
-{
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"点击了中间的按钮" message:@"do something!" preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *action = [UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [alertController dismissViewControllerAnimated:YES completion:nil];
-    }];
-    [alertController addAction:action];
-    [self presentViewController:alertController animated:YES completion:nil];
-}
 @end
