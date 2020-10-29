@@ -8,6 +8,7 @@
 
 #import "TestBaseViewController.h"
 #import "DHTabBarController.h"
+#import "MainViewController.h"
 
 @interface TestBaseViewController ()
 
@@ -38,20 +39,22 @@
 }
 
 - (IBAction)onActionPush:(UIButton *)sender {
+//    [self pushMainVC];
+    
+    [self pushTabVC];
+}
+
+- (void)pushTabVC {
     DHTabBarController *tabVC = [[DHTabBarController alloc]init];
     tabVC.hidesBottomBarWhenPushed = YES;
     tabVC.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:tabVC animated:YES completion:nil];
 //    [self.navigationController pushViewController:tabVC animated:YES];
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)pushMainVC {
+    MainViewController *tabVC = [[MainViewController alloc]init];
+    tabVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:tabVC animated:YES];
 }
-*/
-
 @end

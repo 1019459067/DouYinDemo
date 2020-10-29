@@ -19,6 +19,4 @@
     self.label.text = [NSString stringWithFormat:@"%s",__func__];
 }
 
-
-
 @end

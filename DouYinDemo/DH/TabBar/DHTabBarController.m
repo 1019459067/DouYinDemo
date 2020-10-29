@@ -23,17 +23,25 @@
 #pragma mark - life
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.navigationController.navigationBar.hidden = YES;
+    self.view.backgroundColor = UIColor.magentaColor;
 
     // Do any additional setup after loading the view.
     self.dhTabBar = [[DHTabBar alloc] initWithFrame:CGRectZero titles:@[@"首页",@"附近",@"消息",@"我"]];
     self.dhTabBar.tabBarView.viewDelegate = self;
     [self setValue:self.dhTabBar forKey:@"tabBar"];
-    
+
     [self addAllChildViewController];
 }
 
 #pragma mark - UI
+
+- (UIBarButtonItem *)rt_customBackItemWithTarget:(id)target action:(SEL)action
+{
+    return nil;
+}
+
 - (void)addAllChildViewController {
     DHHomeViewController *homeVC = HNWLoadControllerFromStoryboard(SBName, NSStringFromClass(DHHomeViewController.class));
     DHNearViewController *nearVC = HNWLoadControllerFromStoryboard(SBName, NSStringFromClass(DHNearViewController.class));
@@ -54,7 +62,7 @@
     // 如果同时有navigationbar 和 tabbar的时候最好分别设置它们的title
 //    vc.navigationItem.title = title;
     nav.title = nil;
-//    vc.tabBarItem.title = title;
+    vc.tabBarItem.title = nil;
     [self addChildViewController:nav];
 }
 

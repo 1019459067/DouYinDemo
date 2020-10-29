@@ -18,6 +18,8 @@
     [super viewDidLoad];
 //    self.navigationController.navigationBar.hidden = YES;
 
+    self.title = @"Near";
+    
     UILabel *label = [[UILabel alloc]init];
     label.bounds = CGRectMake(0, 0, self.view.frame.size.width, 50);
     label.center = CGPointMake(self.view.frame.size.width/2., self.view.frame.size.height/2.);

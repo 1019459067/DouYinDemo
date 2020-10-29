@@ -10,8 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-//@interface TestNavigationController : RTRootNavigationController
-@interface TestNavigationController : UINavigationController
+@interface TestNavigationController : RTRootNavigationController
+//@interface TestNavigationController : UINavigationController
 
 @end
 

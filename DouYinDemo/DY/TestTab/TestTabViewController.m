@@ -54,7 +54,7 @@
 - (void)addChildViewControllerWithVC:(UIViewController *)vc
 {
     TestNavigationController *nav = [[TestNavigationController alloc]initWithRootViewController:vc];
-        nav.view.backgroundColor = UIColor.redColor;
+    nav.view.backgroundColor = UIColor.redColor;
     [self addChildViewController:nav];
 }
 
