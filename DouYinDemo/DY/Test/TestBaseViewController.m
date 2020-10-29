@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     self.label = [[UILabel alloc]init];
     self.label.bounds = CGRectMake(0, 0, self.view.frame.size.width, 50);
     self.label.center = CGPointMake(self.view.frame.size.width/2., self.view.frame.size.height/2.);
@@ -40,7 +40,9 @@
 - (IBAction)onActionPush:(UIButton *)sender {
     DHTabBarController *tabVC = [[DHTabBarController alloc]init];
     tabVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:tabVC animated:YES];
+    tabVC.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentViewController:tabVC animated:YES completion:nil];
+//    [self.navigationController pushViewController:tabVC animated:YES];
 }
 /*
 #pragma mark - Navigation

@@ -18,6 +18,7 @@
 #pragma mark - life
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.hidden = YES;
 
     self.label = [[UILabel alloc]init];
     self.label.bounds = CGRectMake(0, 0, self.view.frame.size.width, 50);

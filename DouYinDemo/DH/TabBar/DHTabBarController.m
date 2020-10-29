@@ -13,7 +13,6 @@
 #import "DHMyViewController.h"
 
 #import "DHTabBar.h"
-#import "TestNavigationController.h"
 
 @interface DHTabBarController ()<DHTabBarViewDelegate>
 
@@ -24,6 +23,7 @@
 #pragma mark - life
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.hidden = YES;
 
     // Do any additional setup after loading the view.
     self.dhTabBar = [[DHTabBar alloc] initWithFrame:CGRectZero titles:@[@"首页",@"附近",@"消息",@"我"]];

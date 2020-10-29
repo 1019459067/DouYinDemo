@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.hidden = YES;
+
     // Do any additional setup after loading the view.
     self.label.text = [NSString stringWithFormat:@"%s",__func__];
 }

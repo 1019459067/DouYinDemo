@@ -37,12 +37,13 @@
 #pragma mark - life
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.hidden = YES;
+
 //    self.gk_navigationBar.hidden = YES;
 //    self.gk_statusBarStyle = UIStatusBarStyleLightContent;
 //    self.gk_statusBarHidden = YES;
     // 设置左滑push代理
     self.gk_pushDelegate = self;
-    self.navigationController.navigationBar.hidden = YES;
 
     [self settingUI];
     [self addPlayLoadingView];
