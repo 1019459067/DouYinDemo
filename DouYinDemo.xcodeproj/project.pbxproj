@@ -14,13 +14,9 @@
 		A65E42A72510564D0029A1DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E42A62510564D0029A1DB /* main.m */; };
 		A66F431D2542C3F100EDD15B /* PlayLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = A66F431C2542C3F100EDD15B /* PlayLoadingView.m */; };
 		A6755C892546B06500EA78D2 /* DHScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6755C882546B06500EA78D2 /* DHScrollView.m */; };
-		A6755C942546B07200EA78D2 /* DHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6755C8D2546B07200EA78D2 /* DHTabBarController.m */; };
-		A6755C952546B07200EA78D2 /* DHTabbarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A6755C912546B07200EA78D2 /* DHTabbarButton.m */; };
-		A6755C962546B07200EA78D2 /* DHTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6755C922546B07200EA78D2 /* DHTabBarView.m */; };
-		A6755C972546B07200EA78D2 /* DHCustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A6755C932546B07200EA78D2 /* DHCustomTabBar.m */; };
 		A6792BB4253D2B69000CB4DE /* SlideTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6792BB3253D2B69000CB4DE /* SlideTabBarView.m */; };
 		A6AA03A22547F030000E5061 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AA03A12547F030000E5061 /* MainViewController.m */; };
-		A6AA03A62547F2EF000E5061 /* DYTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AA03A52547F2EF000E5061 /* DYTabViewController.m */; };
+		A6AA03A62547F2EF000E5061 /* TestTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AA03A52547F2EF000E5061 /* TestTabViewController.m */; };
 		A6AA047425481820000E5061 /* GKPushTransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AA045525481820000E5061 /* GKPushTransitionAnimation.m */; };
 		A6AA047525481820000E5061 /* GKDelegateHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AA045625481820000E5061 /* GKDelegateHandler.m */; };
 		A6AA047625481820000E5061 /* GKPopTransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AA045725481820000E5061 /* GKPopTransitionAnimation.m */; };
@@ -43,6 +39,20 @@
 		A6B3A3AC2547E9E7008B37BE /* DHHomeRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B3A3A42547E9E7008B37BE /* DHHomeRecommendViewController.m */; };
 		A6B3A3AD2547E9E7008B37BE /* DHHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B3A3A62547E9E7008B37BE /* DHHomeViewController.m */; };
 		A6CC252825242FF500F44260 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6CC252725242FF500F44260 /* main.storyboard */; };
+		C953053C256138D300DCF8E7 /* DHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9530534256138D300DCF8E7 /* DHTabBarController.m */; };
+		C953053D256138D300DCF8E7 /* DHTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C9530537256138D300DCF8E7 /* DHTabBar.m */; };
+		C953053E256138D300DCF8E7 /* DHTabbarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C9530539256138D300DCF8E7 /* DHTabbarButton.m */; };
+		C9530540256138D300DCF8E7 /* DHBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = C953053B256138D300DCF8E7 /* DHBottomView.m */; };
+		C9D734F325486BF6008A0A85 /* UIViewController+RTRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D734EF25486BF6008A0A85 /* UIViewController+RTRootNavigationController.m */; };
+		C9D734F425486BF6008A0A85 /* RTRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D734F225486BF6008A0A85 /* RTRootNavigationController.m */; };
+		C9D7353625499377008A0A85 /* Test2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D7353525499377008A0A85 /* Test2ViewController.m */; };
+		C9D7353A2549937D008A0A85 /* Test3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D735392549937D008A0A85 /* Test3ViewController.m */; };
+		C9D7353E25499385008A0A85 /* Test4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D7353D25499385008A0A85 /* Test4ViewController.m */; };
+		C9D735432549948E008A0A85 /* TestBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D735422549948E008A0A85 /* TestBaseViewController.m */; };
+		C9D735492549970B008A0A85 /* Test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D735472549970B008A0A85 /* Test1ViewController.m */; };
+		C9D73554254AE362008A0A85 /* TestNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D73553254AE362008A0A85 /* TestNavigationController.m */; };
+		C9D7355C254AE489008A0A85 /* TestTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D7355B254AE489008A0A85 /* TestTabBar.m */; };
+		C9D73561254AE5D1008A0A85 /* TestBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D73560254AE5D1008A0A85 /* TestBarView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,20 +70,12 @@
 		A66F431C2542C3F100EDD15B /* PlayLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayLoadingView.m; sourceTree = "<group>"; };
 		A6755C872546B06500EA78D2 /* DHScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHScrollView.h; sourceTree = "<group>"; };
 		A6755C882546B06500EA78D2 /* DHScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHScrollView.m; sourceTree = "<group>"; };
-		A6755C8C2546B07200EA78D2 /* DHTabbarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTabbarButton.h; sourceTree = "<group>"; };
-		A6755C8D2546B07200EA78D2 /* DHTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTabBarController.m; sourceTree = "<group>"; };
-		A6755C8E2546B07200EA78D2 /* DHTabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTabBarView.h; sourceTree = "<group>"; };
-		A6755C8F2546B07200EA78D2 /* DHCustomTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHCustomTabBar.h; sourceTree = "<group>"; };
-		A6755C902546B07200EA78D2 /* DHTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTabBarController.h; sourceTree = "<group>"; };
-		A6755C912546B07200EA78D2 /* DHTabbarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTabbarButton.m; sourceTree = "<group>"; };
-		A6755C922546B07200EA78D2 /* DHTabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTabBarView.m; sourceTree = "<group>"; };
-		A6755C932546B07200EA78D2 /* DHCustomTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHCustomTabBar.m; sourceTree = "<group>"; };
 		A6792BB2253D2B69000CB4DE /* SlideTabBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlideTabBarView.h; sourceTree = "<group>"; };
 		A6792BB3253D2B69000CB4DE /* SlideTabBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlideTabBarView.m; sourceTree = "<group>"; };
 		A6AA03A02547F030000E5061 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		A6AA03A12547F030000E5061 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		A6AA03A42547F2EF000E5061 /* DYTabViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYTabViewController.h; sourceTree = "<group>"; };
-		A6AA03A52547F2EF000E5061 /* DYTabViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYTabViewController.m; sourceTree = "<group>"; };
+		A6AA03A42547F2EF000E5061 /* TestTabViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTabViewController.h; sourceTree = "<group>"; };
+		A6AA03A52547F2EF000E5061 /* TestTabViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTabViewController.m; sourceTree = "<group>"; };
 		A6AA045525481820000E5061 /* GKPushTransitionAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKPushTransitionAnimation.m; sourceTree = "<group>"; };
 		A6AA045625481820000E5061 /* GKDelegateHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKDelegateHandler.m; sourceTree = "<group>"; };
 		A6AA045725481820000E5061 /* GKPopTransitionAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKPopTransitionAnimation.m; sourceTree = "<group>"; };
@@ -118,6 +120,34 @@
 		A6B3A3A52547E9E7008B37BE /* DHNearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHNearViewController.h; sourceTree = "<group>"; };
 		A6B3A3A62547E9E7008B37BE /* DHHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHHomeViewController.m; sourceTree = "<group>"; };
 		A6CC252725242FF500F44260 /* main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
+		C9530532256138D300DCF8E7 /* DHTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTabBar.h; sourceTree = "<group>"; };
+		C9530533256138D300DCF8E7 /* DHTabbarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTabbarButton.h; sourceTree = "<group>"; };
+		C9530534256138D300DCF8E7 /* DHTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTabBarController.m; sourceTree = "<group>"; };
+		C9530536256138D300DCF8E7 /* DHBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHBottomView.h; sourceTree = "<group>"; };
+		C9530537256138D300DCF8E7 /* DHTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTabBar.m; sourceTree = "<group>"; };
+		C9530538256138D300DCF8E7 /* DHTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTabBarController.h; sourceTree = "<group>"; };
+		C9530539256138D300DCF8E7 /* DHTabbarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTabbarButton.m; sourceTree = "<group>"; };
+		C953053B256138D300DCF8E7 /* DHBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHBottomView.m; sourceTree = "<group>"; };
+		C9D734EF25486BF6008A0A85 /* UIViewController+RTRootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RTRootNavigationController.m"; sourceTree = "<group>"; };
+		C9D734F025486BF6008A0A85 /* RTRootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTRootNavigationController.h; sourceTree = "<group>"; };
+		C9D734F125486BF6008A0A85 /* UIViewController+RTRootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RTRootNavigationController.h"; sourceTree = "<group>"; };
+		C9D734F225486BF6008A0A85 /* RTRootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTRootNavigationController.m; sourceTree = "<group>"; };
+		C9D7353425499377008A0A85 /* Test2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test2ViewController.h; sourceTree = "<group>"; };
+		C9D7353525499377008A0A85 /* Test2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test2ViewController.m; sourceTree = "<group>"; };
+		C9D735382549937D008A0A85 /* Test3ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test3ViewController.h; sourceTree = "<group>"; };
+		C9D735392549937D008A0A85 /* Test3ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test3ViewController.m; sourceTree = "<group>"; };
+		C9D7353C25499385008A0A85 /* Test4ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test4ViewController.h; sourceTree = "<group>"; };
+		C9D7353D25499385008A0A85 /* Test4ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test4ViewController.m; sourceTree = "<group>"; };
+		C9D735412549948E008A0A85 /* TestBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestBaseViewController.h; sourceTree = "<group>"; };
+		C9D735422549948E008A0A85 /* TestBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestBaseViewController.m; sourceTree = "<group>"; };
+		C9D735462549970B008A0A85 /* Test1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test1ViewController.h; sourceTree = "<group>"; };
+		C9D735472549970B008A0A85 /* Test1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test1ViewController.m; sourceTree = "<group>"; };
+		C9D73552254AE362008A0A85 /* TestNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestNavigationController.h; sourceTree = "<group>"; };
+		C9D73553254AE362008A0A85 /* TestNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestNavigationController.m; sourceTree = "<group>"; };
+		C9D7355A254AE489008A0A85 /* TestTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTabBar.h; sourceTree = "<group>"; };
+		C9D7355B254AE489008A0A85 /* TestTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTabBar.m; sourceTree = "<group>"; };
+		C9D7355F254AE5D1008A0A85 /* TestBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestBarView.h; sourceTree = "<group>"; };
+		C9D73560254AE5D1008A0A85 /* TestBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestBarView.m; sourceTree = "<group>"; };
 		F318877465912A0B7EF1276B /* Pods_DouYinDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DouYinDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -146,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				A65E43092510C1FA0029A1DB /* PrefixHeader.pch */,
+				C9D734ED25486BF6008A0A85 /* RTRootNavigationController */,
 				A6AA045325481820000E5061 /* GKNavigationBarViewController */,
 				A66F431A2542C3DD00EDD15B /* PlayLoadingView */,
 				A6792BB1253D2B5A000CB4DE /* SlideTabBarView */,
@@ -167,10 +198,10 @@
 		A65E4293251056480029A1DB /* DouYinDemo */ = {
 			isa = PBXGroup;
 			children = (
-				A6755C8B2546B07200EA78D2 /* TabBar */,
-				A6755C862546B06500EA78D2 /* DHScrollView */,
+				C9D73557254AE3AF008A0A85 /* DY */,
+				C9D73556254AE390008A0A85 /* DH */,
+				C9530531256138D300DCF8E7 /* TabBar */,
 				A65E42FA2510C06B0029A1DB /* Main */,
-				A65E42AD2510568A0029A1DB /* 抖音 */,
 				A65E42A02510564D0029A1DB /* Assets.xcassets */,
 				A6CC252725242FF500F44260 /* main.storyboard */,
 				A65E42A22510564D0029A1DB /* LaunchScreen.storyboard */,
@@ -180,27 +211,6 @@
 			path = DouYinDemo;
 			sourceTree = "<group>";
 		};
-		A65E42AD2510568A0029A1DB /* 抖音 */ = {
-			isa = PBXGroup;
-			children = (
-				A6B3A39B2547E9E6008B37BE /* DHHomeAttentionViewController.h */,
-				A6B3A3A12547E9E7008B37BE /* DHHomeAttentionViewController.m */,
-				A6B3A3A22547E9E7008B37BE /* DHHomeBaseViewController.h */,
-				A6B3A39C2547E9E6008B37BE /* DHHomeBaseViewController.m */,
-				A6B3A39A2547E9E6008B37BE /* DHHomeRecommendViewController.h */,
-				A6B3A3A42547E9E7008B37BE /* DHHomeRecommendViewController.m */,
-				A6B3A39E2547E9E7008B37BE /* DHHomeViewController.h */,
-				A6B3A3A62547E9E7008B37BE /* DHHomeViewController.m */,
-				A6B3A3A02547E9E7008B37BE /* DHMessageViewController.h */,
-				A6B3A39D2547E9E6008B37BE /* DHMessageViewController.m */,
-				A6B3A3992547E9E6008B37BE /* DHMyViewController.h */,
-				A6B3A39F2547E9E7008B37BE /* DHMyViewController.m */,
-				A6B3A3A52547E9E7008B37BE /* DHNearViewController.h */,
-				A6B3A3A32547E9E7008B37BE /* DHNearViewController.m */,
-			);
-			path = "抖音";
-			sourceTree = "<group>";
-		};
 		A65E42FA2510C06B0029A1DB /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,8 +218,6 @@
 				A65E4295251056480029A1DB /* AppDelegate.m */,
 				A6AA03A02547F030000E5061 /* MainViewController.h */,
 				A6AA03A12547F030000E5061 /* MainViewController.m */,
-				A6AA03A42547F2EF000E5061 /* DYTabViewController.h */,
-				A6AA03A52547F2EF000E5061 /* DYTabViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -229,22 +237,8 @@
 				A6755C872546B06500EA78D2 /* DHScrollView.h */,
 				A6755C882546B06500EA78D2 /* DHScrollView.m */,
 			);
-			path = DHScrollView;
-			sourceTree = SOURCE_ROOT;
-		};
-		A6755C8B2546B07200EA78D2 /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-				A6755C8C2546B07200EA78D2 /* DHTabbarButton.h */,
-				A6755C912546B07200EA78D2 /* DHTabbarButton.m */,
-				A6755C8E2546B07200EA78D2 /* DHTabBarView.h */,
-				A6755C922546B07200EA78D2 /* DHTabBarView.m */,
-				A6755C8F2546B07200EA78D2 /* DHCustomTabBar.h */,
-				A6755C932546B07200EA78D2 /* DHCustomTabBar.m */,
-				A6755C902546B07200EA78D2 /* DHTabBarController.h */,
-				A6755C8D2546B07200EA78D2 /* DHTabBarController.m */,
-			);
-			path = TabBar;
+			name = DHScrollView;
+			path = DouYinDemo/DH/DHScrollView;
 			sourceTree = SOURCE_ROOT;
 		};
 		A6792BB1253D2B5A000CB4DE /* SlideTabBarView */ = {
@@ -314,6 +308,120 @@
 				A6AA047125481820000E5061 /* UIViewController+GKCategory.m */,
 			);
 			path = GKCategory;
+			sourceTree = "<group>";
+		};
+		C9530531256138D300DCF8E7 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				C9530532256138D300DCF8E7 /* DHTabBar.h */,
+				C9530537256138D300DCF8E7 /* DHTabBar.m */,
+				C9530533256138D300DCF8E7 /* DHTabbarButton.h */,
+				C9530539256138D300DCF8E7 /* DHTabbarButton.m */,
+				C9530536256138D300DCF8E7 /* DHBottomView.h */,
+				C953053B256138D300DCF8E7 /* DHBottomView.m */,
+				C9530538256138D300DCF8E7 /* DHTabBarController.h */,
+				C9530534256138D300DCF8E7 /* DHTabBarController.m */,
+			);
+			name = TabBar;
+			path = DH/TabBar;
+			sourceTree = "<group>";
+		};
+		C9D734ED25486BF6008A0A85 /* RTRootNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				C9D734EE25486BF6008A0A85 /* Classes */,
+			);
+			path = RTRootNavigationController;
+			sourceTree = "<group>";
+		};
+		C9D734EE25486BF6008A0A85 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C9D734F125486BF6008A0A85 /* UIViewController+RTRootNavigationController.h */,
+				C9D734EF25486BF6008A0A85 /* UIViewController+RTRootNavigationController.m */,
+				C9D734F025486BF6008A0A85 /* RTRootNavigationController.h */,
+				C9D734F225486BF6008A0A85 /* RTRootNavigationController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		C9D7352A25499217008A0A85 /* 抖货 */ = {
+			isa = PBXGroup;
+			children = (
+				A6B3A39B2547E9E6008B37BE /* DHHomeAttentionViewController.h */,
+				A6B3A3A12547E9E7008B37BE /* DHHomeAttentionViewController.m */,
+				A6B3A3A22547E9E7008B37BE /* DHHomeBaseViewController.h */,
+				A6B3A39C2547E9E6008B37BE /* DHHomeBaseViewController.m */,
+				A6B3A39A2547E9E6008B37BE /* DHHomeRecommendViewController.h */,
+				A6B3A3A42547E9E7008B37BE /* DHHomeRecommendViewController.m */,
+				A6B3A39E2547E9E7008B37BE /* DHHomeViewController.h */,
+				A6B3A3A62547E9E7008B37BE /* DHHomeViewController.m */,
+				A6B3A3A02547E9E7008B37BE /* DHMessageViewController.h */,
+				A6B3A39D2547E9E6008B37BE /* DHMessageViewController.m */,
+				A6B3A3992547E9E6008B37BE /* DHMyViewController.h */,
+				A6B3A39F2547E9E7008B37BE /* DHMyViewController.m */,
+				A6B3A3A52547E9E7008B37BE /* DHNearViewController.h */,
+				A6B3A3A32547E9E7008B37BE /* DHNearViewController.m */,
+			);
+			path = "抖货";
+			sourceTree = "<group>";
+		};
+		C9D7352E25499249008A0A85 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				C9D735462549970B008A0A85 /* Test1ViewController.h */,
+				C9D735472549970B008A0A85 /* Test1ViewController.m */,
+				C9D7353425499377008A0A85 /* Test2ViewController.h */,
+				C9D7353525499377008A0A85 /* Test2ViewController.m */,
+				C9D735382549937D008A0A85 /* Test3ViewController.h */,
+				C9D735392549937D008A0A85 /* Test3ViewController.m */,
+				C9D7353C25499385008A0A85 /* Test4ViewController.h */,
+				C9D7353D25499385008A0A85 /* Test4ViewController.m */,
+				C9D735412549948E008A0A85 /* TestBaseViewController.h */,
+				C9D735422549948E008A0A85 /* TestBaseViewController.m */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		C9D73551254AE344008A0A85 /* TestNav */ = {
+			isa = PBXGroup;
+			children = (
+				C9D73552254AE362008A0A85 /* TestNavigationController.h */,
+				C9D73553254AE362008A0A85 /* TestNavigationController.m */,
+			);
+			path = TestNav;
+			sourceTree = "<group>";
+		};
+		C9D73556254AE390008A0A85 /* DH */ = {
+			isa = PBXGroup;
+			children = (
+				A6755C862546B06500EA78D2 /* DHScrollView */,
+				C9D7352A25499217008A0A85 /* 抖货 */,
+			);
+			path = DH;
+			sourceTree = "<group>";
+		};
+		C9D73557254AE3AF008A0A85 /* DY */ = {
+			isa = PBXGroup;
+			children = (
+				C9D73551254AE344008A0A85 /* TestNav */,
+				C9D73558254AE3D0008A0A85 /* TestTab */,
+				C9D7352E25499249008A0A85 /* Test */,
+			);
+			path = DY;
+			sourceTree = "<group>";
+		};
+		C9D73558254AE3D0008A0A85 /* TestTab */ = {
+			isa = PBXGroup;
+			children = (
+				A6AA03A42547F2EF000E5061 /* TestTabViewController.h */,
+				A6AA03A52547F2EF000E5061 /* TestTabViewController.m */,
+				C9D7355A254AE489008A0A85 /* TestTabBar.h */,
+				C9D7355B254AE489008A0A85 /* TestTabBar.m */,
+				C9D7355F254AE5D1008A0A85 /* TestBarView.h */,
+				C9D73560254AE5D1008A0A85 /* TestBarView.m */,
+			);
+			path = TestTab;
 			sourceTree = "<group>";
 		};
 		F7F518498214B961BEA7BC33 /* Frameworks */ = {
@@ -423,6 +531,7 @@
 			files = (
 				A6AA047725481820000E5061 /* GKBaseTransitionAnimation.m in Sources */,
 				A6AA047C25481820000E5061 /* UIScrollView+GKCategory.m in Sources */,
+				C9D7353A2549937D008A0A85 /* Test3ViewController.m in Sources */,
 				A6AA048125481820000E5061 /* GKNavigationBarViewController.m in Sources */,
 				A65E4296251056480029A1DB /* AppDelegate.m in Sources */,
 				A65E42A72510564D0029A1DB /* main.m in Sources */,
@@ -430,28 +539,37 @@
 				A6B3A3AC2547E9E7008B37BE /* DHHomeRecommendViewController.m in Sources */,
 				A6B3A3AA2547E9E7008B37BE /* DHHomeAttentionViewController.m in Sources */,
 				A6B3A3A82547E9E7008B37BE /* DHMessageViewController.m in Sources */,
-				A6755C962546B07200EA78D2 /* DHTabBarView.m in Sources */,
+				C953053D256138D300DCF8E7 /* DHTabBar.m in Sources */,
 				A6B3A3AB2547E9E7008B37BE /* DHNearViewController.m in Sources */,
+				C9D735432549948E008A0A85 /* TestBaseViewController.m in Sources */,
 				A6AA047B25481820000E5061 /* UIBarButtonItem+GKCategory.m in Sources */,
-				A6AA03A62547F2EF000E5061 /* DYTabViewController.m in Sources */,
+				C953053C256138D300DCF8E7 /* DHTabBarController.m in Sources */,
+				A6AA03A62547F2EF000E5061 /* TestTabViewController.m in Sources */,
+				C9D73561254AE5D1008A0A85 /* TestBarView.m in Sources */,
+				C9D7353E25499385008A0A85 /* Test4ViewController.m in Sources */,
+				C9D735492549970B008A0A85 /* Test1ViewController.m in Sources */,
 				A6AA047F25481820000E5061 /* UIViewController+GKCategory.m in Sources */,
+				C9D73554254AE362008A0A85 /* TestNavigationController.m in Sources */,
+				C9D734F325486BF6008A0A85 /* UIViewController+RTRootNavigationController.m in Sources */,
 				A6AA047E25481820000E5061 /* UIImage+GKCategory.m in Sources */,
 				A6AA03A22547F030000E5061 /* MainViewController.m in Sources */,
+				C9D734F425486BF6008A0A85 /* RTRootNavigationController.m in Sources */,
 				A6B3A3A72547E9E7008B37BE /* DHHomeBaseViewController.m in Sources */,
 				A6AA047A25481820000E5061 /* UINavigationController+GKCategory.m in Sources */,
 				A6755C892546B06500EA78D2 /* DHScrollView.m in Sources */,
-				A6755C952546B07200EA78D2 /* DHTabbarButton.m in Sources */,
+				C9D7355C254AE489008A0A85 /* TestTabBar.m in Sources */,
 				A6792BB4253D2B69000CB4DE /* SlideTabBarView.m in Sources */,
 				A6AA047925481820000E5061 /* GKNavigationBarConfigure.m in Sources */,
+				C9D7353625499377008A0A85 /* Test2ViewController.m in Sources */,
 				A6AA047625481820000E5061 /* GKPopTransitionAnimation.m in Sources */,
+				C9530540256138D300DCF8E7 /* DHBottomView.m in Sources */,
 				A6AA047425481820000E5061 /* GKPushTransitionAnimation.m in Sources */,
 				A6B3A3A92547E9E7008B37BE /* DHMyViewController.m in Sources */,
 				A6AA047825481820000E5061 /* GKNavigationBar.m in Sources */,
 				A66F431D2542C3F100EDD15B /* PlayLoadingView.m in Sources */,
-				A6755C972546B07200EA78D2 /* DHCustomTabBar.m in Sources */,
 				A6AA047525481820000E5061 /* GKDelegateHandler.m in Sources */,
 				A6B3A3AD2547E9E7008B37BE /* DHHomeViewController.m in Sources */,
-				A6755C942546B07200EA78D2 /* DHTabBarController.m in Sources */,
+				C953053E256138D300DCF8E7 /* DHTabbarButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

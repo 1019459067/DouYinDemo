@@ -13,8 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 @class SlideTabBarView;
 @protocol SlideTabBarViewDelegate <NSObject>
 
-- (void)slideTabBarView:(SlideTabBarView *)slideTabBarView didSelectedPageIndex:(NSInteger)pageIndex;
-- (void)slideTabBarView:(SlideTabBarView *)slideTabBarView didSelectedIndex:(NSInteger)selectedIndex;
+- (void)slideTabBarView:(SlideTabBarView *)view
+   didSelectedPageIndex:(NSInteger)pageIndex;
+- (void)slideTabBarView:(SlideTabBarView *)view
+       didSelectedIndex:(NSInteger)selectedIndex;
 
 @end
 
@@ -22,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (assign, nonatomic) id<SlideTabBarViewDelegate> delegate;
 
-- (instancetype)initWithFrame:(CGRect)frame titles:(NSArray *)titlesArray;
+- (instancetype)initWithFrame:(CGRect)frame titles:(NSArray *)itemsArray;
 
 - (void)updateCurrentPageWithScroll:(UIScrollView *)scrollView;
 - (void)updateSlideViewWithScroll:(UIScrollView *)scrollView;

@@ -7,7 +7,6 @@
 //
 
 #import "MainViewController.h"
-#import "DHTabBarController.h"
 
 @interface MainViewController ()
 
@@ -17,15 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-//    self.navigationController.navigationBar.hidden = YES;
-}
-
-- (IBAction)onActionPush:(UIButton *)sender {
-    
-    DHTabBarController *tabVC = [[DHTabBarController alloc]init];
-    tabVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:tabVC animated:YES];
+    self.navigationController.navigationBar.hidden = YES;
+    self.view.backgroundColor = UIColor.whiteColor;
 }
 
 @end

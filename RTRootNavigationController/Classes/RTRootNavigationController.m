@@ -437,22 +437,22 @@ __attribute((overloadable)) static inline UIViewController *RTSafeWrapViewContro
     }
 }
 
-//- (UITabBarController *)tabBarController
-//{
-//    UITabBarController *tabController = [super tabBarController];
-//    RTRootNavigationController *navigationController = self.rt_navigationController;
-//    if (tabController) {
-//        if (navigationController.tabBarController != tabController) {   // Tab is child of Root VC
-//            return tabController;
-//        }
-//        else {
-//            return !tabController.tabBar.isTranslucent || [navigationController.rt_viewControllers rt_any:^BOOL(__kindof UIViewController *obj) {
-//                return obj.hidesBottomBarWhenPushed;
-//            }] ? nil : tabController;
-//        }
-//    }
-//    return nil;
-//}
+- (UITabBarController *)tabBarController
+{
+    UITabBarController *tabController = [super tabBarController];
+    RTRootNavigationController *navigationController = self.rt_navigationController;
+    if (tabController) {
+        if (navigationController.tabBarController != tabController) {   // Tab is child of Root VC
+            return tabController;
+        }
+        else {
+            return !tabController.tabBar.isTranslucent || [navigationController.rt_viewControllers rt_any:^BOOL(__kindof UIViewController *obj) {
+                return obj.hidesBottomBarWhenPushed;
+            }] ? nil : tabController;
+        }
+    }
+    return nil;
+}
 
 - (NSArray *)viewControllers
 {

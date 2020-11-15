@@ -10,6 +10,7 @@
 #define PrefixHeader_pch
 
 #import "GKNavigationBarViewController.h"
+#import "TestNavigationController.h"
 #import "AppDelegate.h"
 
 #pragma mark - UI
